@@ -67,6 +67,13 @@ class Scan(unittest.TestCase):
             self.assertEqual((u.files, sorted(u.members["UI"])), (1, ["A"]))
         self.assertEqual(usage.scan_dir("no-such-dir").files, 0)
 
+    def test_tutorial_scripts_counted(self):
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "Tutorials" / "Lua").mkdir(parents=True)
+            (Path(d) / "Tutorials" / "Lua" / "t.lua").write_text("UI.T()\n", encoding="utf-8")
+            u = usage.scan_dir(d)
+            self.assertEqual((u.files, sorted(u.members["UI"])), (1, ["T"]))
+
 
 class Game(unittest.TestCase):
     def test_real_game(self):
@@ -75,6 +82,7 @@ class Game(unittest.TestCase):
         if game is None or not (game / "Assets").is_dir():
             self.skipTest("game_dir is empty: usage tests need the game's Lua (set game_dir in civ5re.local.cfg)")
         files = usage.lua_files(game)
+        # Assets/**.lua (600 in the Steam install with Lekmod) + Tutorials/Lua (5)
         self.assertEqual(len(files), 605)
         u = usage.scan_dir(game).to_dict()
         self.assertGreaterEqual(len(u["controls"]), 88)

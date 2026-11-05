@@ -70,13 +70,18 @@ class Usage:
                 "events": self.events, "luaevents": self.luaevents, "gameevents": self.gameevents}
 
 
+# Lua shipped with the game: the Assets tree plus the tutorial scenario scripts that sit beside it.
+LUA_ROOTS = ("Assets", "Tutorials")
+
+
 def lua_files(game_dir) -> list:
-    root = Path(game_dir) / "Assets"
     out = []
-    if root.is_dir():
-        for d, dirs, names in os.walk(root):
-            dirs[:] = sorted(dirs)
-            out += [Path(d, n) for n in sorted(names) if n.lower().endswith(".lua")]
+    for name in LUA_ROOTS:
+        root = Path(game_dir) / name
+        if root.is_dir():
+            for d, dirs, names in os.walk(root):
+                dirs[:] = sorted(dirs)
+                out += [Path(d, n) for n in sorted(names) if n.lower().endswith(".lua")]
     return out
 
 
