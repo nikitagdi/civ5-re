@@ -1,0 +1,6 @@
+Civ5Expansion2/Lua/UI.h:7 LUA2 'table' marker must be above a class
+Civ5Expansion2/Lua/UI.h:11 LUA2 'event' marker must be above a typedef
+Civ5Expansion2/Lua/UI.h:14 LUA2 'function' marker must be above a function
+Civ5Expansion2/Lua/UI.h:17 LUA2 'enum' marker must be above an enum
+Civ5Expansion2/Lua/UI.h:21 LUA2 'push' marker must be above ToLua
+Civ5Expansion2/Lua/UI.h:25 LUA2 'pull' marker must be above FromLua

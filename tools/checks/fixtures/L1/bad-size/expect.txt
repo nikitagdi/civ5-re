@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Sizes.h:5 L1 Plain: size 0x8, clang 0x4
+Civ5Expansion2/Fx/Sizes.h:12 L1 FBuf<char>: size 0x8, clang 0x2

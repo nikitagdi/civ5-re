@@ -1,0 +1,2 @@
+Civ5Expansion2/Lua/UI.h:10 LUA2 on LuaThunk_* only '/// lua ?' is allowed
+Civ5Expansion2/Lua/UI.h:14 LUA2 no '/// lua' is allowed on LuaToString_*

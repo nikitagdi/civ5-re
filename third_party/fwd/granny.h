@@ -1,0 +1,51 @@
+#pragma once
+
+struct granny_animation;
+struct granny_blend_dag_node;
+struct granny_bone;
+struct granny_control;
+struct granny_curve2;
+struct granny_dag2;
+struct granny_dag2_info;
+struct granny_dag2_instance;
+struct granny_dag2_instantiate_callbacks;
+struct granny_dag2_node;
+struct granny_dag2_nodedata_poseanimsource;
+struct granny_dag_pose_cache;
+struct granny_data_type_definition;
+struct granny_file;
+struct granny_file_info;
+struct granny_file_reader;
+struct granny_local_pose;
+enum granny_log_message_origin : int;
+enum granny_log_message_type : int;
+struct granny_material;
+struct granny_mesh;
+struct granny_mesh_binding;
+struct granny_model;
+struct granny_sample_context;
+struct granny_skeleton;
+struct granny_string_database;
+struct granny_text_track;
+struct granny_text_track_entry;
+struct granny_track_mask;
+struct granny_variant;
+struct granny_world_pose;
+namespace granny {
+enum _ARITHBITS : int;
+struct animation_binding;
+struct animation_binding_identifier;
+struct curve2;
+struct file;
+struct file_data_tree_writer;
+struct file_writer;
+enum file_writer_seek_type : int;
+struct fixup_remap;
+struct grn_reference;
+struct mesh_builder;
+struct model;
+struct model_control_binding;
+struct retarget_identifier;
+struct retargeter;
+struct string_table;
+}

@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Bases.h:47 V3 base 0 cvIface: in RTTI public cvBase +0 (class differ)
+Civ5Expansion2/Fx/Bases.h:47 V3 base 1 cvBase: in RTTI public cvIface +4 (class differ)

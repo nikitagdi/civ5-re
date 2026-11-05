@@ -1,0 +1,3 @@
+Civ5Expansion2/Lua/UI.h:8 LUA7 lAdd without /// lua
+Civ5Expansion2/Lua/UI.h:25 LUA7 LuaThunk_Base_Stop without
+Civ5Expansion2/Lua/UI.h:32 LUA7 lGetX without /// lua (at least '?' is needed)

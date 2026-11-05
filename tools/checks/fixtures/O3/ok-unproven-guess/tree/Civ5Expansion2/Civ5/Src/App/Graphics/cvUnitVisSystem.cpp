@@ -1,0 +1,2 @@
+/// origin guess
+#pragma once

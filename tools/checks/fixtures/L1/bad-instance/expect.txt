@@ -1,0 +1,1 @@
+Civ5Expansion2/Fx/Sizes.h:7 L1 FTMaker<int>: size 0x10, clang 0x8

@@ -1,0 +1,87 @@
+{
+ "stats": {
+  "denominator": {
+   "by_kind": {
+    "c": 0,
+    "ctor": 2,
+    "data": 1,
+    "dtor": 0,
+    "function": 1,
+    "method": 0,
+    "thunk": 0,
+    "vtable": 0
+   },
+   "total": 4
+  }
+ },
+ "symbols": [
+  {
+   "addr": "0x0834a000",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::cvBase()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN6cvBaseC1Ev",
+   "name": "cvBase",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 32,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x0834a000",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::cvBase()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN6cvBaseC2Ev",
+   "name": "cvBase",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 32,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x0834a290",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvFreeUtils(int)",
+   "group": "firaxis",
+   "kind": "function",
+   "mangled": "_Z11cvFreeUtilsi",
+   "name": "cvFreeUtils",
+   "params": "(int)",
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 24,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0b000000",
+   "bind": "global",
+   "cv": null,
+   "demangled": "g_cvCounter",
+   "group": "firaxis",
+   "kind": "data",
+   "mangled": "g_cvCounter",
+   "name": "g_cvCounter",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".bss",
+   "size": 4,
+   "type": "object",
+   "variant": null
+  }
+ ]
+}

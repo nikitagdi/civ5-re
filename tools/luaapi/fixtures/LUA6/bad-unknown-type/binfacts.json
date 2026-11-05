@@ -1,0 +1,21 @@
+{
+ "symbols+": [
+  {
+   "mangled": "_Z28LuaThunk_ControlBase_SetHideP9lua_State",
+   "demangled": "LuaThunk_ControlBase_SetHide(lua_State*)",
+   "addr": "0x09000010",
+   "size": 16,
+   "type": "func",
+   "bind": "global",
+   "section": ".text",
+   "kind": "function",
+   "variant": null,
+   "scope": "",
+   "scope_is_class": null,
+   "name": "LuaThunk_ControlBase_SetHide",
+   "params": "lua_State*",
+   "cv": null,
+   "group": "firaxis"
+  }
+ ]
+}

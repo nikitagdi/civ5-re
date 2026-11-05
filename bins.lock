@@ -1,0 +1,308 @@
+# Steam app 8930: depot 282301 holds the binaries, 282300 the content; fetched with `download_depot 8930 282301`.
+[[file]]
+path = "linux_1.0.3.279/Civ5XP"
+role = "target"
+sha256 = "cc06b647821ec5e7cca3c397f6b0d4726f0106cdd67bcf074d494bea2607a8ca"
+size = 36536148
+origin = "Steam depot 282301, 1.0.3.279, Aspyr changelist 130961"
+
+[[file]]
+path = "linux_1.0.3.279/binkawin.asi"
+role = "depot"
+sha256 = "8837ebe7ad9c9f391e9279554be59b1a1ec0280764937e5824e705b3335bb285"
+size = 55808
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/com.aspyr.civ5xp.version.json"
+role = "depot"
+sha256 = "aa3365a667ea1c788aea3316149d4c2c7c1cab0b8c163e74cc4006349076179e"
+size = 172
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libCvGameCoreDLL.so"
+role = "depot"
+sha256 = "789f8d0f0a15a9ccf8fdd677532e871304874376357d0e6f280c3e48f930b241"
+size = 5642200
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libCvGameCoreDLL_Expansion1.so"
+role = "depot"
+sha256 = "647498b4d81ec0b595ec345a5db77ae6a328048a9edbd96a7a780884d4df741e"
+size = 4890628
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libCvGameCoreDLL_Expansion2.so"
+role = "depot"
+sha256 = "7402b4aa68283e3f0046ef4bebf0e968f97699f872a7de69e57c8bf4da162331"
+size = 5660808
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libMiles.so"
+role = "depot"
+sha256 = "df33be1f7447bb96e0cbc26fd4f9b4b703623586574c9bf464a4e318f87f33f9"
+size = 539626
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libMilesMidi.so"
+role = "depot"
+sha256 = "a140d9aeaaed2da82b8de4b0b08ccf42b52d20819370be80c351f3a9e9f9de35"
+size = 251176
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libMilesX64.so"
+role = "depot"
+sha256 = "a702ce2d29e55aa3861b780174d0ea6e7a68051a0d4045a4a565c00607799324"
+size = 559386
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libc++.so"
+role = "depot"
+sha256 = "4032a09053a22ef8d1d90f5ae0647ae6e708610bd3fd9c19ce31108647054e38"
+size = 920044
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libc++.so.1"
+role = "depot"
+sha256 = "4032a09053a22ef8d1d90f5ae0647ae6e708610bd3fd9c19ce31108647054e38"
+size = 920044
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libc++.so.1.0"
+role = "depot"
+sha256 = "4032a09053a22ef8d1d90f5ae0647ae6e708610bd3fd9c19ce31108647054e38"
+size = 920044
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libcrypto.so.1.0.0"
+role = "depot"
+sha256 = "b0f1f7524c63843824f0e4ac521a700a3e7aff16edc59bb15bcad49f7849af19"
+size = 1734772
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libcxxrt.so"
+role = "depot"
+sha256 = "ca6aa9ecc8e6d65aadc8570d76033384ff9543c64141a1fa26f7466fb9a53a94"
+size = 128822
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libiconv.so"
+role = "depot"
+sha256 = "b08d270c9b3458223339d242cf41397d07d92647f06cce9b5b30573630a86e96"
+size = 1219620
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libiconv.so.2"
+role = "depot"
+sha256 = "b08d270c9b3458223339d242cf41397d07d92647f06cce9b5b30573630a86e96"
+size = 1219620
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libiconv.so.2.5.1"
+role = "depot"
+sha256 = "b08d270c9b3458223339d242cf41397d07d92647f06cce9b5b30573630a86e96"
+size = 1219620
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libopenal.so"
+role = "depot"
+sha256 = "3ae73698cb99069fb8f491be3c5e6ba0f06cabdc9471a11190629a50bd09e6e9"
+size = 297452
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libopenal.so.1"
+role = "depot"
+sha256 = "3ae73698cb99069fb8f491be3c5e6ba0f06cabdc9471a11190629a50bd09e6e9"
+size = 297452
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libopenal.so.1.13.0"
+role = "depot"
+sha256 = "3ae73698cb99069fb8f491be3c5e6ba0f06cabdc9471a11190629a50bd09e6e9"
+size = 297452
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libssl.so.1.0.0"
+role = "depot"
+sha256 = "031241264337f1d68e63be2276db32555287889c4c6b643ff4bffea640ac0dbb"
+size = 346124
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libsteam.so"
+role = "depot"
+sha256 = "986e81b3a7783c3c22c2cb895bfb331f43543260a7996ef10a11de2033ab6f3c"
+size = 4217996
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libsteam_api.so"
+role = "depot"
+sha256 = "83c02f3b64c97f7bef0d34af9f90945d88e7a030b2ac2782445dcc39bfa78e22"
+size = 66598
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libtbb.so"
+role = "depot"
+sha256 = "37b507cef26b47b7d1c2beefc91ec1e30d61b0e94073bebca780ac6870a62878"
+size = 20
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libtbb.so.2"
+role = "depot"
+sha256 = "84668c61c4e31f5b7a3883161282177ddddeaf0b063138684e6b02b67333ba20"
+size = 1625316
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libtier0_s.so"
+role = "depot"
+sha256 = "f4e23de9dbbfad5cb7835e7b0ecf6b3784653090f4092d39f1f87ea37788e6d6"
+size = 187151
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libuuid.so.1"
+role = "depot"
+sha256 = "cbbe75a83766d4140a8d8ac9134af804ff5a9e1933f2eff91317ecf757e8ffcc"
+size = 18012
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libuuid.so.1.3.0"
+role = "depot"
+sha256 = "cbbe75a83766d4140a8d8ac9134af804ff5a9e1933f2eff91317ecf757e8ffcc"
+size = 18012
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/libvstdlib_s.so"
+role = "depot"
+sha256 = "e51ef58d5375b3cbbd7f5f72b2a8091f5d45263b3d1dab81717830e1b0a284e9"
+size = 231443
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/mssdolby.flt"
+role = "depot"
+sha256 = "1e3a06705333cf10bebb4b9970a822dccfbf45ff08ab582e710310398eab488d"
+size = 7680
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/mssdsp.flt"
+role = "depot"
+sha256 = "b5920db5ae75cf73c2033724c26ec98024931bed212f63f153baf044992d6a00"
+size = 49664
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/mssmixer.mix"
+role = "depot"
+sha256 = "dbbf5644315baba786bb7387571c39e61632920910b5296a7a6a0bacf336bb4b"
+size = 35840
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/mssmp3.asi"
+role = "depot"
+sha256 = "1a18c564392b69ef9f63d4f6cf0da323dd760f11169aade31e377ee9cdef769d"
+size = 71168
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/mssogg.asi"
+role = "depot"
+sha256 = "2ca4a6665e519f9e205843515ce4668f637877e57dcd274bf99186bd080c4d68"
+size = 41472
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/msssrs.flt"
+role = "depot"
+sha256 = "a4a99c719cc597ac9d200bdef088c5a759b075e2f5953209bb994c88c7b63aeb"
+size = 12800
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/mssvoice.asi"
+role = "depot"
+sha256 = "605200ed58dbd9098d0cb6066f3c96f39bf4f297b8a96e83d2675ee492ba1a74"
+size = 152064
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "linux_1.0.3.279/steamclient.so"
+role = "depot"
+sha256 = "bdb7f9d6d78dfe596a94fc6190e5f9f4366391d7a0ebb5f8973ee14ce2c6f2c6"
+size = 16540201
+origin = "Steam depot 282301 (Linux 1.0.3.279)"
+
+[[file]]
+path = "win/Analyze-Civ5Dump.ps1"
+role = "windows"
+sha256 = "5886bb92d1b1b80f4726450f74250c54a3d75b70dc4ecaa7316b257391e27f31"
+size = 3666
+origin = "our WinDbg script"
+
+[[file]]
+path = "win/CivilizationV_DX11.exe"
+role = "windows"
+sha256 = "482a43cc52bf7045946c2fcba7cd82dd1ff83b826ef649e01126c865e8eae0a4"
+size = 16982584
+origin = "Steam Windows depot"
+
+[[file]]
+path = "win/CvGameCore_Expansion2_v34.15.dll"
+role = "windows"
+sha256 = "878673cdd4bc1be856693dafe60516a4fc7d92b0689ba3890c3de7bf62228a0a"
+size = 4253184
+origin = "Lekmod release v34.15"
+
+[[file]]
+path = "win/lekmod_v35.4_author_build/CvGameCore_Expansion2.dll"
+role = "windows"
+sha256 = "a5ac79567eff7c738f12c655457d2255199ef5da1e9e43aeb0e2b688b9161fd2"
+size = 4360192
+origin = "Lekmod author build (not publicly distributed)"
+
+[[file]]
+path = "win/lekmod_v35.4_author_build/CvGameCore_Expansion2.pdb"
+role = "windows"
+sha256 = "39c8e1b0975269fb5c4f9c191e0ab750ba12780934ead7567dfa00529067d8df"
+size = 23391232
+origin = "Lekmod author build (not publicly distributed)"
+
+[[file]]
+path = "win/scripts/sync/sync-state-live.cdb"
+role = "windows"
+sha256 = "8d0be6c98a344592849d8868d1857a842c568c2f0235aae5454913029cfc0c29"
+size = 2628
+origin = "our WinDbg script"
+
+[[file]]
+path = "win/scripts/sync/sync-state.cdb"
+role = "windows"
+sha256 = "0c836027b6d9e76886e891baad0bf4a043b69fe557feed8d6b67193b283629a5"
+size = 2543
+origin = "our WinDbg script"

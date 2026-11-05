@@ -1,0 +1,15 @@
+# Folder of a class without path evidence or agreeing neighbors.
+# qualified-name pattern (fnmatch, case-sensitive)<TAB>folder under Civ5Expansion2/ ; first match wins
+FireGrafix::*	FirePlace/FireGrafix
+FGX*	FirePlace/FireGrafix
+FLua::*	FirePlace/FireWorks/FLua/Include
+cvLua*	Civ5/Src/App/LuaSupport
+CvLua*	Civ5/Src/App/LuaSupport
+UI*	Civ5/Src/App/UI
+*Control	Civ5/Src/App/UI
+Nexus*	Civ5/Src/App/NexusSupport
+Net*	Civ5/Src/App
+F*	FirePlace/FireWorks
+cv*	Civ5/Src/App
+Cv*	Civ5/Src/App
+*	Civ5/Src/App

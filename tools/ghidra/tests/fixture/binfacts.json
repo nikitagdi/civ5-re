@@ -1,0 +1,462 @@
+{
+ "binary": {
+  "build_id": null,
+  "comment": [],
+  "entry": "0x08049810",
+  "name": "Civ5XP",
+  "sha256": "7f75fdaadc6e2871662432be3c064953db985e5ea99341b58d6242624040d47c",
+  "size": 3100
+ },
+ "functions_eh": [
+  {
+   "addr": "0x080496a0",
+   "size": 18
+  },
+  {
+   "addr": "0x080496c0",
+   "size": 12
+  },
+  {
+   "addr": "0x080496d0",
+   "size": 17
+  },
+  {
+   "addr": "0x080496f0",
+   "size": 48
+  },
+  {
+   "addr": "0x08049720",
+   "size": 14
+  },
+  {
+   "addr": "0x08049730",
+   "size": 16
+  },
+  {
+   "addr": "0x08049740",
+   "size": 20
+  },
+  {
+   "addr": "0x08049760",
+   "size": 16
+  },
+  {
+   "addr": "0x08049770",
+   "size": 11
+  },
+  {
+   "addr": "0x08049780",
+   "size": 27
+  },
+  {
+   "addr": "0x080497a0",
+   "size": 30
+  },
+  {
+   "addr": "0x080497c0",
+   "size": 58
+  },
+  {
+   "addr": "0x08049800",
+   "size": 14
+  },
+  {
+   "addr": "0x08049810",
+   "size": 131
+  }
+ ],
+ "plt": [],
+ "schema": 1,
+ "sections": [
+  {
+   "addr": "0x080484c4",
+   "flags": "A",
+   "name": ".rodata",
+   "size": 36
+  },
+  {
+   "addr": "0x080496a0",
+   "flags": "AX",
+   "name": ".text",
+   "size": 499
+  },
+  {
+   "addr": "0x0804b8dc",
+   "flags": "WA",
+   "name": ".data",
+   "size": 4
+  }
+ ],
+ "stats": {},
+ "symbols": [
+  {
+   "addr": "0x080484c4",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZTV4Base",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV4Base",
+   "name": "_ZTV4Base",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".rodata",
+   "size": 16,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x080484d4",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZTV7Derived",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV7Derived",
+   "name": "_ZTV7Derived",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".rodata",
+   "size": 20,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x080496a0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4BaseC1Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN4BaseC1Ev",
+   "name": "_ZN4BaseC1Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 18,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x080496a0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4BaseC2Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN4BaseC2Ev",
+   "name": "_ZN4BaseC2Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 18,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x080496c0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4Base6UpdateEi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN4Base6UpdateEi",
+   "name": "_ZN4Base6UpdateEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 12,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x080496d0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4Base5ExtraEii",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN4Base5ExtraEii",
+   "name": "_ZN4Base5ExtraEii",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 17,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x080496f0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7DerivedC1Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN7DerivedC1Ev",
+   "name": "_ZN7DerivedC1Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 48,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x080496f0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7DerivedC2Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN7DerivedC2Ev",
+   "name": "_ZN7DerivedC2Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 48,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x08049720",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived6UpdateEi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7Derived6UpdateEi",
+   "name": "_ZN7Derived6UpdateEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 14,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08049730",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived5ScaleEi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7Derived5ScaleEi",
+   "name": "_ZN7Derived5ScaleEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08049740",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZNK7Derived6GetPosEv",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZNK7Derived6GetPosEv",
+   "name": "_ZNK7Derived6GetPosEv",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 20,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08049760",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived3SumEii",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7Derived3SumEii",
+   "name": "_ZN7Derived3SumEii",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08049770",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived4PeekEv",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7Derived4PeekEv",
+   "name": "_ZN7Derived4PeekEv",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 11,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08049780",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_Z10CallUpdateP4Basei",
+   "group": "firaxis",
+   "kind": "function",
+   "mangled": "_Z10CallUpdateP4Basei",
+   "name": "_Z10CallUpdateP4Basei",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 27,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x080497a0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_Z9CallExtraP4Base",
+   "group": "firaxis",
+   "kind": "function",
+   "mangled": "_Z9CallExtraP4Base",
+   "name": "_Z9CallExtraP4Base",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 30,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x080497c0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_Z6UsePosP7Derivedi",
+   "group": "firaxis",
+   "kind": "function",
+   "mangled": "_Z6UsePosP7Derivedi",
+   "name": "_Z6UsePosP7Derivedi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 58,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08049810",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_start",
+   "group": "firaxis",
+   "kind": "c",
+   "mangled": "_start",
+   "name": "_start",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 131,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0804b8dc",
+   "bind": "global",
+   "cv": null,
+   "demangled": "g_counter",
+   "group": "firaxis",
+   "kind": "c",
+   "mangled": "g_counter",
+   "name": "g_counter",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".data",
+   "size": 4,
+   "type": "object",
+   "variant": null
+  }
+ ],
+ "tool": {},
+ "typeinfo": [],
+ "vtables": [
+  {
+   "addr": "0x080484c4",
+   "class": "Base",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x080484cc",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [],
+       "target": "0x080496c0"
+      },
+      {
+       "kind": "func",
+       "symbols": [],
+       "target": "0x080496d0"
+      }
+     ],
+     "typeinfo": null,
+     "vbase_offsets": []
+    }
+   ],
+   "size": 16,
+   "symbol": "_ZTV4Base"
+  },
+  {
+   "addr": "0x080484d4",
+   "class": "Derived",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x080484dc",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [],
+       "target": "0x08049720"
+      },
+      {
+       "kind": "func",
+       "symbols": [],
+       "target": "0x080496d0"
+      },
+      {
+       "kind": "func",
+       "symbols": [],
+       "target": "0x08049730"
+      }
+     ],
+     "typeinfo": null,
+     "vbase_offsets": []
+    }
+   ],
+   "size": 20,
+   "symbol": "_ZTV7Derived"
+  }
+ ]
+}

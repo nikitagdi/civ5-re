@@ -1,0 +1,1 @@
+Civ5Expansion2/Fx/Foo.h:1 O4 origin guess, but there is no class Foo

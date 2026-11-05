@@ -1,0 +1,742 @@
+{
+ "schema": "civ5re-lua-api/1",
+ "tool": {
+  "luaapi": "1.0.0"
+ },
+ "inputs": {
+  "typedb_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "binfacts_sha256": "abababababababababababababababababababababababababababababababab",
+  "game_scanned": false
+ },
+ "types": [
+  {
+   "name": "AlphaAnim",
+   "kind": "class",
+   "base": "ControlBase",
+   "xml": [
+    "AlphaAnim",
+    "Alpha"
+   ],
+   "cxx": "AlphaAnimCtl",
+   "origin": "exe",
+   "fields": [],
+   "values": [],
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 39,
+   "doc": null
+  },
+  {
+   "name": "Area",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaArea.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "City",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaCity.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "ControlBase",
+   "kind": "class",
+   "base": null,
+   "xml": [],
+   "cxx": "ControlBase",
+   "origin": "exe",
+   "fields": [],
+   "values": [],
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 29,
+   "doc": null
+  },
+  {
+   "name": "Deal",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaDeal.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "Event",
+   "kind": "class",
+   "base": null,
+   "xml": [],
+   "cxx": "CvLuaEvent",
+   "origin": "exe",
+   "fields": [],
+   "values": [],
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 69,
+   "doc": null
+  },
+  {
+   "name": "Game",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaGame.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "Keys",
+   "kind": "enum",
+   "base": null,
+   "xml": [],
+   "cxx": "Keys",
+   "origin": "exe",
+   "fields": [],
+   "values": [
+    {
+     "name": "VK_A",
+     "value": 65
+    },
+    {
+     "name": "VK_RETURN",
+     "value": 13
+    }
+   ],
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 99,
+   "doc": "Virtual keys."
+  },
+  {
+   "name": "League",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaLeague.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "Map",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaMap.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "Player",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaPlayer.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "Plot",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaPlot.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "Team",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaTeam.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "TeamTech",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaTeamTech.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "UI",
+   "kind": "table",
+   "base": null,
+   "xml": [],
+   "cxx": "cvLuaInterfaceBuddy",
+   "origin": "exe",
+   "fields": [],
+   "values": [],
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 19,
+   "doc": null
+  },
+  {
+   "name": "Unit",
+   "kind": "external",
+   "base": null,
+   "xml": [],
+   "cxx": null,
+   "origin": "gamecore",
+   "fields": [],
+   "values": [],
+   "file": "Lua/CvLuaUnit.h",
+   "line": null,
+   "doc": null
+  },
+  {
+   "name": "Vector2",
+   "kind": "shape",
+   "base": null,
+   "xml": [],
+   "cxx": "FGXVector2",
+   "origin": "exe",
+   "fields": [
+    {
+     "name": "x",
+     "optional": false,
+     "type": "number",
+     "t": {
+      "k": "prim",
+      "name": "number"
+     }
+    },
+    {
+     "name": "y",
+     "optional": false,
+     "type": "number",
+     "t": {
+      "k": "prim",
+      "name": "number"
+     }
+    }
+   ],
+   "values": [],
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 49,
+   "doc": null
+  }
+ ],
+ "globals": [
+  {
+   "name": "Controls",
+   "type": "table<string, ControlBase>",
+   "t": {
+    "k": "map",
+    "key": {
+     "k": "prim",
+     "name": "string"
+    },
+    "value": {
+     "k": "name",
+     "name": "ControlBase"
+    }
+   },
+   "cxx": "ControlHolder",
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 59,
+   "doc": null
+  }
+ ],
+ "functions": [
+  {
+   "path": "AlphaAnim:SetSize",
+   "owner": "AlphaAnim",
+   "name": "SetSize",
+   "call": "method",
+   "overload": 0,
+   "params": [
+    {
+     "name": "size",
+     "optional": false,
+     "vararg": false,
+     "type": "Vector2",
+     "t": {
+      "k": "name",
+      "name": "Vector2"
+     }
+    }
+   ],
+   "returns": [],
+   "raw": "AlphaAnim:SetSize(size: Vector2)",
+   "cxx": {
+    "qualified": "ControlBase::SetSize",
+    "mangled": "_ZN11ControlBase7SetSizeERK10FGXVector2",
+    "addr": "0x08691a00",
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 36,
+    "template": false
+   },
+   "bind": "flua",
+   "thunk": null,
+   "doc": "Resizes the control.",
+   "game_uses": null
+  },
+  {
+   "path": "ControlBase:SetHide",
+   "owner": "ControlBase",
+   "name": "SetHide",
+   "call": "method",
+   "overload": 0,
+   "params": [
+    {
+     "name": "hide",
+     "optional": false,
+     "vararg": false,
+     "type": "boolean",
+     "t": {
+      "k": "prim",
+      "name": "boolean"
+     }
+    }
+   ],
+   "returns": [],
+   "raw": "ControlBase:SetHide(hide: boolean)",
+   "cxx": {
+    "qualified": "ControlBase::SetHide",
+    "mangled": "_ZN11ControlBase7SetHideEb",
+    "addr": "0x08691916",
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 32,
+    "template": false
+   },
+   "bind": "flua",
+   "thunk": {
+    "name": "LuaThunk_ControlBase_SetHide",
+    "addr": "0x08693aaf"
+   },
+   "doc": null,
+   "game_uses": null
+  },
+  {
+   "path": "ControlBase:SetSize",
+   "owner": "ControlBase",
+   "name": "SetSize",
+   "call": "method",
+   "overload": 0,
+   "params": [
+    {
+     "name": "size",
+     "optional": false,
+     "vararg": false,
+     "type": "Vector2",
+     "t": {
+      "k": "name",
+      "name": "Vector2"
+     }
+    }
+   ],
+   "returns": [],
+   "raw": "ControlBase:SetSize(size: Vector2)",
+   "cxx": {
+    "qualified": "ControlBase::SetSize",
+    "mangled": "_ZN11ControlBase7SetSizeERK10FGXVector2",
+    "addr": "0x08691a00",
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 36,
+    "template": false
+   },
+   "bind": "flua",
+   "thunk": {
+    "name": "LuaThunk_ControlBase_SetSize",
+    "addr": "0x08693b00"
+   },
+   "doc": "Resizes the control.",
+   "game_uses": null
+  },
+  {
+   "path": "Event:Add",
+   "owner": "Event",
+   "name": "Add",
+   "call": "method",
+   "overload": 0,
+   "params": [
+    {
+     "name": "handler",
+     "optional": false,
+     "vararg": false,
+     "type": "fun(EventArgs)",
+     "t": {
+      "k": "fun",
+      "params": [
+       {
+        "name": null,
+        "optional": false,
+        "vararg": false,
+        "type": "EventArgs",
+        "t": {
+         "k": "eventargs"
+        }
+       }
+      ],
+      "returns": []
+     }
+    }
+   ],
+   "returns": [],
+   "raw": "Event:Add(handler: fun(EventArgs))",
+   "cxx": {
+    "qualified": "CvLuaEvent::lAdd",
+    "mangled": null,
+    "addr": null,
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 72,
+    "template": true
+   },
+   "bind": "event",
+   "thunk": null,
+   "doc": null,
+   "game_uses": null
+  },
+  {
+   "path": "Event:__call",
+   "owner": "Event",
+   "name": "__call",
+   "call": "method",
+   "overload": 0,
+   "params": [
+    {
+     "name": null,
+     "optional": false,
+     "vararg": false,
+     "type": "EventArgs",
+     "t": {
+      "k": "eventargs"
+     }
+    }
+   ],
+   "returns": [],
+   "raw": "Event:__call(EventArgs)",
+   "cxx": {
+    "qualified": "CvLuaEvent::lMetaCall",
+    "mangled": null,
+    "addr": null,
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 74,
+    "template": true
+   },
+   "bind": "event",
+   "thunk": null,
+   "doc": null,
+   "game_uses": null
+  },
+  {
+   "path": "UI.GetHeadSelectedUnit",
+   "owner": "UI",
+   "name": "GetHeadSelectedUnit",
+   "call": "dot",
+   "overload": 0,
+   "params": [],
+   "returns": [
+    {
+     "name": null,
+     "type": "Unit?",
+     "t": {
+      "k": "nullable",
+      "inner": {
+       "k": "name",
+       "name": "Unit"
+      }
+     }
+    }
+   ],
+   "raw": "UI.GetHeadSelectedUnit() -> Unit?",
+   "cxx": {
+    "qualified": "cvLuaInterfaceBuddy::lGetHeadSelectedUnit",
+    "mangled": "_ZN19cvLuaInterfaceBuddy20lGetHeadSelectedUnitEP9lua_State",
+    "addr": "0x089468e6",
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 22,
+    "template": false
+   },
+   "bind": "lib",
+   "thunk": null,
+   "doc": "Head of the active player's selected group.",
+   "game_uses": null
+  },
+  {
+   "path": "UI.Open",
+   "owner": "UI",
+   "name": "Open",
+   "call": "dot",
+   "overload": 0,
+   "params": [
+    {
+     "name": "name",
+     "optional": false,
+     "vararg": false,
+     "type": "string",
+     "t": {
+      "k": "prim",
+      "name": "string"
+     }
+    }
+   ],
+   "returns": [],
+   "raw": "UI.Open(name: string)",
+   "cxx": {
+    "qualified": "cvLuaInterfaceBuddy::lOpen",
+    "mangled": "_ZN19cvLuaInterfaceBuddy5lOpenEP9lua_State",
+    "addr": "0x089468e7",
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 25,
+    "template": false
+   },
+   "bind": "lib",
+   "thunk": null,
+   "doc": null,
+   "game_uses": null
+  },
+  {
+   "path": "UI.Open",
+   "owner": "UI",
+   "name": "Open",
+   "call": "dot",
+   "overload": 1,
+   "params": [
+    {
+     "name": "name",
+     "optional": false,
+     "vararg": false,
+     "type": "string",
+     "t": {
+      "k": "prim",
+      "name": "string"
+     }
+    },
+    {
+     "name": "flag",
+     "optional": false,
+     "vararg": false,
+     "type": "boolean",
+     "t": {
+      "k": "prim",
+      "name": "boolean"
+     }
+    }
+   ],
+   "returns": [],
+   "raw": "UI.Open(name: string, flag: boolean)",
+   "cxx": {
+    "qualified": "cvLuaInterfaceBuddy::lOpen",
+    "mangled": "_ZN19cvLuaInterfaceBuddy5lOpenEP9lua_State",
+    "addr": "0x089468e7",
+    "file": "Civ5Expansion2/Lua/UI.h",
+    "line": 25,
+    "template": false
+   },
+   "bind": "lib",
+   "thunk": null,
+   "doc": null,
+   "game_uses": null
+  }
+ ],
+ "events": [
+  {
+   "lib": "Events",
+   "name": "SerialEventStart",
+   "container": "nonserial",
+   "id": 4,
+   "cxx_type": "EventTemplate<Event_Int2Type<4>,NullEventClass,LinearEventDispatcher,NonSerialContainer,NullEventClass>",
+   "payload": null,
+   "handler_args": [],
+   "call_args": [],
+   "binding": true,
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 111,
+   "doc": "Fires once.",
+   "game_uses": null
+  },
+  {
+   "lib": "Events",
+   "name": "SerialEventUnitCreated",
+   "container": "serial",
+   "id": 3,
+   "cxx_type": "EventTemplate<Event_Int2Type<3>,UnitCreatedData,LinearEventDispatcher,SerialContainer,NullEventClass>",
+   "payload": "UnitCreatedData",
+   "handler_args": [
+    {
+     "name": "playerID",
+     "optional": false,
+     "type": "integer",
+     "t": {
+      "k": "prim",
+      "name": "integer"
+     }
+    },
+    {
+     "name": "unitID",
+     "optional": false,
+     "type": "integer",
+     "t": {
+      "k": "prim",
+      "name": "integer"
+     }
+    }
+   ],
+   "call_args": [
+    {
+     "name": "playerID",
+     "optional": false,
+     "type": "integer",
+     "t": {
+      "k": "prim",
+      "name": "integer"
+     }
+    },
+    {
+     "name": "unitID",
+     "optional": false,
+     "type": "integer",
+     "t": {
+      "k": "prim",
+      "name": "integer"
+     }
+    }
+   ],
+   "binding": true,
+   "file": "Civ5Expansion2/Lua/UI.h",
+   "line": 109,
+   "doc": null,
+   "game_uses": null
+  }
+ ],
+ "coverage": {
+  "partial": false,
+  "entry_points": 13,
+  "marked": 8,
+  "none": 1,
+  "unknown": 1,
+  "unmarked": 0,
+  "undeclared": 3,
+  "by_owner": [
+   {
+    "cxx_scope": "CvLuaEvent",
+    "lua": "Event",
+    "total": 2,
+    "marked": 2,
+    "none": 0,
+    "unknown": 0,
+    "missing": 0
+   },
+   {
+    "cxx_scope": "CvLuaEvent::Handle",
+    "lua": null,
+    "total": 1,
+    "marked": 0,
+    "none": 0,
+    "unknown": 0,
+    "missing": 1
+   },
+   {
+    "cxx_scope": "LuaThunk_*",
+    "lua": null,
+    "total": 3,
+    "marked": 2,
+    "none": 0,
+    "unknown": 0,
+    "missing": 1
+   },
+   {
+    "cxx_scope": "cvLuaInterfaceBuddy",
+    "lua": "UI",
+    "total": 5,
+    "marked": 2,
+    "none": 1,
+    "unknown": 1,
+    "missing": 1
+   }
+  ],
+  "events": {
+   "in_binary": 3,
+   "declared": 2,
+   "with_args": 2
+  },
+  "payloads": {
+   "to_lua": 1,
+   "push": 1,
+   "from_lua": 1,
+   "pull": 1
+  }
+ },
+ "missing": [
+  {
+   "cxx": "CvLuaEvent::Handle::lDestroy",
+   "mangled": "_ZFAKEHandle0",
+   "addr": "0x08a90000",
+   "status": "undeclared",
+   "hint": null,
+   "game_uses": null
+  },
+  {
+   "cxx": "LuaThunk_FooBar_Something",
+   "mangled": "_Z24LuaThunk_FooBar_SomethingP9lua_State",
+   "addr": "0x08693c00",
+   "status": "undeclared",
+   "hint": "FooBar_Something",
+   "game_uses": null
+  },
+  {
+   "cxx": "cvLuaInterfaceBuddy::lLater",
+   "mangled": "_ZN19cvLuaInterfaceBuddy6lLaterEP9lua_State",
+   "addr": "0x089468e9",
+   "status": "unknown",
+   "hint": "UI.Later",
+   "game_uses": null
+  },
+  {
+   "cxx": "cvLuaInterfaceBuddy::lOther",
+   "mangled": "_ZN19cvLuaInterfaceBuddy6lOtherEP9lua_State",
+   "addr": "0x089468ea",
+   "status": "undeclared",
+   "hint": "UI.Other",
+   "game_uses": null
+  }
+ ],
+ "diagnostics": []
+}

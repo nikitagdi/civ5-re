@@ -1,0 +1,2 @@
+Civ5Expansion2/Lua/UI.h:15 LUA6 ControlBase:SetHide: argument 'hide' is string
+Civ5Expansion2/Lua/UI.h:15 LUA6 ControlBase:SetHide: returns 1 values, target returns void

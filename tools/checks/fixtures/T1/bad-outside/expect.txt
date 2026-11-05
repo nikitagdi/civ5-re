@@ -1,0 +1,4 @@
+src/x.h:1 T1 source outside the mirror
+tools/typedb/impl.cpp:1 T1 source outside the mirror
+Civ5Expansion2/data.txt:1 T1 non-source file in the mirror
+Civ5Expansion2/Civ5/b.hpp:1 T1 non-source file in the mirror

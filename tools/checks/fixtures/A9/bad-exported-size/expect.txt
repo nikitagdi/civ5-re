@@ -1,0 +1,1 @@
+Civ5Expansion2/Fx/Globals.h:5 A9 g_cvCounter: sizeof 8, symbol has 4

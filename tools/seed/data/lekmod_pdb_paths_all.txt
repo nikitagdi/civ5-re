@@ -1,0 +1,696 @@
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\assert.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\codeanalysis\sourceannotations.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\crtassem.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\crtdbg.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\crtdefs.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\crtwrn.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\ctype.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\eh.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\excpt.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\float.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\limits.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\locale.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\malloc.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\math.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\mbstring.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\memory.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\mmintrin.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\sal.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\share.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\stdarg.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\stddef.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\stdio.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\stdlib.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\string.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\swprintf.inl
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\tchar.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\use_ansi.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\vadefs.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\wchar.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\wtime.inl
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\xlocinfo.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\xmmintrin.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\ymath.h
+c:\program files (x86)\microsoft visual studio 9.0\vc\include\yvals.h
+c:\program files\microsoft sdks\windows\v6.0a\include\basetsd.h
+c:\program files\microsoft sdks\windows\v6.0a\include\cguid.h
+c:\program files\microsoft sdks\windows\v6.0a\include\dbghelp.h
+c:\program files\microsoft sdks\windows\v6.0a\include\guiddef.h
+c:\program files\microsoft sdks\windows\v6.0a\include\imm.h
+c:\program files\microsoft sdks\windows\v6.0a\include\ktmtypes.h
+c:\program files\microsoft sdks\windows\v6.0a\include\mmsystem.h
+c:\program files\microsoft sdks\windows\v6.0a\include\msxml.h
+c:\program files\microsoft sdks\windows\v6.0a\include\oaidl.h
+c:\program files\microsoft sdks\windows\v6.0a\include\objbase.h
+c:\program files\microsoft sdks\windows\v6.0a\include\objidl.h
+c:\program files\microsoft sdks\windows\v6.0a\include\ole2.h
+c:\program files\microsoft sdks\windows\v6.0a\include\oleauto.h
+c:\program files\microsoft sdks\windows\v6.0a\include\oleidl.h
+c:\program files\microsoft sdks\windows\v6.0a\include\poppack.h
+c:\program files\microsoft sdks\windows\v6.0a\include\propidl.h
+c:\program files\microsoft sdks\windows\v6.0a\include\pshpack1.h
+c:\program files\microsoft sdks\windows\v6.0a\include\pshpack2.h
+c:\program files\microsoft sdks\windows\v6.0a\include\pshpack4.h
+c:\program files\microsoft sdks\windows\v6.0a\include\pshpack8.h
+c:\program files\microsoft sdks\windows\v6.0a\include\reason.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpc.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcasync.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcdce.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcdcep.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcndr.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcnsi.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcnsip.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcnterr.h
+c:\program files\microsoft sdks\windows\v6.0a\include\rpcsal.h
+c:\program files\microsoft sdks\windows\v6.0a\include\sdkddkver.h
+c:\program files\microsoft sdks\windows\v6.0a\include\servprov.h
+c:\program files\microsoft sdks\windows\v6.0a\include\specstrings.h
+c:\program files\microsoft sdks\windows\v6.0a\include\specstrings_adt.h
+c:\program files\microsoft sdks\windows\v6.0a\include\specstrings_strict.h
+c:\program files\microsoft sdks\windows\v6.0a\include\specstrings_undef.h
+c:\program files\microsoft sdks\windows\v6.0a\include\stralign.h
+c:\program files\microsoft sdks\windows\v6.0a\include\tvout.h
+c:\program files\microsoft sdks\windows\v6.0a\include\unknwn.h
+c:\program files\microsoft sdks\windows\v6.0a\include\urlmon.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winbase.h
+c:\program files\microsoft sdks\windows\v6.0a\include\wincon.h
+c:\program files\microsoft sdks\windows\v6.0a\include\windef.h
+c:\program files\microsoft sdks\windows\v6.0a\include\windows.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winerror.h
+c:\program files\microsoft sdks\windows\v6.0a\include\wingdi.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winnetwk.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winnls.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winnt.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winreg.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winuser.h
+c:\program files\microsoft sdks\windows\v6.0a\include\winver.h
+c:\program files\microsoft sdks\windows\v6.0a\include\wtypes.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\_defines.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\_fruitydefines.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\_precompile.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvachievementunlocker.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvachievementunlocker.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvadvisorcounsel.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvadvisorcounsel.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvadvisorrecommender.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvadvisorrecommender.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvaioperation.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvaioperation.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvarea.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvarea.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvarmyai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvarmyai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvastar.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvastar.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvastarnode.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbarbarians.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbarbarians.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbeliefclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbeliefclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbitfield.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbuildertaskingai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbuildertaskingai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbuildingclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbuildingclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbuildingproductionai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvbuildingproductionai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcity.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcity.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcityai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcityai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcitycitizens.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcitycitizens.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcityconnections.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcityconnections.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcitymanager.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcitymanager.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcityspecializationai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcityspecializationai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcitystrategyai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcitystrategyai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcultureclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvcultureclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdangerplots.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdangerplots.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdatabaseutility.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdatabaseutility.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdealai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdealai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdealclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdealclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdefines.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdiplomacyai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdiplomacyai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdiplomacyaienums.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdiplomacyrequests.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdiplomacyrequests.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllbuildinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllbuildinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllbuildinginfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllbuildinginfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcity.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcity.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcivilizationinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcivilizationinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcolorinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcolorinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcombatinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcombatinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcontext.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllcontext.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldatabaseutility.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldatabaseutility.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldeal.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldeal.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldealai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldealai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldiplomacyai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldiplomacyai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldlcpackageinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlldlcpackageinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllerainfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllerainfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllfeatureinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllfeatureinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgame.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgame.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgameasynch.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgameasynch.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgamedeals.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgamedeals.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgameoptioninfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgameoptioninfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgamespeedinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllgamespeedinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllhandicapinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllhandicapinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllimprovementinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllimprovementinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllinterfacemodeinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllinterfacemodeinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllleaderheadinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllleaderheadinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllmap.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllmap.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllminorcivinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllminorcivinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllmissiondata.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllmissiondata.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllmissioninfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllmissioninfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetinitinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetinitinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetloadgameinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetloadgameinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetmessagehandler.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetmessagehandler.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetworksyncronization.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllnetworksyncronization.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpathfinderupdate.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpathfinderupdate.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplayer.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplayer.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplayercolorinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplayercolorinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplayeroptioninfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplayeroptioninfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplot.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllplot.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpolicyinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpolicyinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpregame.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpregame.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpromotioninfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllpromotioninfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllrandom.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllrandom.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllresourceinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllresourceinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllscriptsystemutility.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllscriptsystemutility.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllteam.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllteam.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlltechinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdlltechinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllterraininfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllterraininfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllunit.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllunit.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllunitcombatclassinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllunitcombatclassinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllunitinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllunitinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllversion.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllvictoryinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllvictoryinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllworldbuildermaploader.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllworldbuildermaploader.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllworldinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvdllworldinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cveconomicai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cveconomicai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvemphasisclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvemphasisclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvespionageclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvespionageclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvflavormanager.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvflavormanager.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvfractal.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvfractal.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgame.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgame.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredll.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllpch.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvassert.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvdllinterfaces.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvdllinterfaces2.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvdllutildefines.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvenums.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvenumserialization.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvgamecoredllutil.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvgamecoredllutil_win32headers.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvluaargtemplates.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvluamethodwrapper.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvluastaticinstance.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvstring.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvstringutils.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvstructs.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\cvweightedvector.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\icvdlldatabaseutility.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\icvdllscriptsystem.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\icvdlluserinterface.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\icvdllutility.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoredllutil\include\linkedlist.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoreenums.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoreenumserialization.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoreenumserialization.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoreutils.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamecoreutils.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\cvgamedatabase.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\database.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\databaseio.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\databaseresults.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\idatabaselogger.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\luaexposures.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\resultscache.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamedatabase\include\xmlserializer.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamequeries.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgamequeries.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgametextmgr.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgametextmgr.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvglobals.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvglobals.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgoodyhuts.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgoodyhuts.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgrandstrategyai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvgrandstrategyai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvhomelandai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvhomelandai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvimprovementclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvimprovementclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvinfos.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvinfos.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvinfosserializationhelper.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvinfosserializationhelper.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvinternalgamecoreutils.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvinternalgamecoreutils.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvlocalization\include\cvlocalization.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvlocalization\include\ilocalizationlogger.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvmap.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvmap.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvmapgenerator.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvmapgenerator.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvmilitaryai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvmilitaryai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvminorcivai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvminorcivai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvnotificationclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvnotificationclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvnotifications.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvnotifications.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplayer.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplayer.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplayerai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplayerai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplayermanager.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplayermanager.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplot.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplot.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplotmanager.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvplotmanager.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpoint.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpolicyai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpolicyai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpolicyclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpolicyclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpopupinfoserialization.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpopupinfoserialization.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpopupreturn.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpopupreturn.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpregame.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpregame.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvprocessproductionai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvprocessproductionai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvprojectclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvprojectclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvprojectproductionai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvprojectproductionai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpromotionclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvpromotionclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvrandom.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvrandom.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvreligionclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvreligionclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvreplayinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvreplayinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvreplaymessage.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvreplaymessage.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvsiteevaluationclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvsiteevaluationclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvstartpositioner.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvstartpositioner.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvstopwatch.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvstopwatch.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvstructs.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvstructs.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtacticalai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtacticalai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtacticalanalysismap.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtacticalanalysismap.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtargeting.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtargeting.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvteam.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvteam.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtechai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtechai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtechclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtechclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtradeclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtradeclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtraitclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtraitclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtreasury.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtreasury.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtypes.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvtypes.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunit.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunit.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitcombat.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitcombat.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitcycler.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitcycler.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitmission.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitmission.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitmovement.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitmovement.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitproductionai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvunitproductionai.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvvotingclasses.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvvotingclasses.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvwonderproductionai.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvwonderproductionai.h
+C:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvWorldBuilderMap\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvGameCoreDLLUtil\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvLocalization\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvGameDatabase\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\FirePlace\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\FirePlace\include\FireWorks\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\ThirdPartyLibs\Lua51\include\ -Zi -nologo -W4 -WX- -MP -Ox -Ob2 -Oi -Ot -Oy -DFXS_IS_DLL -DWIN32 -DNDEBUG -D_WINDOWS -D_USRDLL -DCVGAMECOREDLL_EXPORTS -DFINAL_RELEASE -D_CRT_SECURE_NO_WARNINGS -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS -D_WINDLL -D_MBCS -Gm- -MD -GS- -Gy -fp:strict -Zc:wchar_t -Zc:forScope -GR -YcCvGameCoreDLLPCH.h
+C:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvWorldBuilderMap\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvGameCoreDLLUtil\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvLocalization\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\CvGameDatabase\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\FirePlace\include\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\FirePlace\include\FireWorks\ -IC:\users\user\Documents\GitHub\Lekmod\LEKMOD_DLL\CvGameCoreDLL_Expansion2\ThirdPartyLibs\Lua51\include\ -Zi -nologo -W4 -WX- -MP -Ox -Ob2 -Oi -Ot -Oy -DFXS_IS_DLL -DWIN32 -DNDEBUG -D_WINDOWS -D_USRDLL -DCVGAMECOREDLL_EXPORTS -DFINAL_RELEASE -D_CRT_SECURE_NO_WARNINGS -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS -D_WINDLL -D_MBCS -Gm- -MD -GS- -Gy -fp:strict -Zc:wchar_t -Zc:forScope -GR -YuCvGameCoreDLLPCH.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermap\include\cvworldbuildermap.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermap\include\cvworldbuildermapelementallocator.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermap\include\cvworldbuildermapmoddata.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermap\include\cvworldbuildermaptypedesc.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermap\include\cvworldbuildermaptypegroup.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermap\include\frelationshipbitset.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermaploader.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\cvworldbuildermaploader.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\eventsystem\fastdelegate.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\farray.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fassert.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fastarnode.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fatomic.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fautoarchive.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fautoarchiveclasscontainer.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fautovariable.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fautovariablebase.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fautovector.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fbatchallocate.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fbitflags.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fcallstack.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fcrc32.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fcriticalsection.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fcriticalsection.inl
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fdatastream.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fdefnew.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fendian.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffastallocator.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffastlist.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffastvector.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffiledefines.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffilestream.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffilesystem.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffiretypes.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffreelistarraybase.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ffreelisttrasharray.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fifile.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\figameiniparser.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\filogfile.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\finputdevice.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\flua.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\fluacommon.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\fluafstringsupport.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\fluaglobaldata.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\fluapointerprotection.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\fluastaticfunctions.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\fluatypeexposure.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\flua\include\fluatypes.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fmemhooks.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fmemorystream.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fobjecthandle.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fobjectpool.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fprefetch.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fremark.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fstlblockallocator.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fstlblockallocatormt.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fstlcontainerserialization.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fstring.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fstringa.inl
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fstringw.inl
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ftempheap.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\ftimer.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\funcopyable.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fundefnew.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\fvariablesystem.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\lintfree.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\win32\fdebughelper.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\win32\fdebughelper.inl
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\fireplace\include\fireworks\win32\fkbinputdevice.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaarea.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaarea.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaargshandle.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaargshandle.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluacity.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluacity.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluadeal.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluadeal.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaenums.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaenums.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluafractal.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluafractal.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluagame.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluagame.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluagameinfo.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluagameinfo.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvlualeague.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvlualeague.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluamap.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluamap.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaplayer.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaplayer.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaplot.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaplot.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluascopedinstance.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluasupport.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluasupport.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluateam.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluateam.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluateamtech.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluateamtech.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaunit.cpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\lua\cvluaunit.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\thirdpartylibs\lua51\include\lauxlib.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\thirdpartylibs\lua51\include\lua.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\thirdpartylibs\lua51\include\lua.hpp
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\thirdpartylibs\lua51\include\luaconf.h
+c:\users\user\documents\github\lekmod\lekmod_dll\cvgamecoredll_expansion2\thirdpartylibs\lua51\include\lualib.h
+f:\binaries.x86ret\inc\emmintrin.h
+f:\binaries.x86ret\inc\mm3dnow.h
+f:\binaries.x86ret\inc\mmintrin.h
+f:\binaries.x86ret\inc\xmmintrin.h
+f:\dd\public\ddk\inc\devioctl.h
+f:\dd\public\ddk\inc\mce.h
+f:\dd\public\ddk\inc\ntdef.h
+f:\dd\public\ddk\inc\ntimage.h
+f:\dd\public\ddk\inc\ntnls.h
+f:\dd\public\ddk\inc\ntpoapi.h
+f:\dd\public\ddk\inc\poppack.h
+f:\dd\public\ddk\inc\pshpack4.h
+f:\dd\public\devdiv\inc\ddbanned.h
+f:\dd\public\internal\vctools\include\undname.h
+f:\dd\public\sdk\inc\basetsd.h
+f:\dd\public\sdk\inc\cfg.h
+f:\dd\public\sdk\inc\guiddef.h
+f:\dd\public\sdk\inc\imm.h
+f:\dd\public\sdk\inc\internal\nt.h
+f:\dd\public\sdk\inc\internal\ntconfig.h
+f:\dd\public\sdk\inc\internal\ntelfapi.h
+f:\dd\public\sdk\inc\internal\ntexapi.h
+f:\dd\public\sdk\inc\internal\nti386.h
+f:\dd\public\sdk\inc\internal\ntioapi.h
+f:\dd\public\sdk\inc\internal\ntiolog.h
+f:\dd\public\sdk\inc\internal\ntkeapi.h
+f:\dd\public\sdk\inc\internal\ntldr.h
+f:\dd\public\sdk\inc\internal\ntlpcapi.h
+f:\dd\public\sdk\inc\internal\ntmmapi.h
+f:\dd\public\sdk\inc\internal\ntobapi.h
+f:\dd\public\sdk\inc\internal\ntpnpapi.h
+f:\dd\public\sdk\inc\internal\ntpsapi.h
+f:\dd\public\sdk\inc\internal\ntregapi.h
+f:\dd\public\sdk\inc\internal\ntseapi.h
+f:\dd\public\sdk\inc\internal\ntxcapi.h
+f:\dd\public\sdk\inc\internal\nxi386.h
+f:\dd\public\sdk\inc\internal\pebteb.h
+f:\dd\public\sdk\inc\ktmtypes.h
+f:\dd\public\sdk\inc\mcx.h
+f:\dd\public\sdk\inc\ntstatus.h
+f:\dd\public\sdk\inc\poppack.h
+f:\dd\public\sdk\inc\pshpack1.h
+f:\dd\public\sdk\inc\pshpack2.h
+f:\dd\public\sdk\inc\pshpack4.h
+f:\dd\public\sdk\inc\pshpack8.h
+f:\dd\public\sdk\inc\reason.h
+f:\dd\public\sdk\inc\sdkddkver.h
+f:\dd\public\sdk\inc\specstrings.h
+f:\dd\public\sdk\inc\specstrings_adt.h
+f:\dd\public\sdk\inc\specstrings_strict.h
+f:\dd\public\sdk\inc\specstrings_undef.h
+f:\dd\public\sdk\inc\stralign.h
+f:\dd\public\sdk\inc\tvout.h
+f:\dd\public\sdk\inc\winbase.h
+f:\dd\public\sdk\inc\wincon.h
+f:\dd\public\sdk\inc\windef.h
+f:\dd\public\sdk\inc\windows.h
+f:\dd\public\sdk\inc\winerror.h
+f:\dd\public\sdk\inc\wingdi.h
+f:\dd\public\sdk\inc\winnetwk.h
+f:\dd\public\sdk\inc\winnls.h
+f:\dd\public\sdk\inc\winnt.h
+f:\dd\public\sdk\inc\winreg.h
+f:\dd\public\sdk\inc\winsvc.h
+f:\dd\public\sdk\inc\winuser.h
+f:\dd\public\sdk\inc\winver.h
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\build\INTEL\dll_obj\ -D_RTC -D_MBCS -D_MB_MAP_DIRECT -D_CRTBLD -D_FN_WIDE -DWINHEAP -D_MT -DCRTDLL -D_CRT_CHECK_MANIFEST -D_STL_NOFORCE_MANIFEST -D_CRT_NOFORCE_MANIFEST -DWIN32_LEAN_AND_MEAN -D_WIN32_WINDOWS=0x501 -D-D-DNOSERVICE -DWIND32 -DFPO=1 -DWIN32 -D_X86_=1 -Di386=1 -DNT_UP=1 -DDEVL=1 -D_WIN32_WINNT=0x0501 -D_WIN32_IE=0x0600 -DWINNT=1 -DNT_INST=0 -DCONDITION_HANDLING=1 -D__BUILDMACHINE__=SP -DNTDDI_VERSION=0x05020100 -D_SHIP -DNDEBUG -D_NEW_SDK=1 -DOFFICIAL_BUILD=0 -DBETA=0 -DFX_VER_PRIVATEBUILD_STR=DDBLD211 -DURTBLDENV_FRIENDLY=Retail -DFX_BRANCH_SYNC_COUNTER_VALUE=0 -FIddbanned.h
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\build\INTEL\dll_obj\ -Fof:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\build\INTEL\dll_obj\ -D_RTC -D_MBCS -D_MB_MAP_DIRECT -D_CRTBLD -D_FN_WIDE -DWINHEAP -D_MT -DCRTDLL -D_CRT_CHECK_MANIFEST -D_STL_NOFORCE_MANIFEST -D_CRT_NOFORCE_MANIFEST -DWIN32_LEAN_AND_MEAN -D_WIN32_WINDOWS=0x501 -D-D-DNOSERVICE -DWIND32 -DFPO=1 -DWIN32 -D_X86_=1 -Di386=1 -DNT_UP=1 -DDEVL=1 -D_WIN32_WINNT=0x0501 -D_WIN32_IE=0x0600 -DWINNT=1 -DNT_INST=0 -DCONDITION_HANDLING=1 -D__BUILDMACHINE__=SP -DNTDDI_VERSION=0x05020100 -D_SHIP -DNDEBUG -D_NEW_SDK=1 -DOFFICIAL_BUILD=0 -DBETA=0 -DFX_VER_PRIVATEBUILD_STR=DDBLD211 -DURTBLDENV_FRIENDLY=Retail -DFX_BRANCH_SYNC_COUNTER_VALUE=0 -FIddbanned.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\eh\ehvecctr.cpp
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\eh\ehvecctr.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\eh\ehvecdtr.cpp
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\eh\ehvecdtr.cpp
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\eh\i386\ehprolg3.c
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\eh\i386\ehprolg3.c
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\eh\tncleanup.cpp
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\eh\tncleanup.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\codeanalysis\sourceannotations.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\crtdbg.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\crtdefs.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\cruntime.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\ctype.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\dbgint.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\eh.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\errno.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\excpt.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\internal.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\limits.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\malloc.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\mtdll.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\process.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\rtcapi.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\rtcpriv.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\sal.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\sect_attribs.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\stdarg.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\stddef.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\stdlib.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\string.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\typeinfo.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\h\vadefs.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\misc\i386\chandler4gs.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\misc\i386\chandler4gs.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\rtc\initsect.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\rtc\initsect.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\stdhpp\use_ansi.h
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\stdhpp\yvals.h
+f:\dd\vctools\crt_bld\SELF_X86\crt\prebuild\tran\i386\cpu_disp.c
+f:\dd\vctools\crt_bld\self_x86\crt\prebuild\tran\i386\cpu_disp.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\adjustfd.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\adjustfd.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\atonexit.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\atonexit.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\build\INTEL\dll_obj\ -Fof:\dd\vctools\crt_bld\SELF_X86\crt\src\build\INTEL\dll_obj\ -D_RTC -D_MBCS -D_MB_MAP_DIRECT -D_CRTBLD -D_FN_WIDE -DWINHEAP -D_MT -D_DLL -DCRTDLL2 -D_CRT_CHECK_MANIFEST -D_STL_NOFORCE_MANIFEST -D_CRT_NOFORCE_MANIFEST -DWIN32_LEAN_AND_MEAN -D_WIN32_WINDOWS=0x501 -D-D-DNOSERVICE -DWIND32 -DFPO=1 -DWIN32 -D_X86_=1 -Di386=1 -DNT_UP=1 -DDEVL=1 -D_WIN32_WINNT=0x0501 -D_WIN32_IE=0x0600 -DWINNT=1 -DNT_INST=0 -DCONDITION_HANDLING=1 -D__BUILDMACHINE__=SP -DNTDDI_VERSION=0x05020100 -D_SHIP -DNDEBUG -D_NEW_SDK=1 -DOFFICIAL_BUILD=0 -DBETA=0 -DFX_VER_PRIVATEBUILD_STR=DDBLD211 -DURTBLDENV_FRIENDLY=Retail -DFX_BRANCH_SYNC_COUNTER_VALUE=0 -FIddbanned.h
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\build\INTEL\dll_obj\ -Fof:\dd\vctools\crt_bld\SELF_X86\crt\src\build\INTEL\dll_obj\ -D_RTC -D_MBCS -D_MB_MAP_DIRECT -D_CRTBLD -D_FN_WIDE -DWINHEAP -D_MT -DCRTDLL -D_CRT_CHECK_MANIFEST -D_STL_NOFORCE_MANIFEST -D_CRT_NOFORCE_MANIFEST -DWIN32_LEAN_AND_MEAN -D_WIN32_WINDOWS=0x501 -D-D-DNOSERVICE -DWIND32 -DFPO=1 -DWIN32 -D_X86_=1 -Di386=1 -DNT_UP=1 -DDEVL=1 -D_WIN32_WINNT=0x0501 -D_WIN32_IE=0x0600 -DWINNT=1 -DNT_INST=0 -DCONDITION_HANDLING=1 -D__BUILDMACHINE__=SP -DNTDDI_VERSION=0x05020100 -D_SHIP -DNDEBUG -D_NEW_SDK=1 -DOFFICIAL_BUILD=0 -DBETA=0 -DFX_VER_PRIVATEBUILD_STR=DDBLD211 -DURTBLDENV_FRIENDLY=Retail -DFX_BRANCH_SYNC_COUNTER_VALUE=0 -FIddbanned.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\cinitexe.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\cinitexe.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\codeanalysis\sourceannotations.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\crtassem.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\crtdbg.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\crtdefs.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\crtdll.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\crtdll.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\crtmanifestrtm.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\crtmanifestrtm.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\cruntime.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\ctype.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\dbgint.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\eh.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\errno.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\excpt.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\gs_cookie.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\gs_cookie.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\gs_report.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\gs_report.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\gs_support.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\gs_support.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\intel\loadcfg.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\INTEL\loadcfg.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\intel\secchk.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\INTEL\secchk.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\internal.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\intrin.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\limits.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\locale.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\malloc.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\mtdll.h
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\natstart.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\natstart.c
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\newopnt.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\src\newopnt.cpp
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\nothrow.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\src\nothrow.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\src\oscalls.h
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\pesect.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\pesect.c
+f:\dd\vctools\crt_bld\self_x86\crt\src\process.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\rtcapi.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\rterr.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\sal.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\sect_attribs.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\setjmp.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\stdarg.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\stddef.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\stdio.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\stdlib.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\string.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\swprintf.inl
+f:\dd\vctools\crt_bld\SELF_X86\crt\src\ti_inst.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\src\ti_inst.cpp
+f:\dd\vctools\crt_bld\self_x86\crt\src\typeinfo.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\use_ansi.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\vadefs.h
+f:\dd\vctools\crt_bld\self_x86\crt\src\yvals.h
+f:\dd\vctools\langapi\include\ehdata.h

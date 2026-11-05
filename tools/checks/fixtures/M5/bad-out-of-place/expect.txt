@@ -1,0 +1,4 @@
+Civ5Expansion2/Fx/Ph.h:6 M5 UNK_DATA in the type of a field
+Civ5Expansion2/Fx/Ph.h:10 M5 function field_4 is a field placeholder
+Civ5Expansion2/Fx/Ph.h:13 M5 UNK_RET in the type of a parameter
+Civ5Expansion2/Fx/Ph.h:16 M5 UNK_DATA in the type of a global

@@ -1,0 +1,7 @@
+compat
+fwd
+lua-5.1.4/include
+libcxx/v1
+<clang>
+libc/include/x86_64-linux-gnu
+libc/include

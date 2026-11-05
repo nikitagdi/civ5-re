@@ -1,0 +1,4 @@
+# ref:path in the Lekmod commit (inputs.lock)	path under Civ5Expansion2/	origin
+sdk:DLC/LEKMOD/CvGameCore_Expansion2/CvGameCoreDLLUtil/include/CvAssert.h	Civ5/Src/App/CvGameCoreDLLUtil/CvAssert.h	binary
+sdk:x/Sdk/P.h	Sdk/P.h	binary
+sdk:x/Sdk/Q.h	Sdk/Q.h	binary

@@ -1,0 +1,24 @@
+/// origin guess
+#pragma once
+
+struct lua_State;
+
+template <int N> struct Event_Int2Type {};
+struct NullEventClass {};
+struct LinearEventDispatcher {};
+struct NonSerialContainer {};
+struct SerialContainer {};
+template <class... A> struct EventTemplate {};
+
+struct UnitData { int id; };
+
+/// lua event Events.UnitCreated
+typedef EventTemplate<Event_Int2Type<7>, UnitData, LinearEventDispatcher, NonSerialContainer> EvX;
+
+
+/// 0x08000030
+/// lua push (id: integer)
+void ToLua(lua_State* L, UnitData& d);
+/// 0x08000031
+/// lua pull (id: integer)
+void FromLua(lua_State* L, UnitData& d);

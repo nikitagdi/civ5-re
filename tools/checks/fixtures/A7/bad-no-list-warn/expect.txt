@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Starts.h:5 A7 0x08350100 has no FDE, no Ghidra list: civ5re ghidra functions
+Civ5Expansion2/Fx/Starts.h:8 A7 0x08350000 fastcc cannot be checked, no Ghidra list

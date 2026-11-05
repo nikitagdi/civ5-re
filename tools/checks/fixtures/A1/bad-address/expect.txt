@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Symbols.h:22 A1 _ZN6cvBase4InitEv: marker 0x0834a384, in binary 0x0834a380
+Civ5Expansion2/Fx/Symbols.h:43 A1 _Z11cvFreeUtilsi: marker 0x0834a298, in binary 0x0834a290

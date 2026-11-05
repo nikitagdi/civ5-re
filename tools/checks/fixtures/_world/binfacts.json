@@ -1,0 +1,1348 @@
+{
+ "binary": {
+  "build_id": "0000000000000000000000000000000000000000",
+  "comment": [],
+  "entry": "0x08048100",
+  "name": "Civ5XP-synthetic",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "size": 0
+ },
+ "functions_eh": [
+  {
+   "addr": "0x0834a000",
+   "size": 32
+  },
+  {
+   "addr": "0x0834a030",
+   "size": 16
+  },
+  {
+   "addr": "0x0834a060",
+   "size": 24
+  },
+  {
+   "addr": "0x0834a1c0",
+   "size": 64
+  },
+  {
+   "addr": "0x08350000",
+   "size": 64
+  }
+ ],
+ "plt": [
+  {
+   "addr": "0x08468860",
+   "name": "__cxa_pure_virtual"
+  }
+ ],
+ "schema": 1,
+ "sections": [
+  {
+   "addr": "0x08048000",
+   "flags": "AX",
+   "name": ".text",
+   "size": 4194304
+  },
+  {
+   "addr": "0x08468800",
+   "flags": "AX",
+   "name": ".plt",
+   "size": 256
+  },
+  {
+   "addr": "0x0a100000",
+   "flags": "A",
+   "name": ".rodata",
+   "size": 720896
+  },
+  {
+   "addr": "0x0a1b0000",
+   "flags": "WA",
+   "name": ".data.rel.ro",
+   "size": 131072
+  },
+  {
+   "addr": "0x0a900000",
+   "flags": "WA",
+   "name": ".data",
+   "size": 65536
+  },
+  {
+   "addr": "0x0a9f0000",
+   "flags": "WAT",
+   "name": ".tdata",
+   "size": 256
+  },
+  {
+   "addr": "0x0a9f0100",
+   "flags": "WAT",
+   "name": ".tbss",
+   "size": 256
+  },
+  {
+   "addr": "0x0b000000",
+   "flags": "WA",
+   "name": ".bss",
+   "size": 65536
+  }
+ ],
+ "sizes": {},
+ "stats": {
+  "aliases": {
+   "addresses": 5,
+   "names": 10
+  },
+  "denominator": {
+   "by_kind": {
+    "c": 1,
+    "ctor": 6,
+    "data": 1,
+    "dtor": 13,
+    "function": 1,
+    "method": 12,
+    "thunk": 1,
+    "vtable": 4
+   },
+   "covered_by_class": {
+    "guard": 1,
+    "typeinfo": 3,
+    "typeinfo_name": 3
+   },
+   "total": 39
+  },
+  "groups": {
+   "aspyr": 1,
+   "firaxis": 46,
+   "lua": 1,
+   "std": 1
+  },
+  "kinds": {
+   "aspyr": {
+    "c": 0,
+    "ctor": 0,
+    "ctor_vtable": 0,
+    "data": 0,
+    "dtor": 0,
+    "function": 0,
+    "guard": 0,
+    "method": 1,
+    "thunk": 0,
+    "typeinfo": 0,
+    "typeinfo_name": 0,
+    "vtable": 0
+   },
+   "firaxis": {
+    "c": 1,
+    "ctor": 6,
+    "ctor_vtable": 0,
+    "data": 1,
+    "dtor": 13,
+    "function": 1,
+    "guard": 1,
+    "method": 12,
+    "thunk": 1,
+    "typeinfo": 3,
+    "typeinfo_name": 3,
+    "vtable": 4
+   },
+   "lua": {
+    "c": 1,
+    "ctor": 0,
+    "ctor_vtable": 0,
+    "data": 0,
+    "dtor": 0,
+    "function": 0,
+    "guard": 0,
+    "method": 0,
+    "thunk": 0,
+    "typeinfo": 0,
+    "typeinfo_name": 0,
+    "vtable": 0
+   },
+   "std": {
+    "c": 0,
+    "ctor": 0,
+    "ctor_vtable": 0,
+    "data": 0,
+    "dtor": 0,
+    "function": 0,
+    "guard": 0,
+    "method": 1,
+    "thunk": 0,
+    "typeinfo": 0,
+    "typeinfo_name": 0,
+    "vtable": 0
+   }
+  },
+  "variants": {
+   "aspyr": {
+    "entities": {
+     "c1_eq_c2": 0,
+     "c1_ne_c2": 0,
+     "c1_only": 0,
+     "c2_only": 0,
+     "d1_eq_d2": 0,
+     "d1_ne_d2": 0,
+     "d1_only": 0,
+     "d2_only": 0,
+     "has_d0": 0
+    },
+    "symbols": {
+     "C1": 0,
+     "C2": 0,
+     "C3": 0,
+     "D0": 0,
+     "D1": 0,
+     "D2": 0
+    }
+   },
+   "firaxis": {
+    "entities": {
+     "c1_eq_c2": 2,
+     "c1_ne_c2": 0,
+     "c1_only": 1,
+     "c2_only": 1,
+     "d1_eq_d2": 2,
+     "d1_ne_d2": 1,
+     "d1_only": 2,
+     "d2_only": 1,
+     "has_d0": 4
+    },
+    "symbols": {
+     "C1": 3,
+     "C2": 3,
+     "C3": 0,
+     "D0": 4,
+     "D1": 5,
+     "D2": 4
+    }
+   },
+   "lua": {
+    "entities": {
+     "c1_eq_c2": 0,
+     "c1_ne_c2": 0,
+     "c1_only": 0,
+     "c2_only": 0,
+     "d1_eq_d2": 0,
+     "d1_ne_d2": 0,
+     "d1_only": 0,
+     "d2_only": 0,
+     "has_d0": 0
+    },
+    "symbols": {
+     "C1": 0,
+     "C2": 0,
+     "C3": 0,
+     "D0": 0,
+     "D1": 0,
+     "D2": 0
+    }
+   },
+   "std": {
+    "entities": {
+     "c1_eq_c2": 0,
+     "c1_ne_c2": 0,
+     "c1_only": 0,
+     "c2_only": 0,
+     "d1_eq_d2": 0,
+     "d1_ne_d2": 0,
+     "d1_only": 0,
+     "d2_only": 0,
+     "has_d0": 0
+    },
+    "symbols": {
+     "C1": 0,
+     "C2": 0,
+     "C3": 0,
+     "D0": 0,
+     "D1": 0,
+     "D2": 0
+    }
+   }
+  }
+ },
+ "symbols": [
+  {
+   "addr": "0x0834a000",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::cvBase()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN6cvBaseC1Ev",
+   "name": "cvBase",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 32,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x0834a000",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::cvBase()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN6cvBaseC2Ev",
+   "name": "cvBase",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 32,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x0834a030",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::~cvBase()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN6cvBaseD1Ev",
+   "name": "~cvBase",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D1"
+  },
+  {
+   "addr": "0x0834a030",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::~cvBase()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN6cvBaseD2Ev",
+   "name": "~cvBase",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D2"
+  },
+  {
+   "addr": "0x0834a040",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::~cvBase()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN6cvBaseD0Ev",
+   "name": "~cvBase",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D0"
+  },
+  {
+   "addr": "0x0834a060",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::Update(float)",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN6cvBase6UpdateEf",
+   "name": "Update",
+   "params": "(float)",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 24,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a080",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvIface::cvIface()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN7cvIfaceC1Ev",
+   "name": "cvIface",
+   "params": "()",
+   "scope": "cvIface",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x0834a080",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvIface::cvIface()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN7cvIfaceC2Ev",
+   "name": "cvIface",
+   "params": "()",
+   "scope": "cvIface",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x0834a090",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvIface::Flush()",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7cvIface5FlushEv",
+   "name": "Flush",
+   "params": "()",
+   "scope": "cvIface",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 8,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a0a0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::cvUnitVisSystem()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN15cvUnitVisSystemC1Ev",
+   "name": "cvUnitVisSystem",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 48,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x0834a0e0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::~cvUnitVisSystem()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN15cvUnitVisSystemD1Ev",
+   "name": "~cvUnitVisSystem",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D1"
+  },
+  {
+   "addr": "0x0834a0f0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::~cvUnitVisSystem()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN15cvUnitVisSystemD2Ev",
+   "name": "~cvUnitVisSystem",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D2"
+  },
+  {
+   "addr": "0x0834a100",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::~cvUnitVisSystem()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN15cvUnitVisSystemD0Ev",
+   "name": "~cvUnitVisSystem",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D0"
+  },
+  {
+   "addr": "0x0834a120",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::Update(float)",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN15cvUnitVisSystem6UpdateEf",
+   "name": "Update",
+   "params": "(float)",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 32,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a150",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "non-virtual thunk to cvUnitVisSystem::Flush()",
+   "group": "firaxis",
+   "kind": "thunk",
+   "mangled": "_ZThn4_N15cvUnitVisSystem5FlushEv",
+   "name": "Flush",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 8,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a160",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::Flush()",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN15cvUnitVisSystem5FlushEv",
+   "name": "Flush",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 8,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a1c0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::InitHandle(cvUnitVisHandle&, cvUnitVis_Init const&)",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN15cvUnitVisSystem10InitHandleER15cvUnitVisHandleRK14cvUnitVis_Init",
+   "name": "InitHandle",
+   "params": "(cvUnitVisHandle&, cvUnitVis_Init const&)",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 64,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a200",
+   "bind": "weak",
+   "cv": "const",
+   "demangled": "cvUnitVisSystem::GetCount() const",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZNK15cvUnitVisSystem8GetCountEv",
+   "name": "GetCount",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 8,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a220",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvOnlyBase::cvOnlyBase()",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN10cvOnlyBaseC2Ev",
+   "name": "cvOnlyBase",
+   "params": "()",
+   "scope": "cvOnlyBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x0834a240",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvLeaf::~cvLeaf()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN6cvLeafD0Ev",
+   "name": "~cvLeaf",
+   "params": "()",
+   "scope": "cvLeaf",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D0"
+  },
+  {
+   "addr": "0x0834a250",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvLeaf::~cvLeaf()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN6cvLeafD2Ev",
+   "name": "~cvLeaf",
+   "params": "()",
+   "scope": "cvLeaf",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D2"
+  },
+  {
+   "addr": "0x0834a270",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "FUDPSocket::~FUDPSocket()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN10FUDPSocketD1Ev",
+   "name": "~FUDPSocket",
+   "params": "()",
+   "scope": "FUDPSocket",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D1"
+  },
+  {
+   "addr": "0x0834a270",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "FSocket::~FSocket()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN7FSocketD1Ev",
+   "name": "~FSocket",
+   "params": "()",
+   "scope": "FSocket",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D1"
+  },
+  {
+   "addr": "0x0834a290",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvFreeUtils(int)",
+   "group": "firaxis",
+   "kind": "function",
+   "mangled": "_Z11cvFreeUtilsi",
+   "name": "cvFreeUtils",
+   "params": "(int)",
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 24,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a2c0",
+   "bind": "global",
+   "cv": null,
+   "demangled": "FSBAAllocate",
+   "group": "firaxis",
+   "kind": "c",
+   "mangled": "FSBAAllocate",
+   "name": "FSBAAllocate",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 32,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a300",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "std::__1::vector<int, std::__1::allocator<int> >::push_back(int&&)",
+   "group": "std",
+   "kind": "method",
+   "mangled": "_ZNSt3__16vectorIiNS_9allocatorIiEEE9push_backEOi",
+   "name": "push_back",
+   "params": "(int&&)",
+   "scope": "std::__1::vector<int, std::__1::allocator<int> >",
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 64,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a340",
+   "bind": "global",
+   "cv": null,
+   "demangled": "lua_pushnil",
+   "group": "lua",
+   "kind": "c",
+   "mangled": "lua_pushnil",
+   "name": "lua_pushnil",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a360",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "ASLWindow::Open()",
+   "group": "aspyr",
+   "kind": "method",
+   "mangled": "_ZN9ASLWindow4OpenEv",
+   "name": "Open",
+   "params": "()",
+   "scope": "ASLWindow",
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a380",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::Init()",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN6cvBase4InitEv",
+   "name": "Init",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a390",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvBase::Fini()",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN6cvBase4FiniEv",
+   "name": "Fini",
+   "params": "()",
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a3a0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvUnitVisSystem::Reset()",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN15cvUnitVisSystem4ResetEv",
+   "name": "Reset",
+   "params": "()",
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a3b0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "cvIface::Close()",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7cvIface5CloseEv",
+   "name": "Close",
+   "params": "()",
+   "scope": "cvIface",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a400",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "FFastVector<int>::Grow()",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN11FFastVectorIiE4GrowEv",
+   "name": "Grow",
+   "params": "()",
+   "scope": "FFastVector<int>",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 24,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0834a420",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "FTMaker<int>::~FTMaker()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN7FTMakerIiED1Ev",
+   "name": "~FTMaker",
+   "params": "()",
+   "scope": "FTMaker<int>",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D1"
+  },
+  {
+   "addr": "0x0834a420",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "FTMaker<int>::~FTMaker()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN7FTMakerIiED2Ev",
+   "name": "~FTMaker",
+   "params": "()",
+   "scope": "FTMaker<int>",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D2"
+  },
+  {
+   "addr": "0x0834a430",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "FTMaker<int>::~FTMaker()",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN7FTMakerIiED0Ev",
+   "name": "~FTMaker",
+   "params": "()",
+   "scope": "FTMaker<int>",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D0"
+  },
+  {
+   "addr": "0x0834a440",
+   "bind": "weak",
+   "cv": "const",
+   "demangled": "FTMaker<int>::Make() const",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZNK7FTMakerIiE4MakeEv",
+   "name": "Make",
+   "params": "()",
+   "scope": "FTMaker<int>",
+   "scope_is_class": true,
+   "section": ".text",
+   "size": 8,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0a100040",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "typeinfo name for cvBase",
+   "group": "firaxis",
+   "kind": "typeinfo_name",
+   "mangled": "_ZTS6cvBase",
+   "name": null,
+   "params": null,
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".rodata",
+   "size": 7,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a100050",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "typeinfo name for cvIface",
+   "group": "firaxis",
+   "kind": "typeinfo_name",
+   "mangled": "_ZTS7cvIface",
+   "name": null,
+   "params": null,
+   "scope": "cvIface",
+   "scope_is_class": true,
+   "section": ".rodata",
+   "size": 8,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a100060",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "typeinfo name for cvUnitVisSystem",
+   "group": "firaxis",
+   "kind": "typeinfo_name",
+   "mangled": "_ZTS15cvUnitVisSystem",
+   "name": null,
+   "params": null,
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".rodata",
+   "size": 20,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a1b2c00",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "vtable for cvBase",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV6cvBase",
+   "name": null,
+   "params": null,
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".data.rel.ro",
+   "size": 24,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a1b2c40",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "typeinfo for cvBase",
+   "group": "firaxis",
+   "kind": "typeinfo",
+   "mangled": "_ZTI6cvBase",
+   "name": null,
+   "params": null,
+   "scope": "cvBase",
+   "scope_is_class": true,
+   "section": ".data.rel.ro",
+   "size": 8,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a1b2c80",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "vtable for cvIface",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV7cvIface",
+   "name": null,
+   "params": null,
+   "scope": "cvIface",
+   "scope_is_class": true,
+   "section": ".data.rel.ro",
+   "size": 12,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a1b2ca0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "typeinfo for cvIface",
+   "group": "firaxis",
+   "kind": "typeinfo",
+   "mangled": "_ZTI7cvIface",
+   "name": null,
+   "params": null,
+   "scope": "cvIface",
+   "scope_is_class": true,
+   "section": ".data.rel.ro",
+   "size": 8,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a1b2cc0",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "vtable for cvUnitVisSystem",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV15cvUnitVisSystem",
+   "name": null,
+   "params": null,
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".data.rel.ro",
+   "size": 40,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a1b2d00",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "typeinfo for cvUnitVisSystem",
+   "group": "firaxis",
+   "kind": "typeinfo",
+   "mangled": "_ZTI15cvUnitVisSystem",
+   "name": null,
+   "params": null,
+   "scope": "cvUnitVisSystem",
+   "scope_is_class": true,
+   "section": ".data.rel.ro",
+   "size": 24,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a1b2d60",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "vtable for FTMaker<int>",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV7FTMakerIiE",
+   "name": null,
+   "params": null,
+   "scope": "FTMaker<int>",
+   "scope_is_class": true,
+   "section": ".data.rel.ro",
+   "size": 20,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0b000000",
+   "bind": "global",
+   "cv": null,
+   "demangled": "g_cvCounter",
+   "group": "firaxis",
+   "kind": "data",
+   "mangled": "g_cvCounter",
+   "name": "g_cvCounter",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".bss",
+   "size": 4,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0b000008",
+   "bind": "weak",
+   "cv": null,
+   "demangled": "guard variable for cvFreeUtils(int)::s_one",
+   "group": "firaxis",
+   "kind": "guard",
+   "mangled": "_ZGVZ11cvFreeUtilsiE5s_one",
+   "name": null,
+   "params": null,
+   "scope": "cvFreeUtils(int)",
+   "scope_is_class": null,
+   "section": ".bss",
+   "size": 8,
+   "type": "object",
+   "variant": null
+  }
+ ],
+ "tool": {
+  "binfacts": "synthetic",
+  "cxxfilt": "synthetic",
+  "groups_cfg": "0000000000000000000000000000000000000000000000000000000000000000"
+ },
+ "typeinfo": [
+  {
+   "addr": "0x0a1b2c40",
+   "bases": [],
+   "class": "cvBase",
+   "flags": null,
+   "kind": "class",
+   "name": "cvBase",
+   "symbol": "_ZTI6cvBase"
+  },
+  {
+   "addr": "0x0a1b2ca0",
+   "bases": [],
+   "class": "cvIface",
+   "flags": null,
+   "kind": "class",
+   "name": "cvIface",
+   "symbol": "_ZTI7cvIface"
+  },
+  {
+   "addr": "0x0a1b2d00",
+   "bases": [
+    {
+     "class": "cvBase",
+     "offset": 0,
+     "public": true,
+     "typeinfo": "_ZTI6cvBase",
+     "virtual": false
+    },
+    {
+     "class": "cvIface",
+     "offset": 4,
+     "public": true,
+     "typeinfo": "_ZTI7cvIface",
+     "virtual": false
+    }
+   ],
+   "class": "cvUnitVisSystem",
+   "flags": 0,
+   "kind": "vmi",
+   "name": "cvUnitVisSystem",
+   "symbol": "_ZTI15cvUnitVisSystem"
+  },
+  {
+   "addr": "0x0a1b2d80",
+   "bases": [],
+   "class": "FTMaker<int>",
+   "flags": null,
+   "kind": "class",
+   "name": "7FTMakerIiE",
+   "symbol": "_ZTI7FTMakerIiE"
+  },
+  {
+   "addr": "0x0a1b2dc0",
+   "bases": [
+    {
+     "class": "cvBase",
+     "offset": 0,
+     "public": true,
+     "typeinfo": "_ZTI6cvBase",
+     "virtual": false
+    }
+   ],
+   "class": "cvLeaf",
+   "flags": null,
+   "kind": "si",
+   "name": "6cvLeaf",
+   "symbol": "_ZTI6cvLeaf"
+  }
+ ],
+ "vtables": [
+  {
+   "addr": "0x0a1b2c00",
+   "class": "cvBase",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a1b2c08",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN6cvBaseD1Ev",
+        "_ZN6cvBaseD2Ev"
+       ],
+       "target": "0x0834a030"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN6cvBaseD0Ev"
+       ],
+       "target": "0x0834a040"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN6cvBase6UpdateEf"
+       ],
+       "target": "0x0834a060"
+      },
+      {
+       "kind": "pure",
+       "symbols": [],
+       "target": "0x08468860"
+      }
+     ],
+     "typeinfo": "0x0a1b2c40",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 24,
+   "symbol": "_ZTV6cvBase"
+  },
+  {
+   "addr": "0x0a1b2c80",
+   "class": "cvIface",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a1b2c88",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN7cvIface5FlushEv"
+       ],
+       "target": "0x0834a090"
+      }
+     ],
+     "typeinfo": "0x0a1b2ca0",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 12,
+   "symbol": "_ZTV7cvIface"
+  },
+  {
+   "addr": "0x0a1b2cc0",
+   "class": "cvUnitVisSystem",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a1b2cc8",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN15cvUnitVisSystemD1Ev"
+       ],
+       "target": "0x0834a0e0"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN15cvUnitVisSystemD0Ev"
+       ],
+       "target": "0x0834a100"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN15cvUnitVisSystem6UpdateEf"
+       ],
+       "target": "0x0834a120"
+      },
+      {
+       "kind": "pure",
+       "symbols": [],
+       "target": "0x08468860"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN15cvUnitVisSystem5FlushEv"
+       ],
+       "target": "0x0834a160"
+      }
+     ],
+     "typeinfo": "0x0a1b2d00",
+     "vbase_offsets": []
+    },
+    {
+     "address_point": "0x0a1b2ce4",
+     "offset_to_top": -4,
+     "slots": [
+      {
+       "kind": "thunk",
+       "symbols": [
+        "_ZThn4_N15cvUnitVisSystem5FlushEv"
+       ],
+       "target": "0x0834a150"
+      }
+     ],
+     "typeinfo": "0x0a1b2d00",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 40,
+   "symbol": "_ZTV15cvUnitVisSystem"
+  },
+  {
+   "addr": "0x0a1b2d60",
+   "class": "FTMaker<int>",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a1b2d68",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN7FTMakerIiED1Ev",
+        "_ZN7FTMakerIiED2Ev"
+       ],
+       "target": "0x0834a420"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN7FTMakerIiED0Ev"
+       ],
+       "target": "0x0834a430"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZNK7FTMakerIiE4MakeEv"
+       ],
+       "target": "0x0834a440"
+      }
+     ],
+     "typeinfo": "0x0a1b2d80",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 20,
+   "symbol": "_ZTV7FTMakerIiE"
+  }
+ ]
+}

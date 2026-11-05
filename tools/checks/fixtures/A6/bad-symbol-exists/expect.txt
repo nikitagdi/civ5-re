@@ -1,0 +1,5 @@
+Civ5Expansion2/Fx/Inline.h:9 A6 inline, but symbol exists: 0x0834a380
+Civ5Expansion2/Fx/Inline.h:12 A6 absent, but symbol exists: 0x0834a390
+Civ5Expansion2/Fx/Inline.h:15 A6 pure, but symbol exists: 0x0834a060
+Civ5Expansion2/Fx/Inline.h:22 A6 inline, but symbol exists: 0x0834a220
+Civ5Expansion2/Fx/Inline.h:26 A6 inline, but symbol exists: 0x0b000000

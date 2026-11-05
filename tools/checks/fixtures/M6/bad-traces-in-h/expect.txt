@@ -1,0 +1,7 @@
+Civ5Expansion2/Fx/Bad.h:3 M6 decompiler trace 'param_1'
+Civ5Expansion2/Fx/Bad.h:4 M6 decompiler trace 'iVar3'
+Civ5Expansion2/Fx/Bad.h:5 M6 decompiler trace 'undefined4'
+Civ5Expansion2/Fx/Bad.h:6 M6 decompiler trace 'LAB_08123456'
+Civ5Expansion2/Fx/Bad.h:7 M6 decompiler trace 'local_10'
+Civ5Expansion2/Fx/Bad.h:7 M6 decompiler trace 'CONCAT44'
+Civ5Expansion2/Fx/Bad.h:7 M6 decompiler trace 'SUB41'

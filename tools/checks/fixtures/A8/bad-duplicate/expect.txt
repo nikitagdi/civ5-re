@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Alias.h:8 A8 0x0834a290 already taken: Civ5Expansion2/Fx/Alias.h:5 cvFreeUtils
+Civ5Expansion2/Fx/Alias.h:14 A8 0x08350000 already taken: Civ5Expansion2/Fx/Alias.h:11 Fun_08350000

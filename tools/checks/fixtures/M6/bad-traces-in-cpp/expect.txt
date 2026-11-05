@@ -1,0 +1,4 @@
+Civ5Expansion2/Fx/Bad.cpp:3 M6 decompiler trace 'pcVar1'
+Civ5Expansion2/Fx/Bad.cpp:3 M6 decompiler trace 'in_stack_00000004'
+Civ5Expansion2/Fx/Bad.cpp:3 M6 decompiler trace 'extraout_EAX'
+Civ5Expansion2/Fx/Bad.cpp:4 M6 decompiler trace 'unaff_EBX'

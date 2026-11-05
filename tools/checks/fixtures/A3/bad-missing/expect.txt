@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Structors.h:12 A3 base missing: D2 is at 0x0834a0f0, D1 at 0x0834a0e0
+Civ5Expansion2/Fx/Structors.h:12 A3 deleting missing: D0 is exported at 0x0834a100

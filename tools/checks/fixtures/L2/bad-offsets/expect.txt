@@ -1,0 +1,3 @@
+Civ5Expansion2/Fx/Fields.h:7 L2 m_iCount: ///< +0x4, clang +0x0
+Civ5Expansion2/Fx/Fields.h:10 L2 m_bFlagB: ///< +0x7, clang +0x6
+Civ5Expansion2/Fx/Fields.h:14 L2 m_fRaw: ///< +0x0, clang +0x8

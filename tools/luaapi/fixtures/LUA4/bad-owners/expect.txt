@@ -1,0 +1,2 @@
+Civ5Expansion2/Lua/UI.h:10 LUA4 PreGame.X on a class with table UI
+Civ5Expansion2/Lua/UI.h:17 LUA4 UI.Y on Plain

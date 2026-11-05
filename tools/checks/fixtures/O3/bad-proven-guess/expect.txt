@@ -1,0 +1,3 @@
+Civ5Expansion2/Civ5/Src/App/Audio/cvAudioManager.h:1 O3 path is in evidence (L)
+Civ5Expansion2/Civ5/Src/App/Audio/CVAUDIOMANAGER.cpp:1 O3 path is in evidence (Wr)
+Civ5Expansion2/Civ5/Src/App/CvGameCoreDLLUtil/cvassert.h:1 O3 path is in evidence (S)

@@ -1,0 +1,997 @@
+{
+ "cpp_defs": [],
+ "diagnostics": [],
+ "enums": [
+  {
+   "comment": null,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "line": 1,
+   "markers": {
+    "lua": []
+   },
+   "qualified": "Color",
+   "size": 4,
+   "values": [
+    {
+     "name": "Red",
+     "value": 0
+    },
+    {
+     "name": "Green",
+     "value": 1
+    },
+    {
+     "name": "Blue",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "files": [
+  {
+   "kind": "h",
+   "origin": "guess",
+   "path": "Civ5Expansion2/Fixture/t.h",
+   "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+ ],
+ "functions": [
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_Z10CallUpdateP4Basei",
+   "kind": "function",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_Z10CallUpdateP4Basei",
+   "markers": {
+    "absent": false,
+    "addr": "0x08049780",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "CallUpdate",
+   "params": [
+    {
+     "name": "p",
+     "type": "Base *"
+    },
+    {
+     "name": "dt",
+     "type": "int"
+    }
+   ],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "CallUpdate",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "",
+   "scope_kind": "namespace",
+   "static": false,
+   "this": null,
+   "variadic": false,
+   "variants": null,
+   "virtual": false,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_Z9CallExtraP4Base",
+   "kind": "function",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_Z9CallExtraP4Base",
+   "markers": {
+    "absent": false,
+    "addr": "0x080497a0",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "CallExtra",
+   "params": [
+    {
+     "name": "p",
+     "type": "Base *"
+    }
+   ],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "CallExtra",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "",
+   "scope_kind": "namespace",
+   "static": false,
+   "this": null,
+   "variadic": false,
+   "variants": null,
+   "virtual": false,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZL11hidden_funcP7Derivedi",
+   "kind": "function",
+   "line": 1,
+   "linkage": "internal",
+   "mangled": "_ZL11hidden_funcP7Derivedi",
+   "markers": {
+    "absent": false,
+    "addr": "0x08049800",
+    "base": null,
+    "deleting": null,
+    "fastcc": true,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "hidden_func",
+   "params": [
+    {
+     "name": "d",
+     "type": "Derived *"
+    },
+    {
+     "name": "k",
+     "type": "int"
+    }
+   ],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "hidden_func",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "",
+   "scope_kind": "namespace",
+   "static": false,
+   "this": null,
+   "variadic": false,
+   "variants": null,
+   "virtual": false,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN4Base5ExtraEii",
+   "kind": "method",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN4Base5ExtraEii",
+   "markers": {
+    "absent": false,
+    "addr": "0x080496d0",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Extra",
+   "params": [
+    {
+     "name": "a",
+     "type": "int"
+    },
+    {
+     "name": "b",
+     "type": "int"
+    }
+   ],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Base::Extra",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "Base",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Base *",
+   "variadic": false,
+   "variants": null,
+   "virtual": true,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN4Base6UpdateEi",
+   "kind": "method",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN4Base6UpdateEi",
+   "markers": {
+    "absent": false,
+    "addr": "0x080496c0",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Update",
+   "params": [
+    {
+     "name": "dt",
+     "type": "int"
+    }
+   ],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Base::Update",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "Base",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Base *",
+   "variadic": false,
+   "variants": null,
+   "virtual": true,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN4BaseC1Ev",
+   "kind": "ctor",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN4BaseC1Ev",
+   "markers": {
+    "absent": false,
+    "addr": "0x080496a0",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Base",
+   "params": [],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Base::Base",
+   "redecls": [],
+   "return": "void",
+   "return_indirect": false,
+   "scope": "Base",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Base *",
+   "variadic": false,
+   "variants": {
+    "C1": "_ZN4BaseC1Ev",
+    "C2": "_ZN4BaseC2Ev"
+   },
+   "virtual": false,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN7Derived3SumEii",
+   "kind": "method",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN7Derived3SumEii",
+   "markers": {
+    "absent": false,
+    "addr": "0x08049760",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Sum",
+   "params": [],
+   "params_unknown": true,
+   "pure": false,
+   "qualified": "Derived::Sum",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "Derived",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Derived *",
+   "variadic": false,
+   "variants": null,
+   "virtual": false,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN7Derived4PeekEv",
+   "kind": "method",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN7Derived4PeekEv",
+   "markers": {
+    "absent": false,
+    "addr": "0x08049770",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Peek",
+   "params": [],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Derived::Peek",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "Derived",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Derived *",
+   "variadic": false,
+   "variants": null,
+   "virtual": false,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN7Derived5ScaleEi",
+   "kind": "method",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN7Derived5ScaleEi",
+   "markers": {
+    "absent": false,
+    "addr": "0x08049730",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Scale",
+   "params": [
+    {
+     "name": "k",
+     "type": "int"
+    }
+   ],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Derived::Scale",
+   "redecls": [],
+   "return": "UNK_RET",
+   "return_indirect": false,
+   "scope": "Derived",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Derived *",
+   "variadic": false,
+   "variants": null,
+   "virtual": true,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN7Derived6UpdateEi",
+   "kind": "method",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN7Derived6UpdateEi",
+   "markers": {
+    "absent": false,
+    "addr": "0x08049720",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Update",
+   "params": [
+    {
+     "name": "dt",
+     "type": "int"
+    }
+   ],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Derived::Update",
+   "redecls": [],
+   "return": "int",
+   "return_indirect": false,
+   "scope": "Derived",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Derived *",
+   "variadic": false,
+   "variants": null,
+   "virtual": true,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": false,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZN7DerivedC1Ev",
+   "kind": "ctor",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZN7DerivedC1Ev",
+   "markers": {
+    "absent": false,
+    "addr": "0x080496f0",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "Derived",
+   "params": [],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Derived::Derived",
+   "redecls": [],
+   "return": "void",
+   "return_indirect": false,
+   "scope": "Derived",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Derived *",
+   "variadic": false,
+   "variants": {
+    "C1": "_ZN7DerivedC1Ev",
+    "C2": "_ZN7DerivedC2Ev"
+   },
+   "virtual": false,
+   "vtable_index": null
+  },
+  {
+   "access": "public",
+   "comment": null,
+   "const": true,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "has_body": false,
+   "instances": [],
+   "key": "_ZNK7Derived6GetPosEv",
+   "kind": "method",
+   "line": 1,
+   "linkage": "external",
+   "mangled": "_ZNK7Derived6GetPosEv",
+   "markers": {
+    "absent": false,
+    "addr": "0x08049740",
+    "base": null,
+    "deleting": null,
+    "fastcc": false,
+    "inline": false,
+    "lua": [],
+    "pure": false,
+    "thunks": []
+   },
+   "name": "GetPos",
+   "params": [],
+   "params_unknown": false,
+   "pure": false,
+   "qualified": "Derived::GetPos",
+   "redecls": [],
+   "return": "Vec2",
+   "return_indirect": true,
+   "scope": "Derived",
+   "scope_kind": "class",
+   "static": false,
+   "this": "Derived *",
+   "variadic": false,
+   "variants": null,
+   "virtual": false,
+   "vtable_index": null
+  }
+ ],
+ "globals": [
+  {
+   "addr_marker": "0x0804b8dc",
+   "comment": null,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "inline_marker": false,
+   "line": 1,
+   "linkage": "external",
+   "mangled": "g_counter",
+   "qualified": "g_counter",
+   "size": 4,
+   "static_member": false,
+   "type": "int"
+  }
+ ],
+ "inputs": {},
+ "markers": "strict",
+ "ok": true,
+ "records": [
+  {
+   "align": 4,
+   "bases": [],
+   "comment": null,
+   "complete": true,
+   "dsize": 8,
+   "dynamic": true,
+   "fields": [
+    {
+     "bit_offset": null,
+     "bit_size": null,
+     "line": 1,
+     "name": "m_iCount",
+     "offset": 4,
+     "offset_marker": "0x4",
+     "size": 4,
+     "type": "int"
+    }
+   ],
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "instance_markers": [],
+   "kind": "struct",
+   "line": 1,
+   "markers": {
+    "lua": []
+   },
+   "name": "Base",
+   "origin": "tree",
+   "size": 8,
+   "size_marker": "0x8",
+   "template": null,
+   "trivial_for_calls": false,
+   "typeinfo_symbol": null,
+   "vptrs": [
+    0
+   ],
+   "vtable": {
+    "groups": [
+     {
+      "offset_to_top": 0,
+      "slots": [
+       {
+        "function": "_ZN4Base6UpdateEi",
+        "kind": "method",
+        "symbol": null,
+        "thunk": null
+       },
+       {
+        "function": "_ZN4Base5ExtraEii",
+        "kind": "method",
+        "symbol": null,
+        "thunk": null
+       }
+      ],
+      "subobject": "Base",
+      "vbase_offsets": []
+     }
+    ]
+   },
+   "vtable_marker": "0x080484c4",
+   "vtable_symbol": "_ZTV4Base"
+  },
+  {
+   "align": 4,
+   "bases": [],
+   "comment": null,
+   "complete": true,
+   "dsize": 4,
+   "dynamic": false,
+   "fields": [
+    {
+     "bit_offset": 0,
+     "bit_size": 3,
+     "line": 1,
+     "name": "a",
+     "offset": 0,
+     "offset_marker": "0x0",
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "bit_offset": 3,
+     "bit_size": 5,
+     "line": 1,
+     "name": "b",
+     "offset": 0,
+     "offset_marker": "0x0",
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "bit_offset": 8,
+     "bit_size": 10,
+     "line": 1,
+     "name": "c",
+     "offset": 0,
+     "offset_marker": "0x0",
+     "size": 4,
+     "type": "unsigned int"
+    }
+   ],
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "instance_markers": [],
+   "kind": "struct",
+   "line": 1,
+   "markers": {
+    "lua": []
+   },
+   "name": "Bits",
+   "origin": "tree",
+   "size": 4,
+   "size_marker": "?",
+   "template": null,
+   "trivial_for_calls": true,
+   "typeinfo_symbol": null,
+   "vptrs": [],
+   "vtable": null,
+   "vtable_marker": null,
+   "vtable_symbol": null
+  },
+  {
+   "align": 4,
+   "bases": [
+    {
+     "access": "public",
+     "name": "Base",
+     "offset": 0,
+     "virtual": false
+    }
+   ],
+   "comment": null,
+   "complete": true,
+   "dsize": 20,
+   "dynamic": true,
+   "fields": [
+    {
+     "bit_offset": null,
+     "bit_size": null,
+     "line": 1,
+     "name": "m_iExtra",
+     "offset": 8,
+     "offset_marker": "0x8",
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "bit_offset": null,
+     "bit_size": null,
+     "line": 1,
+     "name": "m_pos",
+     "offset": 12,
+     "offset_marker": "0xc",
+     "size": 8,
+     "type": "Vec2"
+    }
+   ],
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "instance_markers": [],
+   "kind": "struct",
+   "line": 1,
+   "markers": {
+    "lua": []
+   },
+   "name": "Derived",
+   "origin": "tree",
+   "size": 20,
+   "size_marker": "0x14",
+   "template": null,
+   "trivial_for_calls": false,
+   "typeinfo_symbol": null,
+   "vptrs": [
+    0
+   ],
+   "vtable": {
+    "groups": [
+     {
+      "offset_to_top": 0,
+      "slots": [
+       {
+        "function": "_ZN7Derived6UpdateEi",
+        "kind": "method",
+        "symbol": null,
+        "thunk": null
+       },
+       {
+        "function": "_ZN4Base5ExtraEii",
+        "kind": "method",
+        "symbol": null,
+        "thunk": null
+       },
+       {
+        "function": "_ZN7Derived5ScaleEi",
+        "kind": "method",
+        "symbol": null,
+        "thunk": null
+       }
+      ],
+      "subobject": "Derived",
+      "vbase_offsets": []
+     }
+    ]
+   },
+   "vtable_marker": "0x080484d4",
+   "vtable_symbol": "_ZTV7Derived"
+  },
+  {
+   "align": 4,
+   "bases": [],
+   "comment": null,
+   "complete": true,
+   "dsize": 4,
+   "dynamic": false,
+   "fields": [
+    {
+     "bit_offset": null,
+     "bit_size": null,
+     "line": 1,
+     "name": "v",
+     "offset": 0,
+     "offset_marker": "0x0",
+     "size": 4,
+     "type": "int"
+    }
+   ],
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "instance_markers": [],
+   "kind": "struct",
+   "line": 1,
+   "markers": {
+    "lua": []
+   },
+   "name": "Removed",
+   "origin": "tree",
+   "size": 4,
+   "size_marker": "0x4",
+   "template": null,
+   "trivial_for_calls": true,
+   "typeinfo_symbol": null,
+   "vptrs": [],
+   "vtable": null,
+   "vtable_marker": null,
+   "vtable_symbol": null
+  },
+  {
+   "align": 4,
+   "bases": [],
+   "comment": null,
+   "complete": true,
+   "dsize": 8,
+   "dynamic": false,
+   "fields": [
+    {
+     "bit_offset": null,
+     "bit_size": null,
+     "line": 1,
+     "name": "x",
+     "offset": 0,
+     "offset_marker": "0x0",
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "bit_offset": null,
+     "bit_size": null,
+     "line": 1,
+     "name": "y",
+     "offset": 4,
+     "offset_marker": "0x4",
+     "size": 4,
+     "type": "int"
+    }
+   ],
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "instance_markers": [],
+   "kind": "struct",
+   "line": 1,
+   "markers": {
+    "lua": []
+   },
+   "name": "Vec2",
+   "origin": "tree",
+   "size": 8,
+   "size_marker": "0x8",
+   "template": null,
+   "trivial_for_calls": true,
+   "typeinfo_symbol": null,
+   "vptrs": [],
+   "vtable": null,
+   "vtable_marker": null,
+   "vtable_symbol": null
+  }
+ ],
+ "schema": "civ5re.typedb/1",
+ "stats": {},
+ "tool": {},
+ "typedefs": [
+  {
+   "comment": null,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "line": 1,
+   "markers": {
+    "lua": []
+   },
+   "qualified": "DerivedPtr",
+   "type": "Derived *"
+  },
+  {
+   "comment": null,
+   "file": "Civ5Expansion2/Fixture/t.h",
+   "line": 2,
+   "markers": {
+    "lua": []
+   },
+   "qualified": "AFwdFnPtr",
+   "type": "FwdFn *"
+  }
+ ],
+ "types": {
+  "AFwdFnPtr": {
+   "kind": "typedef",
+   "name": "AFwdFnPtr",
+   "of": "FwdFn *"
+  },
+  "Base": {
+   "key": "Base",
+   "kind": "record",
+   "size": 8
+  },
+  "Base *": {
+   "kind": "pointer",
+   "size": 4,
+   "to": "Base"
+  },
+  "Bits": {
+   "key": "Bits",
+   "kind": "record",
+   "size": 4
+  },
+  "Color": {
+   "key": "Color",
+   "kind": "enum",
+   "size": 4
+  },
+  "Derived": {
+   "key": "Derived",
+   "kind": "record",
+   "size": 20
+  },
+  "Derived *": {
+   "kind": "pointer",
+   "size": 4,
+   "to": "Derived"
+  },
+  "DerivedPtr": {
+   "kind": "typedef",
+   "name": "DerivedPtr",
+   "of": "Derived *"
+  },
+  "FwdFn": {
+   "kind": "function",
+   "params": [
+    "int"
+   ],
+   "ret": "int",
+   "variadic": false
+  },
+  "FwdFn *": {
+   "kind": "pointer",
+   "size": 4,
+   "to": "FwdFn"
+  },
+  "Removed": {
+   "key": "Removed",
+   "kind": "record",
+   "size": 4
+  },
+  "UNK_RET": {
+   "kind": "unknown",
+   "name": "UNK_RET",
+   "size": null
+  },
+  "Vec2": {
+   "key": "Vec2",
+   "kind": "record",
+   "size": 8
+  },
+  "int": {
+   "kind": "builtin",
+   "name": "int",
+   "signed": true,
+   "size": 4
+  },
+  "unsigned int": {
+   "kind": "builtin",
+   "name": "unsigned int",
+   "signed": false,
+   "size": 4
+  },
+  "void": {
+   "kind": "builtin",
+   "name": "void",
+   "signed": false,
+   "size": null
+  }
+ }
+}

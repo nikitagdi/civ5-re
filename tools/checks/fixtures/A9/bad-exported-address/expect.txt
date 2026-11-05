@@ -1,0 +1,1 @@
+Civ5Expansion2/Fx/Globals.h:5 A9 g_cvCounter: marker 0x0b000004, in binary 0x0b000000

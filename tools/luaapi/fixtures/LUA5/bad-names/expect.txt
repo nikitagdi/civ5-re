@@ -1,0 +1,3 @@
+Civ5Expansion2/Lua/UI.h:15 LUA5 type name Vector2 already at
+Civ5Expansion2/Lua/UI.h:20 LUA5 event Events.A already at
+Civ5Expansion2/Lua/UI.h:22 LUA5 event id 1 in container nonserial

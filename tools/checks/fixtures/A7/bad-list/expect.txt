@@ -1,0 +1,6 @@
+Civ5Expansion2/Fx/Starts.h:5 A7 0x08350010 inside FUN_08350000+0x10
+Civ5Expansion2/Fx/Starts.h:8 A7 0x08350300 is not a function start
+Civ5Expansion2/Fx/Starts.h:11 A7 0x08350100 fastcc, but it has no r= in the Ghidra list
+Civ5Expansion2/Fx/Starts.h:14 A7 0x08350200 has r= in the Ghidra list, but no fastcc
+Civ5Expansion2/Fx/Starts.h:17 A7 0x0834a290 is exported, fastcc is only for internal functions
+Civ5Expansion2/Fx/Starts.h:20 A7 0x0a900010 is not in .text (.data)

@@ -1,0 +1,5 @@
+Civ5Expansion2/Fx/Globals.h:5 A9 g_0c000000: 0x0c000000 is not in a data section (no section)
+Civ5Expansion2/Fx/Globals.h:8 A9 g_0b00fffc: [0x0b00fffc, 0x0b010004) leaves .bss
+Civ5Expansion2/Fx/Globals.h:11 A9 g_0b000004: [0x0b000004, 0x0b00000c) overlaps _ZGVZ11cvFreeUtilsiE5s_one at 0x0b000008
+Civ5Expansion2/Fx/Globals.h:14 A9 g_0a900100: [0x0a900100, 0x0a900108) overlaps g_0a900104 at 0x0a900104
+Civ5Expansion2/Fx/Globals.h:20 A9 g_08350000: 0x08350000 is not in a data section (.text)

@@ -1,0 +1,9 @@
+Unmodified system headers, kept only so that clang can parse the Civ5Expansion2 tree on a Linux/glibc target.
+
+- Files under include/ other than include/linux and include/asm-generic are glibc 2.39 headers (Ubuntu 24.04,
+  /usr/include), Copyright (C) Free Software Foundation, Inc., distributed under the GNU LGPL version 2.1 or later;
+  see COPYING.LIB in this directory.
+- include/linux and include/asm-generic are Linux kernel UAPI headers, carried unchanged with their SPDX tags
+  (GPL-2.0 WITH Linux-syscall-note, i.e. the syscall exception that permits their use from userspace programs).
+
+sha256 and origin of every file: third_party/MANIFEST.txt. Nothing here has been edited.

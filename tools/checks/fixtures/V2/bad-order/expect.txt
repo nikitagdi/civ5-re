@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Slots.h:6 V2 group 0 slot 2: declared pure, in binary _ZN6cvBase6UpdateEf
+Civ5Expansion2/Fx/Slots.h:6 V2 group 0 slot 3: declared _ZN6cvBase6UpdateEf, in binary pure

@@ -1,0 +1,3 @@
+Civ5Expansion2/Lua/UI.h:10 LUA1 needs a space after ','
+Civ5Expansion2/Lua/UI.h:13 LUA1 needs a space
+Civ5Expansion2/Lua/UI.h:16 LUA1 expected

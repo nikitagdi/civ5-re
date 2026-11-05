@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Sizes.h:5 L3 Short: size 0x8, binary uses at least 0xc
+Civ5Expansion2/Fx/Sizes.h:13 L3 FBuf<int>: size 0x8, binary uses at least 0x10

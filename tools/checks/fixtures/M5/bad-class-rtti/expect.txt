@@ -1,0 +1,1 @@
+Civ5Expansion2/Fx/Ph.h:6 M5 Class_0a1b2c00: the vtable at 0x0a1b2c00 is named cvBase in RTTI

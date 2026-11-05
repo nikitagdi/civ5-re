@@ -1,0 +1,5 @@
+# Macros treated as undefined by unifdef (fnmatch patterns).
+AUI_*
+LEKMOD*
+INGAME_HOTKEY_MANAGER
+REPLAY_MESSAGE_EXTENDED

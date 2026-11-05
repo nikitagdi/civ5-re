@@ -1,0 +1,20 @@
+#!/bin/sh
+# civ5-re: pre-commit checks. Installed by bootstrap.py (core.hooksPath=.githooks).
+# Git runs the hook from the working tree root.
+case "$(uname -s)" in
+  MINGW*|MSYS*|CYGWIN*) py=.venv/Scripts/python.exe ;;   # Git for Windows
+  *)                    py=.venv/bin/python ;;           # Linux, WSL
+esac
+if [ ! -x "$py" ]; then
+  echo "pre-commit: $py is missing - run: python tools/bootstrap.py" >&2; exit 1
+fi
+PYTHONUTF8=1 "$py" -m civ5re check --staged
+code=$?
+case $code in
+  0) exit 0 ;;
+  1) echo "pre-commit: commit stopped - rules violated (see above)" >&2 ;;
+  2) echo "pre-commit: checks could not run (input named above) - commit stopped" >&2 ;;
+  3) echo "pre-commit: the rules themselves are broken - run civ5re selftest" >&2 ;;
+  *) echo "pre-commit: unexpected code $code" >&2 ;;
+esac
+exit 1

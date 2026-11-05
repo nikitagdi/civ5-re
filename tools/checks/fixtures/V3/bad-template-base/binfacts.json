@@ -1,0 +1,1 @@
+{"typeinfo+": [{"addr": "0x0a1b2f40", "bases": [{"class": "cvTpl<int, 5u>", "offset": 4, "public": true, "typeinfo": null, "virtual": false}], "class": "cvLeafT", "flags": 0, "kind": "vmi", "name": "7cvLeafT", "symbol": "_ZTI7cvLeafT"}]}

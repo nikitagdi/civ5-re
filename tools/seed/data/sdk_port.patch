@@ -1,0 +1,2621 @@
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvDllInterfaces.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvDllInterfaces.h
+@@ -1,5 +1,20 @@
+ 
+ #pragma once
++
++#include <memory>
++
++#include <Windows.h>
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h"
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvStructs.h"
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvString.h"
++#include "FirePlace/FireWorks/FDataStream.h"
++#include <string>
++
++namespace Database
++{
++	class Connection;
++	class Results;
++}
+ 
+ //------------------------------------------------------------------------------
+ // DEFINES
+@@ -1859,7 +1874,7 @@
+ 	{
+ 		if(m_Enumerator.get() != NULL)
+ 		{
+-			auto_ptr<ICvUnknown> pValue(m_Enumerator->GetCurrent());
++			std::auto_ptr<ICvUnknown> pValue(m_Enumerator->GetCurrent());
+ 			return (pValue.get() != NULL)? pValue->QueryInterface<T>() : NULL;
+ 		}
+ 		else
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvDllInterfaces2.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvDllInterfaces2.h
+@@ -1,4 +1,10 @@
+ #pragma once
++
++class ICvUserInterface1;
++class ICvUserInterface2;
++
++#include <Windows.h>
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvString.h"
+ 
+ // This file should be included by CvDLLInterfaces.h
+ 
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h
+@@ -6,6 +6,8 @@
+ //!
+ //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ #pragma once 
++
++#include "FirePlace/FireWorks/FMemHooks.h"
+ #ifndef CVENUMS_H
+ #define CVENUMS_H
+ 
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvEnumSerialization.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvEnumSerialization.h
+@@ -1,5 +1,8 @@
+ #ifndef INCLUDED_CvEnumSerialization_H
+ #define INCLUDED_CvEnumSerialization_H
++
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h"
++#include "FirePlace/FireWorks/FDataStream.h"
+ 
+ FDataStream & operator<<(FDataStream &, const PlayerColorTypes &);
+ FDataStream & operator>>(FDataStream &, PlayerColorTypes &);
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvLuaArgTemplates.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvLuaArgTemplates.h
+@@ -1,5 +1,7 @@
+ 
+ #pragma once 
++
++#include <lua.h>
+ #ifndef CVLUAARGTEMPLATES
+ #define CVLUAARGTEMPLATES
+ 
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvLuaStaticInstance.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvLuaStaticInstance.h
+@@ -1,5 +1,7 @@
+ 
+ #pragma once 
++
++#include "FirePlace/FireWorks/FLua/Include/FLuaCommon.h"
+ #ifndef CVLUASTATICINSTANCE_H
+ 
+ #include "Civ5/Src/App/CvGameCoreDLLUtil/CvLuaMethodWrapper.h"
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvString.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvString.h
+@@ -1,4 +1,6 @@
+ #pragma once
++
++#include <Windows.h>
+ 
+ #ifndef CvString_h
+ #define CvString_h
+@@ -38,7 +40,7 @@
+ 	CvString& operator=( const std::string& s) { assign(s.c_str());	return *this; }	
+ 
+ 	// FString compatibility
+-	bool IsEmpty() const { return (empty() || this[0] == '\0');}
++	bool IsEmpty() const { return (empty() || c_str()[0] == '\0');}
+ 	const char* GetCString() const 	{ return c_str(); }
+ 	int CompareNoCase( const char* lpsz ) const { return _stricmp(lpsz, c_str()); }
+ 	int CompareNoCase( const char* lpsz, int iLength ) const { return _strnicmp(lpsz, c_str(), iLength);  }
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvStringUtils.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvStringUtils.h
+@@ -7,6 +7,8 @@
+ //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ #pragma once
+ 
++#include <string>
++
+ namespace CvStringUtils
+ {
+ 	std::wstring FromACPToUTF16(const std::string& strCPString);
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvStructs.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvStructs.h
+@@ -1,10 +1,17 @@
+ #pragma once 
++
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h"
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include "FirePlace/FireWorks/FFreeListArrayBase.h"
+ 
+ struct CvColorA 
+ {
+ 	CvColorA(float fr, float fg, float fb, float fa) : r(fr), g(fg), b(fb), a(fa) {}
+ 	CvColorA() : r(0.0f), g(0.0f), b(0.0f), a(0.0f)  {}
+-	float r, g, b, a;
++	float r;
++	float g;
++	float b;
++	float a;
+ };
+ 
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/CvWeightedVector.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/CvWeightedVector.h
+@@ -1,4 +1,6 @@
+ #pragma once
++
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvAssert.h"
+ 
+ #ifndef CIV5_WEIGHTED_VECTOR_H
+ #define CIV5_WEIGHTED_VECTOR_H
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLDatabaseUtility.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLDatabaseUtility.h
+@@ -1,4 +1,6 @@
+ #pragma once
++
++#include <Windows.h>
+ 
+ #include "Civ5/Src/App/CvGameCoreDLLUtil/CvDllInterfaces.h"
+ 
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLScriptSystem.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLScriptSystem.h
+@@ -1,5 +1,9 @@
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include <stddef.h>
++#include <lua.h>
+ #ifndef ICVDLLSCRIPTSYSTEM_H
+ #define ICVDLLSCRIPTSYSTEM_H
+ 
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLUserInterface.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLUserInterface.h
+@@ -1,4 +1,14 @@
+ #pragma once
++
++#include <list>
++
++#include <Windows.h>
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h"
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvStructs.h"
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvString.h"
++#include <string>
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvDllInterfaces.h"
+ 
+ 
+ // {02891D70-8B76-412a-A8A5-5363DBF0B22B}
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLUtility.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/ICvDLLUtility.h
+@@ -1,4 +1,10 @@
+ #pragma once
++
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h"
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvStructs.h"
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvString.h"
++#include "FirePlace/FireWorks/FFastList.h"
++#include "FirePlace/FireWorks/FFireTypes.h"
+ 
+ #ifndef ICvDLLUtility_h
+ #define ICvDLLUtility_h
+--- a/Civ5/Src/App/CvGameCoreDLLUtil/LinkedList.h
++++ b/Civ5/Src/App/CvGameCoreDLLUtil/LinkedList.h
+@@ -1,4 +1,9 @@
+ #pragma once
++
++#include <stddef.h>
++#include "Civ5/Src/App/CvGameCoreDLLUtil/CvEnums.h"
++#include "FirePlace/FireWorks/FDataStream.h"
++#include "FirePlace/FireWorks/FMemHooks.h"
+ // LinkedList.h
+ // A doubly-linked list
+ 
+--- a/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMap.h
++++ b/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMap.h
+@@ -13,6 +13,13 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #pragma once
++
++#include <bitset>
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include "FirePlace/FireWorks/FAssert.h"
++#include "FirePlace/FireWorks/FString.h"
++#include <algorithm>
+ #ifndef CvWorldBuilderMap_h
+ #define CvWorldBuilderMap_h
+ 
+@@ -411,7 +418,8 @@
+ 
+ 		uint m_uiCulture;
+ 		uint m_uiGold;
+-		uint m_uiStartX, m_uiStartY;
++		uint m_uiStartX;
++		uint m_uiStartY;
+ 
+ 		byte m_byTeam;
+ 		bool m_bPlayable;
+@@ -437,7 +445,8 @@
+ 
+ 		uint m_uiCulture;
+ 		uint m_uiGold;
+-		uint m_uiStartX, m_uiStartY;
++		uint m_uiStartX;
++		uint m_uiStartY;
+ 
+ 		byte m_byTeam;
+ 		bool m_bPlayable;
+--- a/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapElementAllocator.h
++++ b/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapElementAllocator.h
+@@ -22,6 +22,12 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include "FirePlace/FireWorks/FAssert.h"
++#include "FirePlace/FireWorks/FMemHooks.h"
++#include "FirePlace/FireWorks/FTempHeap.h"
++#include <string.h>
+ #ifndef CvWorldBuilderMapElementAllocator_h
+ #define CvWorldBuilderMapElementAllocator_h
+ 
+@@ -177,7 +183,7 @@
+ 	template<class TargetType, uint TargetInitialSize>
+ 	void ConvertTo(CvWorldBuilderMapElementAllocator<TargetType, TargetInitialSize> &kTarget) const
+ 	{
+-		typedef CvWorldBuilderMapElementAllocator<TargetType, TargetInitialSize>::Entry TargetEntry;
++		typedef typename CvWorldBuilderMapElementAllocator<TargetType, TargetInitialSize>::Entry TargetEntry;
+ 
+ 		kTarget.Release();
+ 
+--- a/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapModData.h
++++ b/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapModData.h
+@@ -18,6 +18,10 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include <stddef.h>
++#include "FirePlace/FireWorks/FFastVector.h"
+ #ifndef CvWorldBuilderMapModData_h
+ #define CvWorldBuilderMapModData_h
+ 
+@@ -44,7 +48,8 @@
+ 	void Serialize(void *pv) const;
+ 	void Deserialize(const void *pv);
+ 
+-	uint m_uiSize, m_uiReservedSize;
++	uint m_uiSize;
++	uint m_uiReservedSize;
+ 	char *m_szBuffer;
+ };
+ 
+--- a/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapTypeDesc.h
++++ b/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapTypeDesc.h
+@@ -13,6 +13,11 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include <algorithm>
++#include <string.h>
++#include <stddef.h>
+ #ifndef CvWorldBuilderMapTypeDesc_h
+ #define CvWorldBuilderMapTypeDesc_h
+ 
+--- a/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapTypeGroup.h
++++ b/Civ5/Src/App/CvWorldBuilderMap/CvWorldBuilderMapTypeGroup.h
+@@ -15,6 +15,8 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
+ #ifndef CvWorldBuilderMapTypeGroup_h
+ #define CvWorldBuilderMapTypeGroup_h
+ 
+--- a/Civ5/Src/App/CvWorldBuilderMap/FRelationshipBitset.h
++++ b/Civ5/Src/App/CvWorldBuilderMap/FRelationshipBitset.h
+@@ -19,6 +19,9 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include "FirePlace/FireWorks/FAssert.h"
+ #ifndef FRelationshipBitset_h
+ #define FRelationshipBitset_h
+ 
+--- a/Civ5/Src/CvGameDatabase/Database.h
++++ b/Civ5/Src/CvGameDatabase/Database.h
+@@ -1,5 +1,12 @@
+ 
+ #pragma once
++
++#ifndef CvGameDatabaseAPI
++#define CvGameDatabaseAPI __declspec(dllimport)
++#endif
++#include <string>
++#include <stddef.h>
++#include <hash_map>
+ 
+ #include <fstream>
+ #include <unordered_map>
+@@ -169,8 +176,8 @@
+ 		std::string m_strMemoryStats;
+ 
+ 		//! Hash map of count statements indexed by table name.
+-		std::tr1::unordered_map<std::string, sqlite3_stmt*> m_hshCountStatements;
+-		std::tr1::unordered_map<std::string, int> m_hshCountValues;
++		stdext::hash_map<std::string, sqlite3_stmt*> m_hshCountStatements;
++		stdext::hash_map<std::string, int> m_hshCountValues;
+ 
+ 		static char ms_pPageCacheBuffer[DB_PAGECACHE_SIZE * DB_NUM_PAGES];
+ 		static char ms_pScratchBuffer[DB_PAGECACHE_SIZE * DB_NUM_THREADS * 6];	
+--- a/Civ5/Src/CvGameDatabase/DatabaseIO.h
++++ b/Civ5/Src/CvGameDatabase/DatabaseIO.h
+@@ -1,5 +1,7 @@
+ 
+ #pragma once 
++
++#include "Civ5/Src/CvGameDatabase/Database.h"
+ 
+ namespace Database
+ {
+--- a/Civ5/Src/CvGameDatabase/DatabaseResults.h
++++ b/Civ5/Src/CvGameDatabase/DatabaseResults.h
+@@ -1,8 +1,10 @@
+ 
+ #pragma once 
+ 
++#include "Civ5/Src/CvGameDatabase/Database.h"
++
+ #include <list>
+ #include <hash_map>
+ #include <string>
+ 
+ namespace Database{
+--- a/Civ5/Src/CvGameDatabase/LuaExposures.h
++++ b/Civ5/Src/CvGameDatabase/LuaExposures.h
+@@ -1,4 +1,8 @@
+ #pragma once 
++
++#include <lua.h>
++
++#include "Civ5/Src/CvGameDatabase/Database.h"
+ 
+ #if !defined(NO_LUA_SUPPORT)
+ 
+--- a/Civ5/Src/CvGameDatabase/ResultsCache.h
++++ b/Civ5/Src/CvGameDatabase/ResultsCache.h
+@@ -1,6 +1,8 @@
+ // $Header
+ //------------------------------------------------------------------------------
+ #pragma once 
++
++#include "Civ5/Src/CvGameDatabase/Database.h"
+ 
+ #include <unordered_map>
+ 
+@@ -35,7 +37,7 @@
+ 
+ 	Database::Connection& m_db;
+ 
+-	typedef std::tr1::unordered_map<std::string, Results*> ResultsMap;
++	typedef std::unordered_map<std::string, Results*> ResultsMap;
+ 	ResultsMap m_storedResults;
+ };
+ 
+--- a/Civ5/Src/CvGameDatabase/XmlSerializer.h
++++ b/Civ5/Src/CvGameDatabase/XmlSerializer.h
+@@ -1,6 +1,13 @@
+ // $Header
+ //------------------------------------------------------------------------------
+ #pragma once 
++
++#include <list>
++
++#include <string>
++#include <stddef.h>
++
++#include "Civ5/Src/CvGameDatabase/Database.h"
+ 
+ 
+ class FXmlTraverser;
+@@ -61,16 +68,16 @@
+ 		void SetErrorMessage(const char* szMsg);
+ 		StringType GetStringType(const char* szString, const size_t lenString);
+ 
+-		bool BuildTable(FXmlTraverser& kXml);
+-		bool IndexTable(FXmlTraverser& kXml);
+-		bool UpdateTable(FXmlTraverser& kXml, ResultsCache& kResultsCache);
+-		bool DeleteMissingReferences(FXmlTraverser& kXml);
++		bool BuildTable(::FXmlTraverser& kXml);
++		bool IndexTable(::FXmlTraverser& kXml);
++		bool UpdateTable(::FXmlTraverser& kXml, ResultsCache& kResultsCache);
++		bool DeleteMissingReferences(::FXmlTraverser& kXml);
+ 	
+-		bool InsertRow(FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName, InsertConflictClause clause = NONE);
+-		bool InsertOrIgnoreRow(FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
+-		bool ReplaceRow(FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
+-		bool DeleteRow(FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
+-		bool UpdateRow(FXmlTraverser& kRows, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
++		bool InsertRow(::FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName, InsertConflictClause clause = NONE);
++		bool InsertOrIgnoreRow(::FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
++		bool ReplaceRow(::FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
++		bool DeleteRow(::FXmlTraverser& kRow, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
++		bool UpdateRow(::FXmlTraverser& kRows, ResultsCache& kResultsCache, const char* szTableName, size_t lenTableName);
+ 
+ 		//! Loads the entire contents of the file szFilename into the buffer pkFilebuffer.
+ 		//! Will allocate or reallocate if necessary depending the preexisting size of the buffer.
+--- a/Civ5/Src/CvLocalization/CvLocalization.h
++++ b/Civ5/Src/CvLocalization/CvLocalization.h
+@@ -1,6 +1,9 @@
+ // $Header
+ //------------------------------------------------------------------------------
+ #pragma once 
++
++#include <Windows.h>
++#include "Civ5/Src/CvGameDatabase/Database.h"
+ #ifndef _CVLOCALIZATION_H
+ #define _CVLOCALIZATION_H
+ 
+@@ -89,7 +92,7 @@
+ 			double	d;
+ 		} m_value;
+ 
+-		std::tr1::shared_ptr<String> m_str;
++		std::shared_ptr<String> m_str;
+ 
+ 		Type m_type;
+ 	};
+@@ -209,7 +212,7 @@
+ 
+ 	private:
+ 		//Shared pointer to a raw string buffer.
+-		std::tr1::shared_ptr<char> m_Buffer;
++		std::shared_ptr<char> m_Buffer;
+ 
+ 		//Length of string buffer, used for checking per instance offsets and lengths.
+ 		size_t m_BufferLength;
+--- a/FirePlace/FireWorks/FArray.h
++++ b/FirePlace/FireWorks/FArray.h
+@@ -15,6 +15,9 @@
+ #ifndef		FARRAY_H
+ #define		FARRAY_H
+ #pragma		once
++
++#include "FirePlace/FireWorks/FAssert.h"
++#include <assert.h>
+ 
+ #include "FirePlace/FireWorks/FSTLBlockAllocatorMT.h"
+ 
+@@ -126,7 +129,8 @@
+ 		//
+ 		//
+ 		T* m_pData;
+-		unsigned int m_nX, m_nY;
++		unsigned int m_nX;
++		unsigned int m_nY;
+ 	};
+ 
+ 	//
+@@ -223,7 +227,8 @@
+ 	{
+ 		Array2D() : m_X(X), m_Y(Y) {};
+ 		T m_Data[X][Y];
+-		unsigned int m_X,m_Y;
++		unsigned int m_X;
++		unsigned int m_Y;
+ 	};
+ };
+ 
+--- a/FirePlace/FireWorks/FAStarNode.h
++++ b/FirePlace/FireWorks/FAStarNode.h
+@@ -15,6 +15,8 @@
+ #ifndef		FASTARNODE_H
+ #define		FASTARNODE_H
+ #pragma		once
++
++#include <stddef.h>
+ 
+ #define ASNL_ADDOPEN		0
+ #define ASNL_STARTOPEN		1
+@@ -80,7 +82,8 @@
+ 		}
+ 	}
+ 
+-	int m_iX, m_iY;         // Coordinate position
++	int m_iX;	// Coordinate position
++	int m_iY;
+ 	int m_iTotalCost;		// Fitness (f)
+ 	int m_iKnownCost;		// Goal (g)
+ 	int m_iHeuristicCost;   // Heuristic (h)
+--- a/FirePlace/FireWorks/FAtomic.h
++++ b/FirePlace/FireWorks/FAtomic.h
+@@ -12,6 +12,8 @@
+ 
+ #ifndef FAtomic_h
+ #define FAtomic_h
++
++#include "FirePlace/FireWorks/FFireTypes.h"
+ 
+ // Terrible performance versions for win32, because they don't have these natively
+ #if defined(_WINPC) 
+--- a/FirePlace/FireWorks/FAutoArchiveClassContainer.h
++++ b/FirePlace/FireWorks/FAutoArchiveClassContainer.h
+@@ -15,6 +15,10 @@
+ //---------------------------------------------------------------------------------------
+ #ifndef _INCLUDED_FAutoArchiveClassContainer_H
+ #define _INCLUDED_FAutoArchiveClassContainer_H
++
++#include <map>
++#include <string>
++#include <algorithm>
+ 
+ //---------------------------------------------------------------------------------------
+ 
+--- a/FirePlace/FireWorks/FAutoVariable.h
++++ b/FirePlace/FireWorks/FAutoVariable.h
+@@ -233,7 +233,7 @@
+ //---------------------------------------------------------------------------------------
+ 
+ template<typename ObjectType, typename ContainerType>
+-__forceinline FAutoVariable<typename ObjectType, typename ContainerType> & FAutoVariable<typename ObjectType, typename ContainerType>::operator-=(const ObjectType & rhs)
++__forceinline FAutoVariable<ObjectType, ContainerType> & FAutoVariable<ObjectType, ContainerType>::operator-=(const ObjectType & rhs)
+ {
+ 	set(m_value - rhs);
+ 	return *this;
+@@ -242,7 +242,7 @@
+ //---------------------------------------------------------------------------------------
+ 
+ template<typename ObjectType, typename ContainerType>
+-__forceinline FAutoVariable<typename ObjectType, typename ContainerType> & FAutoVariable<typename ObjectType, typename ContainerType>::operator+=(const ObjectType & rhs)
++__forceinline FAutoVariable<ObjectType, ContainerType> & FAutoVariable<ObjectType, ContainerType>::operator+=(const ObjectType & rhs)
+ {
+ 	set(m_value + rhs);
+ 	return *this;
+@@ -251,7 +251,7 @@
+ //---------------------------------------------------------------------------------------
+ 
+ template<typename ObjectType, typename ContainerType>
+-__forceinline FAutoVariable<typename ObjectType, typename ContainerType> & FAutoVariable<typename ObjectType, typename ContainerType>::operator++(int)
++__forceinline FAutoVariable<ObjectType, ContainerType> & FAutoVariable<ObjectType, ContainerType>::operator++(int)
+ {
+ 	// prefix and postfix operators are not guaranteed to be applied before being passed to a function
+ 	ObjectType tmp = m_value;
+@@ -263,7 +263,7 @@
+ //---------------------------------------------------------------------------------------
+ 
+ template<typename ObjectType, typename ContainerType>
+-__forceinline FAutoVariable<typename ObjectType, typename ContainerType> & FAutoVariable<typename ObjectType, typename ContainerType>::operator--(int)
++__forceinline FAutoVariable<ObjectType, ContainerType> & FAutoVariable<ObjectType, ContainerType>::operator--(int)
+ {
+ 	// prefix and postfix operators are not guaranteed to be applied before being passed to a function
+ 	ObjectType tmp = m_value;
+--- a/FirePlace/FireWorks/FAutoVariableBase.h
++++ b/FirePlace/FireWorks/FAutoVariableBase.h
+@@ -46,7 +46,7 @@
+ 	std::string toString(const std::vector<ValueType> & source)
+ 	{
+ 		std::string result = "{";
+-		std::vector<ValueType>::const_iterator i;
++		typename std::vector<ValueType>::const_iterator i;
+ 		for(i = source.begin(); i != source.end(); ++i)
+ 		{
+ 			if(i != source.begin())
+--- a/FirePlace/FireWorks/FAutoVector.h
++++ b/FirePlace/FireWorks/FAutoVector.h
+@@ -213,7 +213,7 @@
+ FAutoVariable<std::vector<ElementType>, ClassContainer> & FAutoVariable<std::vector<ElementType>, ClassContainer>::operator=(const std::vector<ElementType> & rhs)
+ {
+ 	clear();
+-	std::vector<ElementType>::const_iterator i;
++	typename std::vector<ElementType>::const_iterator i;
+ 	for(i = rhs.begin(); i != rhs.end(); ++i)
+ 	{
+ 		push_back(*i);
+@@ -355,7 +355,7 @@
+ void FAutoVariable<std::vector<ElementType>, ClassContainer>::insert(size_t index, const ElementType & v)
+ {
+ 	m_owner.touch(*this);
+-	std::vector<ElementType>::iterator i = m_value.begin() + index;
++	typename std::vector<ElementType>::iterator i = m_value.begin() + index;
+ 	m_value.insert(i, v);
+ 	m_commands.push_back(AutoVectorCommand<ElementType>(AutoVectorCommand<ElementType>::INSERT, index, v));
+ }
+@@ -396,7 +396,7 @@
+ {
+ 	m_owner.touch(*this);
+ 
+-	std::vector<ElementType>::iterator i = m_value.begin() + index;
++	typename std::vector<ElementType>::iterator i = m_value.begin() + index;
+ 	m_value.erase(i);
+ 	m_commands.push_back(AutoVectorCommand<ElementType>(AutoVectorCommand<ElementType>::ERASE, index, ElementType()));
+ 	
+--- a/FirePlace/FireWorks/FBatchAllocate.h
++++ b/FirePlace/FireWorks/FBatchAllocate.h
+@@ -16,7 +16,8 @@
+ struct AllocData
+ {
+ 	void* pOut;
+-	unsigned int nX, nY;
++	unsigned int nX;
++	unsigned int nY;
+ };
+ 
+ 
+--- a/FirePlace/FireWorks/FBitFlags.h
++++ b/FirePlace/FireWorks/FBitFlags.h
+@@ -31,7 +31,15 @@
+ template <>
+ class FTBitFlag<unsigned char>
+ {
+-	FBITFLAGS(unsigned char);
++public:
++	bool GetBit(unsigned char uiFlag) const { return (m_uiFlags & uiFlag) != 0; }
++	void SetBit(unsigned char uiFlag, bool bOn) {  if (bOn) m_uiFlags |= uiFlag; else  m_uiFlags &= ~uiFlag; }
++	void ToggleBit( unsigned char uiFlag ) {  if( !(m_uiFlags & uiFlag) ) m_uiFlags |= uiFlag; else  m_uiFlags &= ~uiFlag; }
++	void ClearFlags() { m_uiFlags = 0; }
++	unsigned char GetFlags() const { return m_uiFlags; }
++	void SetFlags(unsigned char val) { m_uiFlags = val; }
++private:
++	unsigned char m_uiFlags;
+ public:
+ 	FTBitFlag() : m_uiFlags(0) { }
+ 	FTBitFlag(unsigned char uiInit) : m_uiFlags(uiInit) {}
+@@ -40,7 +48,15 @@
+ template <>
+ class FTBitFlag<unsigned short>
+ {
+-	FBITFLAGS(unsigned short);
++public:
++	bool GetBit(unsigned short uiFlag) const { return (m_uiFlags & uiFlag) != 0; }
++	void SetBit(unsigned short uiFlag, bool bOn) {  if (bOn) m_uiFlags |= uiFlag; else  m_uiFlags &= ~uiFlag; }
++	void ToggleBit( unsigned short uiFlag ) {  if( !(m_uiFlags & uiFlag) ) m_uiFlags |= uiFlag; else  m_uiFlags &= ~uiFlag; }
++	void ClearFlags() { m_uiFlags = 0; }
++	unsigned short GetFlags() const { return m_uiFlags; }
++	void SetFlags(unsigned short val) { m_uiFlags = val; }
++private:
++	unsigned short m_uiFlags;
+ public:
+ 	FTBitFlag() : m_uiFlags(0) { }
+ 	FTBitFlag(unsigned short uiInit) : m_uiFlags(uiInit) {}
+@@ -49,7 +65,15 @@
+ template <>
+ class FTBitFlag<unsigned int>
+ {
+-	FBITFLAGS(unsigned int);
++public:
++	bool GetBit(unsigned int uiFlag) const { return (m_uiFlags & uiFlag) != 0; }
++	void SetBit(unsigned int uiFlag, bool bOn) {  if (bOn) m_uiFlags |= uiFlag; else  m_uiFlags &= ~uiFlag; }
++	void ToggleBit( unsigned int uiFlag ) {  if( !(m_uiFlags & uiFlag) ) m_uiFlags |= uiFlag; else  m_uiFlags &= ~uiFlag; }
++	void ClearFlags() { m_uiFlags = 0; }
++	unsigned int GetFlags() const { return m_uiFlags; }
++	void SetFlags(unsigned int val) { m_uiFlags = val; }
++private:
++	unsigned int m_uiFlags;
+ public:
+ 	FTBitFlag() : m_uiFlags(0) { }
+ 	FTBitFlag(unsigned int uiInit) : m_uiFlags(uiInit) {}
+--- a/FirePlace/FireWorks/FCrc32.h
++++ b/FirePlace/FireWorks/FCrc32.h
+@@ -75,6 +75,8 @@
+ #define		FCRC_H
+ #pragma		once
+ 
++#include "FirePlace/FireWorks/FFireTypes.h"
++
+ #define CRC_INIT	((dword) ~0)
+ 
+ enum
+--- a/FirePlace/FireWorks/FCriticalSection.h
++++ b/FirePlace/FireWorks/FCriticalSection.h
+@@ -15,6 +15,8 @@
+ #ifndef		FCRITICALSECTION_H
+ #define		FCRITICALSECTION_H
+ #pragma		once
++
++#include <Windows.h>
+ 
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ //
+--- a/FirePlace/FireWorks/FCriticalSection.inl
++++ b/FirePlace/FireWorks/FCriticalSection.inl
+@@ -5,6 +5,8 @@
+ //
+ // Constructors
+ 
++#pragma once
++#include "FirePlace/FireWorks/FCriticalSection.h"
+ inline FScopedCriticalSection::FScopedCriticalSection( FCriticalSection& kCriticalSection ): m_kCriticalSection( kCriticalSection )
+ {
+ 	m_kCriticalSection.Enter();
+--- a/FirePlace/FireWorks/FDefNew.h
++++ b/FirePlace/FireWorks/FDefNew.h
+@@ -6,6 +6,8 @@
+ 
+ #ifndef __FDEF_NEW_H__
+ #define __FDEF_NEW_H__
++
++#include <stdlib.h>
+ 
+ // sjh:  what is this for?
+ #if !defined(USE_MFC)
+--- a/FirePlace/FireWorks/FEndian.h
++++ b/FirePlace/FireWorks/FEndian.h
+@@ -11,6 +11,10 @@
+ //------------------------------------------------------------------------------------------------
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include "FirePlace/FireWorks/FAssert.h"
++#include <algorithm>
+ #ifndef FENDIAN_H
+ #define FENDIAN_H
+ 
+--- a/FirePlace/FireWorks/FFastAllocator.h
++++ b/FirePlace/FireWorks/FFastAllocator.h
+@@ -7,6 +7,9 @@
+ 
+ #ifndef FFAST_ALLOCATOR_H
+ #define FFAST_ALLOCATOR_H
++
++#include <assert.h>
++#include <limits.h>
+ 
+ //
+ // Simple allocator based on a vector.  Deleted elements are 
+@@ -309,8 +312,8 @@
+ 	//The actual data
+ 	VectorType m_vec;
+ 
+-	template< class T, bool bPODType, unsigned int AllocPool, unsigned int nSubID, class BASE_ALLOC > 
+-	friend void* operator new( size_t uiSize, FFastAllocator< T, bPODType, AllocPool, nSubID, BASE_ALLOC >& kAlloc );
++	template< class T_, bool bPODType_, unsigned int AllocPool_, unsigned int nSubID_, class BASE_ALLOC_ > 
++	friend void* operator new( size_t uiSize, FFastAllocator< T_, bPODType_, AllocPool_, nSubID_, BASE_ALLOC_ >& kAlloc );
+ };
+ 
+ // Placement new on a FFastAllocator allows allocation and construction to be combined.
+@@ -353,7 +356,7 @@
+ 	class T,
+ 	unsigned int AllocPool = c_eMPoolTypeContainer, 
+ 	unsigned int nSubID = 0,
+-	class BASE_ALLOC = typename BaseVector< T, bPODType >::FDefaultFastVectorAllocator
++	class BASE_ALLOC = typename BaseVector< T, false >::FDefaultFastVectorAllocator
+ > class FFixedBlockAllocator
+ {
+ 	const static unsigned int ms_uiAnchorNodeIndex = 0x0fffffff;
+@@ -455,7 +458,7 @@
+ 			uiPos = m_uiFirstEmpty;
+ 			T* pTemp = &m_pData[uiPos];
+ 			m_uiFirstEmpty = pTemp->ALLOC_GetNext();
+-			new( (void*)pTemp )T( x );
++			new( (void*)pTemp )T();
+ 			pTemp->ALLOC_SetDeleted(false);
+ 		}
+ 		m_uiMaxActiveIndex++;
+@@ -541,7 +544,7 @@
+ 
+ 			m_uiFirstEmpty = uiIndex;
+ 		}else{
+-			T* pRoot = &m_vec[m_uiFirstEmpty];
++			T* pRoot = &m_pData[m_uiFirstEmpty];
+ 			element.ALLOC_SetNext( pRoot->ALLOC_GetNext() );
+ 			pRoot->ALLOC_SetNext(uiIndex);
+ 		}
+@@ -554,7 +557,7 @@
+ 
+ 	//Don't allow copying
+ private:
+-	void operator = (const FFastAllocator& rhs){}
++	void operator = (const FFixedBlockAllocator& rhs){}
+ 
+ 
+ public:
+@@ -598,8 +601,8 @@
+ 	//The actual data
+ 	T* m_pData;
+ 
+-	template< class T, unsigned int AllocPool, unsigned int nSubID, class BASE_ALLOC >
+-	friend void* operator new( size_t uiSize, FFixedBlockAllocator< T, AllocPool, nSubID, BASE_ALLOC >& kAlloc );
++	template< class T_, unsigned int AllocPool_, unsigned int nSubID_, class BASE_ALLOC_ >
++	friend void* operator new( size_t uiSize, FFixedBlockAllocator< T_, AllocPool_, nSubID_, BASE_ALLOC_ >& kAlloc );
+ };
+ 
+ // Placement new on a FFastAllocator allows allocation and construction to be combined.
+@@ -609,7 +612,7 @@
+ 	if( kAlloc.m_uiSize == kAlloc.m_uiCapacity )
+ 	{
+ 		FAssertMsg(false, "Fixed-size allocator is full!" );
+-		return UINT_MAX;
++		return (void*)UINT_MAX;
+ 	}
+ 
+ 	unsigned int uiPos;
+--- a/FirePlace/FireWorks/FFastList.h
++++ b/FirePlace/FireWorks/FFastList.h
+@@ -42,7 +42,9 @@
+ 	NullListPolicy() : uiSize( 0 ),uiFirst( ANCHOR_NODE_INDEX ),uiLast( ANCHOR_NODE_INDEX ){};
+ 	NullListPolicy( unsigned int uiSize, unsigned int uiFirst, unsigned int uiLast )
+ 		: uiSize( uiSize ), uiFirst( uiFirst ), uiLast( uiLast ) {};
+-	unsigned int uiSize, uiFirst, uiLast;
++	unsigned int uiSize;
++	unsigned int uiFirst;
++	unsigned int uiLast;
+ };
+ 
+ 
+@@ -158,7 +160,7 @@
+ 	//
+ 	explicit FFastList() : BASE_TYPE() {};
+ 	explicit FFastList( unsigned int uiCapacity ) : BASE_TYPE(uiCapacity) {};
+-	explicit TYPE( const TYPE& rhs ) : BASE_TYPE( rhs ) {};
++	explicit FFastList( const TYPE& rhs ) : BASE_TYPE( rhs ) {};
+ 
+ 	//Copy operator
+ 	const TYPE& operator = ( const TYPE& rhs ){  
+@@ -196,11 +198,11 @@
+ 	//
+ 	// Member functions which get/use various iterators
+ 	//
+-	iterator begin(){ return iterator( m_uiFirst, this ); };
++	iterator begin(){ return iterator( this->m_uiFirst, this ); };
+ 	iterator end(){ return iterator( ANCHOR_NODE_INDEX, this ); };
+-	const_iterator begin() const{ return const_iterator( m_uiFirst, this ); };
++	const_iterator begin() const{ return const_iterator( this->m_uiFirst, this ); };
+ 	const_iterator end() const{ return const_iterator( ANCHOR_NODE_INDEX, this ); };
+-	const_iterator begin_const() const{ return const_iterator( m_uiFirst, this ); };
++	const_iterator begin_const() const{ return const_iterator( this->m_uiFirst, this ); };
+ 	const_iterator end_const() const{ return const_iterator( ANCHOR_NODE_INDEX, this ); };
+ 
+ 	iterator get_iterator( unsigned int index ){ 
+@@ -243,8 +245,8 @@
+ 	const T& get_element( unsigned int i ) const{ return BASE_TYPE::get_element( i ).data; };
+ 
+ 
+-	const ALLOC_TYPE& get_allocator() const{ return m_kAllocator; };
+-	ALLOC_TYPE& get_allocator(){ return m_kAllocator; };
++	const ALLOC_TYPE& get_allocator() const{ return this->m_kAllocator; };
++	ALLOC_TYPE& get_allocator(){ return this->m_kAllocator; };
+ 
+ };
+ 
+@@ -284,17 +286,17 @@
+ 	// Base iterator class which defined all iterator-ness except whether
+ 	// access is const or non-const.
+ 	//
+-	template< class TAIL >
++	template< class ITAIL >
+ 	class base_iterator : 
+ 		public std::iterator<std::bidirectional_iterator_tag, MultiListNodePolicy<T> >, 
+-		public TAIL
++		public ITAIL
+ 	{
+ 	public:
+-		explicit base_iterator() : m_uiCurrPos( ANCHOR_NODE_INDEX ), TAIL(NULL) {};
++		explicit base_iterator() : m_uiCurrPos( ANCHOR_NODE_INDEX ), ITAIL(NULL) {};
+ 		explicit base_iterator( unsigned int uiPos, TYPE* pVec )
+-			: m_uiCurrPos( uiPos ), TAIL( pVec ) {};
++			: m_uiCurrPos( uiPos ), ITAIL( pVec ) {};
+ 		explicit base_iterator( unsigned int uiPos, const TYPE* pVec )
+-			: m_uiCurrPos( uiPos ), TAIL( pVec ) {};
++			: m_uiCurrPos( uiPos ), ITAIL( pVec ) {};
+ 
+ 		~base_iterator(){};
+ 
+@@ -305,24 +307,24 @@
+ 		};
+ 		base_iterator& operator++(){
+ 			if( m_uiCurrPos == ANCHOR_NODE_INDEX ){
+-				m_uiCurrPos = m_pFastList->m_uiFirst;
++				m_uiCurrPos = this->m_pFastList->m_uiFirst;
+ 			}else{
+-				m_uiCurrPos = m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_GetNext();
++				m_uiCurrPos = this->m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_GetNext();
+ 			}
+ 			return *this;
+ 		};
+ 
+ 		base_iterator& Inc_prefetch_next(){
+ 			if( m_uiCurrPos == ANCHOR_NODE_INDEX ){
+-				m_uiCurrPos = m_pFastList->m_uiFirst;
++				m_uiCurrPos = this->m_pFastList->m_uiFirst;
+ 			}else{
+-				m_uiCurrPos = m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_GetNext();
++				m_uiCurrPos = this->m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_GetNext();
+ 			}
+ 
+ 			if( m_uiCurrPos!=ANCHOR_NODE_INDEX ) {
+-				const uint uiNextPos = m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_GetNext();
++				const uint uiNextPos = this->m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_GetNext();
+ 				if( uiNextPos!=ANCHOR_NODE_INDEX )
+-					PrefetchRegion(reinterpret_cast<const char*>(m_pFastList->get_allocator().GetStoragePtr())+(uiNextPos*sizeof(MultiListNodePolicy<T>)), sizeof(MultiListNodePolicy<T>) );
++					PrefetchRegion(reinterpret_cast<const char*>(this->m_pFastList->get_allocator().GetStoragePtr())+(uiNextPos*sizeof(MultiListNodePolicy<T>)), sizeof(MultiListNodePolicy<T>) );
+ 			}
+ 			return *this;
+ 		};
+@@ -333,9 +335,9 @@
+ 		}
+ 		base_iterator& operator--(){
+ 			if( m_uiCurrPos == ANCHOR_NODE_INDEX ){
+-				m_uiCurrPos = m_pFastList->m_uiLast;
++				m_uiCurrPos = this->m_pFastList->m_uiLast;
+ 			}else{
+-				m_uiCurrPos = m_pFastList->get_allocator()[m_uiCurrPos].LIST_GetPrev();
++				m_uiCurrPos = this->m_pFastList->get_allocator()[m_uiCurrPos].LIST_GetPrev();
+ 			}
+ 			return *this;
+ 		};
+@@ -351,7 +353,7 @@
+ 
+ 		//Determine if this position is valid, or if it has been deleted.
+ 		bool is_valid(){
+-			return !m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_IsDeleted();
++			return !this->m_pFastList->get_allocator()[ m_uiCurrPos ].LIST_IsDeleted();
+ 		};
+ 
+ 		//Get the index into the array that the iterator is currently pointing to.
+@@ -361,7 +363,7 @@
+ 
+ 	protected:
+ 		unsigned int m_uiCurrPos;
+-		friend class TYPE;
++		friend TYPE;
+ 	};
+ 
+ 	//
+@@ -377,10 +379,10 @@
+ 		~iterator(){};
+ 
+ 		T& operator*(){
+-			return m_pFastList->get_allocator()[ m_uiCurrPos ];
++			return this->m_pFastList->get_allocator()[ this->m_uiCurrPos ];
+ 		};
+ 		T* operator->(){
+-			return &m_pFastList->get_allocator()[ m_uiCurrPos ];
++			return &this->m_pFastList->get_allocator()[ this->m_uiCurrPos ];
+ 		};
+ 	};
+ 
+@@ -397,10 +399,10 @@
+ 		~const_iterator(){};
+ 
+ 		const T & operator*() const{
+-			return m_pFastList->get_allocator()[ m_uiCurrPos ];
++			return this->m_pFastList->get_allocator()[ this->m_uiCurrPos ];
+ 		};
+ 		const T* operator->() const{
+-			return &m_pFastList->get_allocator()[ m_uiCurrPos ];
++			return &this->m_pFastList->get_allocator()[ this->m_uiCurrPos ];
+ 		};
+ 	};
+ 
+@@ -465,7 +467,7 @@
+ 
+ 	//Push a new element to the front of a list
+ 	unsigned int push_front( const T& x ){
+-		unsigned int uiNewIndex = get_allocator().Alloc( x );
++		unsigned int uiNewIndex = this->get_allocator().Alloc( x );
+ 		push_front_existing( uiNewIndex );
+ 		return uiNewIndex;
+ 	};
+@@ -482,7 +484,7 @@
+ 	//Push a new element to the back of a list
+ 	unsigned int push_back( const T& x )
+ 	{
+-		unsigned int uiNewIndex = get_allocator().Alloc( x );
++		unsigned int uiNewIndex = this->get_allocator().Alloc( x );
+ 		push_back_existing( uiNewIndex );
+ 		return uiNewIndex;
+ 	};
+@@ -497,18 +499,18 @@
+ 
+ 
+ 	T& front() {
+-		return get_allocator()[ m_uiFirst ];
++		return this->get_allocator()[ m_uiFirst ];
+ 	};
+ 	T& back() {
+-		return get_allocator()[ m_uiLast ];
++		return this->get_allocator()[ m_uiLast ];
+ 	};
+ 	unsigned int front_index() const { return m_uiFirst; };
+ 	unsigned int back_index() const { return m_uiLast; };
+ 	const T& front() const {
+-		return get_allocator()[ m_uiFirst ];
++		return this->get_allocator()[ m_uiFirst ];
+ 	};
+ 	const T& back() const {
+-		return get_allocator()[ m_uiLast ];
++		return this->get_allocator()[ m_uiLast ];
+ 	};
+ 
+ 	bool empty() const{
+@@ -536,11 +538,11 @@
+ 	const_iterator end_const() const{ return const_iterator( ANCHOR_NODE_INDEX, this ); };
+ 
+ 	iterator get_iterator( unsigned int index ){ 
+-		assert( get_allocator().is_element_valid( index ) );
++		assert( this->get_allocator().is_element_valid( index ) );
+ 		return iterator( index, this );
+ 	};
+ 	const_iterator get_iterator_const( unsigned int index ) const{ 
+-		assert( get_allocator().is_element_valid( index ) )
++		assert( this->get_allocator().is_element_valid( index ) );
+ 			return const_iterator( index, this );
+ 	};
+ 
+@@ -553,12 +555,12 @@
+ 	// get_iterator function were used.
+ 	//
+ 	iterator erase( unsigned int uiIndex ){
+-		const unsigned int uiNext = get_allocator()[uiIndex].LIST_GetNext();
++		const unsigned int uiNext = this->get_allocator()[uiIndex].LIST_GetNext();
+ 		UnLink( uiIndex, uiNext );
+ 		return iterator( uiNext, this );
+ 	};
+ 	iterator erase( iterator  it ){
+-		const unsigned int uiNext = get_allocator()[it.get_index()].LIST_GetNext();
++		const unsigned int uiNext = this->get_allocator()[it.get_index()].LIST_GetNext();
+ 		UnLink( it.get_index(), uiNext );
+ 		return iterator( uiNext, this );
+ 	};
+@@ -571,7 +573,7 @@
+ 	void pop_front()
+ 	{
+ 		if( m_uiFirst != ANCHOR_NODE_INDEX){
+-			unsigned int uiNewFront = get_allocator()[ m_uiFirst ].LIST_GetNext();
++			unsigned int uiNewFront = this->get_allocator()[ m_uiFirst ].LIST_GetNext();
+ 			UnLink( m_uiFirst, uiNewFront );
+ 			m_uiFirst = uiNewFront;
+ 		}
+@@ -579,7 +581,7 @@
+ 	void pop_back()
+ 	{
+ 		if( m_uiLast != ANCHOR_NODE_INDEX ){
+-			unsigned int uiNewBack = get_allocator()[ m_uiLast ].LIST_GetPrev();
++			unsigned int uiNewBack = this->get_allocator()[ m_uiLast ].LIST_GetPrev();
+ 			UnLink( m_uiLast, ANCHOR_NODE_INDEX );
+ 			m_uiLast = uiNewBack;
+ 		}
+@@ -589,13 +591,13 @@
+ 	//Accessors which are not in the STL but should be because the STL is stupid.
+ 	//
+ 	bool is_element_valid(unsigned int i) const{
+-		return get_allocator().is_element_valid(i);
++		return this->get_allocator().is_element_valid(i);
+ 	};
+ 	T& get_element( unsigned int i ){
+-		return get_allocator()[i];
++		return this->get_allocator()[i];
+ 	};
+ 	const T& get_element(unsigned int i) const{
+-		return get_allocator()[i];
++		return this->get_allocator()[i];
+ 	};
+ 
+ protected:
+@@ -603,14 +605,14 @@
+ 	//Set the internal links to add element i before element j
+ 	void InsertBefore(unsigned int i, unsigned int j)
+ 	{
+-		assert( get_allocator().is_element_valid(i) );
+-
+-		T* a = &get_allocator()[i];
++		assert( this->get_allocator().is_element_valid(i) );
++
++		T* a = &this->get_allocator()[i];
+ 		if( j == ANCHOR_NODE_INDEX ){
+ 			a->LIST_SetNext(ANCHOR_NODE_INDEX);
+ 			a->LIST_SetPrev(ANCHOR_NODE_INDEX);
+ 		}else{
+-			T* b = &get_allocator()[j];
++			T* b = &this->get_allocator()[j];
+ 
+ 			//Set the links for the new node
+ 			unsigned int uiBPrev = b->LIST_GetPrev();
+@@ -619,7 +621,7 @@
+ 
+ 			//Fix the links for the next and previous nodes
+ 			if( uiBPrev != ANCHOR_NODE_INDEX )
+-				get_allocator()[uiBPrev].LIST_SetNext(i);
++				this->get_allocator()[uiBPrev].LIST_SetNext(i);
+ 			b->LIST_SetPrev(i);
+ 		}
+ 	};
+@@ -627,14 +629,14 @@
+ 	//Set the internal links to add element i after element j
+ 	void InsertAfter(unsigned int i, unsigned int j)
+ 	{
+-		assert( get_allocator().is_element_valid(i) );
+-
+-		T* a = &get_allocator()[i];
++		assert( this->get_allocator().is_element_valid(i) );
++
++		T* a = &this->get_allocator()[i];
+ 		if( j == ANCHOR_NODE_INDEX ){
+ 			a->LIST_SetNext(ANCHOR_NODE_INDEX);
+ 			a->LIST_SetPrev(ANCHOR_NODE_INDEX);
+ 		}else{
+-			T* b = &get_allocator()[j];
++			T* b = &this->get_allocator()[j];
+ 
+ 			//Set the links for the new node
+ 			unsigned int uiBNext = b->LIST_GetNext();
+@@ -643,7 +645,7 @@
+ 
+ 			//Fix the links for the next and previous nodes
+ 			if( uiBNext != ANCHOR_NODE_INDEX )
+-				get_allocator()[uiBNext].LIST_SetPrev(i);
++				this->get_allocator()[uiBNext].LIST_SetPrev(i);
+ 			b->LIST_SetNext(i);
+ 		}
+ 	};
+@@ -651,26 +653,26 @@
+ 	//Reverse-Unlink an internal chain of elements and add them to the free space.
+ 	void UnLink( unsigned int uiStart, unsigned int uiEnd ){
+ 		if( uiStart == ANCHOR_NODE_INDEX ){ return; }
+-		assert( get_allocator().is_element_valid(uiStart) );
++		assert( this->get_allocator().is_element_valid(uiStart) );
+ 
+ 		if( uiStart == m_uiFirst){ m_uiFirst = uiEnd; }
+-		uiStart = get_allocator()[uiStart].LIST_GetPrev();
++		uiStart = this->get_allocator()[uiStart].LIST_GetPrev();
+ 		if( uiEnd == ANCHOR_NODE_INDEX ){
+ 			uiEnd = m_uiLast;
+ 			m_uiLast = uiStart;
+ 		}else{
+-			assert( get_allocator().is_element_valid(uiEnd) );
+-			uiEnd = get_allocator()[uiEnd].LIST_GetPrev();
++			assert( this->get_allocator().is_element_valid(uiEnd) );
++			uiEnd = this->get_allocator()[uiEnd].LIST_GetPrev();
+ 		}
+ 
+ 		while( uiStart != uiEnd ){
+-			T& kEnd = get_allocator()[uiEnd];
++			T& kEnd = this->get_allocator()[uiEnd];
+ 			unsigned int uiNext = kEnd.LIST_GetNext();
+ 			unsigned int uiPrev = kEnd.LIST_GetPrev();
+-			if( uiNext != ANCHOR_NODE_INDEX ) get_allocator()[uiNext].LIST_SetPrev( uiPrev );
+-			if( uiPrev != ANCHOR_NODE_INDEX ) get_allocator()[uiPrev].LIST_SetNext( uiNext );
++			if( uiNext != ANCHOR_NODE_INDEX ) this->get_allocator()[uiNext].LIST_SetPrev( uiPrev );
++			if( uiPrev != ANCHOR_NODE_INDEX ) this->get_allocator()[uiPrev].LIST_SetNext( uiNext );
+ 			kEnd.LIST_SetDeleted(true);
+-			get_allocator().FreeIfDeleted(uiEnd);
++			this->get_allocator().FreeIfDeleted(uiEnd);
+ 
+ 			m_uiSize--;
+ 
+@@ -678,7 +680,9 @@
+ 		}
+ 	};
+ 
+-	unsigned int m_uiSize, m_uiFirst, m_uiLast;
++	unsigned int m_uiSize;
++	unsigned int m_uiFirst;
++	unsigned int m_uiLast;
+ };
+ 
+ //
+@@ -723,7 +727,7 @@
+ 		: CORE( rhs ) {};
+ 
+ 	const TYPE& operator=( const TYPE& rhs ){
+-		CORE = rhs;
++		CORE::operator=( rhs );
+ 	};
+ };
+ 
+@@ -767,7 +771,7 @@
+ 	FCustomList( const TYPE& rhs ) : CORE( rhs ) {};
+ 
+ 	const TYPE& operator=( const TYPE& rhs ){
+-		CORE = rhs;
++		CORE::operator=( rhs );
+ 	};
+ };
+ 
+@@ -1131,7 +1135,7 @@
+ 		unsigned int m_uiCurrList;
+ 		unsigned int m_uiCurrPos;
+ 		const TYPE* m_pFastList;
+-		friend class TYPE;
++		friend TYPE;
+ 	};
+ 
+ public:
+@@ -1147,10 +1151,10 @@
+ 		~iterator(){};
+ 
+ 		T& operator*() const{
+-			return (*m_pFastList->m_pVec)[m_uiCurrPos];
++			return (*this->m_pFastList->m_pVec)[this->m_uiCurrPos];
+ 		};
+ 		T* operator->() const{
+-			return &(*m_pFastList->m_pVec)[m_uiCurrPos];
++			return &(*this->m_pFastList->m_pVec)[this->m_uiCurrPos];
+ 		};
+ 	};
+ 
+@@ -1165,10 +1169,10 @@
+ 		~const_iterator(){};
+ 
+ 		const T& operator*() const{
+-			return (*m_pFastList->m_pVec)[m_uiCurrPos];
++			return (*this->m_pFastList->m_pVec)[this->m_uiCurrPos];
+ 		};
+ 		const T* operator->() const{
+-			return &(*m_pFastList->m_pVec)[m_uiCurrPos];
++			return &(*this->m_pFastList->m_pVec)[this->m_uiCurrPos];
+ 		};
+ 	};
+ 
+@@ -1379,7 +1383,7 @@
+ 		return iterator(index, this, uiList);
+ 	};
+     const_iterator get_iterator_const(unsigned int index, unsigned int uiList) const{ 
+-		assert( m_pVec->is_element_valid( index ) )
++		assert( m_pVec->is_element_valid( index ) );
+ 		return const_iterator(index, this, uiList);
+ 	};
+     
+--- a/FirePlace/FireWorks/FFastVector.h
++++ b/FirePlace/FireWorks/FFastVector.h
+@@ -25,6 +25,9 @@
+ */
+ 
+ #pragma once
++
++#include "FirePlace/FireWorks/FMemHooks.h"
++#include "FirePlace/FireWorks/FFireTypes.h"
+ 
+ #include "vector"
+ #include "FirePlace/FireWorks/FAssert.h"
+@@ -237,11 +240,11 @@
+ 	unsigned int m_uiCurrSize;		//The current number of elements in the vector
+ 	unsigned int m_uiCurrMaxSize;	//The maximum number of elements which can be stored in the current memory store.
+ 
+-	template< class T, bool bPODType, unsigned int AllocPool, unsigned int nSubID, class FAST_VEC_ALLOC >
+-	friend void* operator new( size_t uiSize, FFastVector< T, bPODType, AllocPool, nSubID, FAST_VEC_ALLOC >& kVector );
+-
+-	template< class T, unsigned int L, bool bPODType, unsigned int AllocPool, unsigned int nSubID >
+-	friend void* operator new( size_t uiSize, FStaticVector< T, L, bPODType, AllocPool, nSubID >& kVector );
++	template< class T_, bool bPODType_, unsigned int AllocPool_, unsigned int nSubID_, class FAST_VEC_ALLOC_ >
++	friend void* operator new( size_t uiSize, FFastVector< T_, bPODType_, AllocPool_, nSubID_, FAST_VEC_ALLOC_ >& kVector );
++
++	template< class T_, unsigned int L_, bool bPODType_, unsigned int AllocPool_, unsigned int nSubID_ >
++	friend void* operator new( size_t uiSize, FStaticVector< T_, L_, bPODType_, AllocPool_, nSubID_ >& kVector );
+ };
+ 
+ //
+@@ -273,12 +276,19 @@
+ 	typedef FFastVector< T, bPODType, AllocPool, nSubID, FAST_VEC_ALLOC > THIS_TYPE;
+ 	typedef BaseVector< T, bPODType > BASE_TYPE;
+ 	typedef T TYPE;
++	using BASE_TYPE::m_pData;
++	using BASE_TYPE::m_uiCurrSize;
++	using BASE_TYPE::m_uiCurrMaxSize;
++protected:
++	using BASE_TYPE::Destroy;
++	using BASE_TYPE::Copy;
++public:
+ 
+ 	typedef TYPE* iterator;
+     typedef const TYPE* const_iterator;
+     typedef TYPE& reference;
+     typedef const TYPE& const_reference;
+-    typedef BASE_TYPE::size_type size_type;
++    typedef typename BASE_TYPE::size_type size_type;
+     typedef size_type difference_type;
+     typedef TYPE value_type;
+     typedef T* pointer;
+@@ -519,7 +529,7 @@
+ 	unsigned int m_nResizeTimes;
+ #endif
+ 
+-	template< class T, bool bPODType, unsigned int AllocPool, unsigned int nSubID, class FAST_VEC_ALLOC >
++	template< class T_, bool bPODType_, unsigned int AllocPool_, unsigned int nSubID_, class FAST_VEC_ALLOC_ >
+ 	friend void* operator new( size_t uiSize, THIS_TYPE& kVector );
+ };
+ 
+@@ -570,6 +580,13 @@
+ 	typedef BaseVector< T, bPODType > BASE_TYPE;
+ 
+ public:
++	using BASE_TYPE::m_pData;
++	using BASE_TYPE::m_uiCurrSize;
++	using BASE_TYPE::m_uiCurrMaxSize;
++protected:
++	using BASE_TYPE::Destroy;
++	using BASE_TYPE::Copy;
++public:
+ 	typedef T* iterator;
+     typedef const T* const_iterator;
+ 
+@@ -815,8 +832,8 @@
+ 	unsigned char m_iNumResized;
+ #endif
+ 
+-	template< class T, unsigned int L, bool bPODType, unsigned int AllocPool, unsigned int nSubID >
+-	friend void* operator new( size_t uiSize, FStaticVector< T, L, bPODType, AllocPool, nSubID >& kVector );
++	template< class T_, unsigned int L_, bool bPODType_, unsigned int AllocPool_, unsigned int nSubID_ >
++	friend void* operator new( size_t uiSize, FStaticVector< T_, L_, bPODType_, AllocPool_, nSubID_ >& kVector );
+ };
+ 
+ //
+@@ -1103,6 +1120,13 @@
+ 	typedef BaseVector< T, bPODType > BASE_TYPE;
+ 
+ public:
++	using BASE_TYPE::m_pData;
++	using BASE_TYPE::m_uiCurrSize;
++	using BASE_TYPE::m_uiCurrMaxSize;
++protected:
++	using BASE_TYPE::Destroy;
++	using BASE_TYPE::Copy;
++public:
+ 	typedef T* iterator;
+     typedef const T* const_iterator;
+ 
+@@ -1279,8 +1303,8 @@
+ 		FFREEALIGNED( (unsigned char*)pVal );
+ 	};
+ 
+-	template< class T, bool bPODType, unsigned int AllocPool, unsigned int nSubID >
+-	friend void* operator new( size_t uiSize, FFixedVector< T, bPODType, AllocPool, nSubID >& kVector );
++	template< class T_, bool bPODType_, unsigned int AllocPool_, unsigned int nSubID_ >
++	friend void* operator new( size_t uiSize, FFixedVector< T_, bPODType_, AllocPool_, nSubID_ >& kVector );
+ };
+ 
+ #if defined(_WIN32) || defined(_WIN64)
+--- a/FirePlace/FireWorks/FFileDefines.h
++++ b/FirePlace/FireWorks/FFileDefines.h
+@@ -15,6 +15,8 @@
+ #ifndef		FFILEDEFINES_H
+ #define		FFILEDEFINES_H
+ #pragma		once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
+ 
+ // Platform-specific support
+ #undef		SUPPORT_ASYNC_IO			// Define to support asynchronous I/O
+--- a/FirePlace/FireWorks/FFireTypes.h
++++ b/FirePlace/FireWorks/FFireTypes.h
+@@ -15,6 +15,8 @@
+ #ifndef		FFIRETYPES_H
+ #define		FFIRETYPES_H
+ #pragma		once
++
++#include <Windows.h>
+ 
+ typedef unsigned char		byte;
+ typedef unsigned short		word;
+@@ -397,6 +399,13 @@
+ #define		CONVERT_KB_TO_BT(kb)	(kb*KILOBYTE)
+ #define		CONVERT_MB_TO_BT(mb)	(mb*MEGABYTE)
+ #define		CONVERT_GB_TO_BT(gb)	(gb*GIGABYTE)
++#ifndef MIN
++#define MIN(a, b) (((a) < (b)) ? (a) : (b))
++#endif
++#ifndef MAX
++#define MAX(a, b) (((a) > (b)) ? (a) : (b))
++#endif
++
+ #define		CONVERT_MB_TO_KB(mb)	(mb*KILOBYTE)
+ #define		CONVERT_GB_TO_KB(gb)	(gb*MEGABYTE)
+ #define		CONVERT_GB_TO_MB(gb)	(gb*KILOBYTE)
+--- a/FirePlace/FireWorks/FFreeListArrayBase.h
++++ b/FirePlace/FireWorks/FFreeListArrayBase.h
+@@ -15,6 +15,8 @@
+ #ifndef		FFREELISTARRAYBASE_H
+ #define		FFREELISTARRAYBASE_H
+ #pragma		once
++
++#include <stddef.h>
+ 
+ namespace FFreeList
+ {
+--- a/FirePlace/FireWorks/FFreeListTrashArray.h
++++ b/FirePlace/FireWorks/FFreeListTrashArray.h
+@@ -15,6 +15,10 @@
+ #ifndef		FFREELISTTRASHARRAY_H
+ #define		FFREELISTTRASHARRAY_H
+ #pragma		once
++
++#include "FirePlace/FireWorks/FDataStream.h"
++#include <assert.h>
++#include "FirePlace/FireWorks/FMemHooks.h"
+ 
+ #include	"FirePlace/FireWorks/FFreeListArrayBase.h"
+ 
+@@ -442,27 +446,27 @@
+ inline void FFreeListTrashArray< T >::Read( FDataStream* pStream )
+ {
+ 	int iTemp;
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	Init( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	SetLastIndex( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	SetFreeListHead( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	SetFreeListCount( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	SetCurrentID( iTemp );
+ 
+ 	int i;
+ 
+ 	for ( i = 0; i < GetNumSlots(); i++ )
+ 	{
+-		pStream->Read( &iTemp );
++		*pStream >> iTemp;
+ 		SetNextFreeIndex( i, iTemp );
+ 	}
+ 
+ 	int iCount;
+-	pStream->Read( &iCount );
++	*pStream >> iCount;
+ 
+ 	for ( i = 0; i < iCount; i++ )
+ 	{
+@@ -510,27 +514,27 @@
+ inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, FDataStream* pStream )
+ {
+ 	int iTemp;
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	flist.Init( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	flist.SetLastIndex( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	flist.SetFreeListHead( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	flist.SetFreeListCount( iTemp );
+-	pStream->Read( &iTemp );
++	*pStream >> iTemp;
+ 	flist.SetCurrentID( iTemp );
+ 
+ 	int i;
+ 
+ 	for ( i = 0; i < flist.GetNumSlots(); i++ )
+ 	{
+-		pStream->Read( &iTemp );
++		*pStream >> iTemp;
+ 		flist.SetNextFreeIndex( i, iTemp );
+ 	}
+ 
+ 	int iCount;
+-	pStream->Read( &iCount );
++	*pStream >> iCount;
+ 
+ 	for ( i = 0; i < iCount; i++ )
+ 	{
+--- a/FirePlace/FireWorks/FIFile.h
++++ b/FirePlace/FireWorks/FIFile.h
+@@ -55,7 +55,7 @@
+ 	enum SeekMode { begin=0, current=1, end=2 };
+ 	enum OpenMode { modeRead=1, modeWrite=2, modeEdit=3 };
+ 
+-	virtual ~FIFile() = 0 { };
++	virtual ~FIFile() = 0;
+ 
+ 	virtual FileErr Open( const  char*  szFileName, OpenMode eOpenMode = modeRead, dword dwFlags = FFILE_FLAG_DEFAULT, uint uiBufferSize = FFILE_DEFAULT_BUFFER_SIZE ) = 0;
+ 	virtual FileErr Open( const wchar* wszFileName, OpenMode eOpenMode = modeRead, dword dwFlags = FFILE_FLAG_DEFAULT, uint uiBufferSize = FFILE_DEFAULT_BUFFER_SIZE ) = 0;
+@@ -118,6 +118,8 @@
+ 	// Assignment operator protection
+ 	FIFile& operator=( const FIFile& obj );
+ };
++
++inline FIFile::~FIFile() { }
+ 
+ /*	An encapsulation of an FIFile class that allows for auto creation and destruction.
+ 	Use this where you used to use the FFile class.  This allows the file system implementation code
+--- a/FirePlace/FireWorks/FIGameIniParser.h
++++ b/FirePlace/FireWorks/FIGameIniParser.h
+@@ -1,5 +1,7 @@
+ #ifndef _FIGAMEINIPARSER_H
+ #define _FIGAMEINIPARSER_H
++
++#include "FirePlace/FireWorks/FString.h"
+ 
+ #include "FirePlace/FireWorks/FFileDefines.h"
+ 
+--- a/FirePlace/FireWorks/FILogFile.h
++++ b/FirePlace/FireWorks/FILogFile.h
+@@ -1,5 +1,7 @@
+ #ifndef _FILOGFILE_H_
+ #define _FILOGFILE_H_
++
++#include "FirePlace/FireWorks/FFireTypes.h"
+ 
+ //
+ // log file object
+@@ -28,8 +30,10 @@
+ 
+ protected:
+ 	FILogFile() {};
+-	virtual ~FILogFile() =0 {};
++	virtual ~FILogFile() = 0;
+ };
++
++inline FILogFile::~FILogFile() {}
+ 
+ //
+ // log file manager
+@@ -37,7 +41,7 @@
+ class FILogFileMgr 
+ {
+ public:
+-	virtual ~FILogFileMgr() = 0 {};
++	virtual ~FILogFileMgr() = 0;
+ 	static FILogFileMgr& GetInstance();
+ 	static FILogFileMgr* PeekInstance();
+ 
+@@ -57,6 +61,8 @@
+ 	FILogFileMgr() {};
+ };
+ 
++inline FILogFileMgr::~FILogFileMgr() {}
++
+ #ifdef FXS_IS_DLL
+ #define LOGFILEMGR FILogFileMgr::GetInstance()
+ #else
+--- a/FirePlace/FireWorks/FInputDevice.h
++++ b/FirePlace/FireWorks/FInputDevice.h
+@@ -25,6 +25,8 @@
+ #ifndef		FINPUTDEVICE_H
+ #define		FINPUTDEVICE_H
+ #pragma		once
++
++#include <map>
+ 
+ #include "FirePlace/FireWorks/FSTLBlockAllocatorMT.h"
+ 
+@@ -100,7 +102,7 @@
+ 	uint TranslateHotKey(uint inputFromType) const;					// Call to use hot key mappings, return inputType
+ protected:
+ 	typedef std::map<uint /*InputType*/, uint /*InputType*/,
+-		std::less<uint>, FSTL_Tagged_Allocator<std::pair<uint, uint>, 16,c_eMPoolTypeContainer> > HotKeyMap;	// map of inputs to inputs (internal use only)
++		std::less<uint>, FSTL_Tagged_Allocator<std::pair<const uint, uint>, 16,c_eMPoolTypeContainer> > HotKeyMap;	// map of inputs to inputs (internal use only)
+ 
+ 	virtual bool IInit() = 0;			// device specific init
+ 	virtual bool IUnInit() = 0;			// device specific uninit
+--- a/FirePlace/FireWorks/FLua/Include/FLua.h
++++ b/FirePlace/FireWorks/FLua/Include/FLua.h
+@@ -13,6 +13,8 @@
+ #ifndef FLua_h
+ #define FLua_h
+ #pragma once
++
++#include "FirePlace/FireWorks/FAssert.h"
+ 
+ #include "FirePlace/FireWorks/FLua/Include/FLuaTypes.h"
+ #include "FirePlace/FireWorks/FLua/Include/FLuaGlobalData.h"
+--- a/FirePlace/FireWorks/FLua/Include/FLuaCommon.h
++++ b/FirePlace/FireWorks/FLua/Include/FLuaCommon.h
+@@ -16,17 +16,20 @@
+ 
+ #include <lua.hpp>
+ 
++#include <Windows.h>
++#if defined(_MSC_VER)
+ #include <tchar.h>
++#endif
+ #include <stdio.h>
+ #include <assert.h>
+ 
+ class FCriticalSection;
+ 
+ // Kind of like an assert for the compiler.  If the condition is not true then a compilation error is caused.
+-#define FLUA_COMPILE_TIME_CONDITION(CONDITION, ERR_NAME) typedef int ERROR_##ERR_NAME##[(CONDITION)? 1 : -1]
++#define FLUA_COMPILE_TIME_CONDITION(CONDITION, ERR_NAME) typedef int ERROR_##ERR_NAME[(CONDITION)? 1 : -1]
+ 
+ // Forces a compile time error.  Useful for template specializations that aren't suppose to compile.
+-#define FLUA_COMPILE_TIME_ERROR(ERR_NAME) FLUA_COMPILE_TIME_CONDITION(false, ERR_NAME)
++#define FLUA_COMPILE_TIME_ERROR(ERR_NAME) FLUA_COMPILE_TIME_CONDITION(sizeof(TFunc) == 0, ERR_NAME)
+ 
+ #define FLUA_MULTITHREAD_SUPPORT
+ 
+@@ -53,8 +56,9 @@
+ 		template<class TOut, class TIn>
+ 		TOut UnsafeCast(TIn inVal)
+ 		{
+-			FLUA_COMPILE_TIME_CONDITION(sizeof(TIn) == sizeof(TOut), CantUseUnsafeCast);
++			FLUA_COMPILE_TIME_CONDITION(sizeof(TIn) <= sizeof(TOut), CantUseUnsafeCast);
+ 			union { TIn inVal; TOut outVal; } u;
++			u.outVal = TOut();
+ 			u.inVal = inVal;
+ 			return u.outVal;
+ 		}
+@@ -164,6 +168,15 @@
+ 	//   A FunctionDescription with a NULL szFunction pointer signals the end of the akDescriptions array.
+ 	bool SetFunctionDescriptions(lua_State *L, FunctionDescription *akDescriptions);
+ 
++	namespace Details
++	{
++		template<class T> struct LuaAnalog;
++		template<class T> struct ArgValidator;
++		template<class T> struct FromLuaAnalog;
++		template<class T> static bool CompatibleType(lua_State *L, int idx);
++		template<class T> static inline T Get(lua_State *L, int idx);
++	}
++
+ 	// StackValue - Represents a generic argument on the lua stack.
+ 	class StackValue
+ 	{
+@@ -198,7 +211,7 @@
+ 			T ret = T(); // Don't use with reference types!!! ...EVER!!!
+ 
+ 			// Get the lua analog for this type off of the lua stack
+-			typedef Details::LuaAnalog<T>::Result Analog;
++			typedef typename Details::LuaAnalog<T>::Result Analog;
+ 			Analog analog = Details::Get<Analog>(m_pkLuaState, m_iStackIndex);
+ 
+ 			// Validate the value from lua
+@@ -359,7 +372,7 @@
+ 			assert(idx > 0);
+ 
+ 			// If T is a const type and the value at idx is a compatible non-const type then a cast is fine.
+-			if( ConstCheck<T>::bIsConst && CompatibleType<StripConst<T>::Result>(L, idx)) return true;
++			if( ConstCheck<T>::bIsConst && CompatibleType<typename StripConst<T>::Result>(L, idx)) return true;
+ 
+ 			// Compare metatables to determine type compatibility
+ 			PushMetaTableFn pfnPushMetaTable = GetPushMetaTableFn<StripPtr<T>::Result>();
+@@ -669,7 +682,7 @@
+ 		void SetToStringForFunc(lua_State *L, lua_CFunction pfnToString);
+ 
+ 		// DescribeType - Used to describe function arguments and return values to lua.
+-		template<class T> static const char *DescribeType() { return TypeNameHolder<StripPtrAndRef<T>::Result>::Get(); }
++		template<class T> static const char *DescribeType() { return TypeNameHolder<typename StripPtrAndRef<T>::Result>::Get(); }
+ 		template<> static const char *DescribeType<void>() { return "void"; }
+ 		template<> static const char *DescribeType<bool>() { return "bool"; }
+ 		template<> static const char *DescribeType<const bool>() { return "const bool"; }
+--- a/FirePlace/FireWorks/FLua/Include/FLuaFStringSupport.h
++++ b/FirePlace/FireWorks/FLua/Include/FLuaFStringSupport.h
+@@ -13,6 +13,9 @@
+ #ifndef FLuaFStringSupport_h
+ #define FLuaFStringSupport_h
+ #pragma once
++
++#include "FirePlace/FireWorks/FString.h"
++#include "FirePlace/FireWorks/FLua/Include/FLuaCommon.h"
+ 
+ namespace FLua
+ {
+--- a/FirePlace/FireWorks/FLua/Include/FLuaStaticFunctions.h
++++ b/FirePlace/FireWorks/FLua/Include/FLuaStaticFunctions.h
+@@ -148,7 +148,7 @@
+ 		// 0 args with return value
+ 		template<class TRet>
+ 		static int Call(TRet(*pfn)(), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
+ 			if( lua_gettop(L) == 0 ) {
+ 				TRet ret = (*pfn)();
+ 				RetAnalog pushMe = ToLuaAnalog<RetAnalog>::Convert(ret);
+@@ -162,7 +162,7 @@
+ 		// 1 arg with no return value
+ 		template<class TArg0>
+ 		static int Call(void(*pfn)(TArg0), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
+ 			if( lua_gettop(L) == 1 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -177,8 +177,8 @@
+ 		// 1 arg with return value
+ 		template<class TRet, class TArg0>
+ 		static int Call(TRet(*pfn)(TArg0), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
+ 			if( lua_gettop(L) == 1 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -197,8 +197,8 @@
+ 		// 2 args with no return value
+ 		template<class TArg0, class TArg1>
+ 		static int Call(void(*pfn)(TArg0, TArg1), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
+ 			if( lua_gettop(L) == 2 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -214,9 +214,9 @@
+ 		// 2 args with return value
+ 		template<class TRet, class TArg0, class TArg1>
+ 		static int Call(TRet(*pfn)(TArg0, TArg1), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
+ 			if( lua_gettop(L) == 2 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -236,9 +236,9 @@
+ 		// 3 args with no return value
+ 		template<class TArg0, class TArg1, class TArg2>
+ 		static int Call(void(*pfn)(TArg0, TArg1, TArg2), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
+ 			if( lua_gettop(L) == 3 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -258,10 +258,10 @@
+ 		// 3 args with return value
+ 		template<class TRet, class TArg0, class TArg1, class TArg2>
+ 		static int Call(TRet(*pfn)(TArg0, TArg1, TArg2), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
+ 			if( lua_gettop(L) == 3 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -284,10 +284,10 @@
+ 		// 4 args with no return value
+ 		template<class TArg0, class TArg1, class TArg2, class TArg3>
+ 		static int Call(void(*pfn)(TArg0, TArg1, TArg2, TArg3), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
+ 			if( lua_gettop(L) == 4 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -309,11 +309,11 @@
+ 		// 4 args with return value
+ 		template<class TRet, class TArg0, class TArg1, class TArg2, class TArg3>
+ 		static int Call(TRet(*pfn)(TArg0, TArg1, TArg2, TArg3), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
+ 			if( lua_gettop(L) == 4 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -338,11 +338,11 @@
+ 		// 5 args with no return value
+ 		template<class TArg0, class TArg1, class TArg2, class TArg3, class TArg4>
+ 		static int Call(void(*pfn)(TArg0, TArg1, TArg2, TArg3, TArg4), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
+-			typedef LuaAnalog<TArg4>::Result Analog4;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg4>::Result Analog4;
+ 			if( lua_gettop(L) == 5 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+@@ -366,12 +366,12 @@
+ 		// 5 args with return value
+ 		template<class TRet, class TArg0, class TArg1, class TArg2, class TArg3, class TArg4>
+ 		static int Call(TRet(*pfn)(TArg0, TArg1, TArg2, TArg3, TArg4), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
+-			typedef LuaAnalog<TArg4>::Result Analog4;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg4>::Result Analog4;
+ 			if( lua_gettop(L) == 5 ) {
+ 				bool bValidArgs = true;
+ 				Analog0 arg0 = Get<Analog0>(L, 1); ArgValidator<TArg0>::Validate(arg0, bValidArgs);
+--- a/FirePlace/FireWorks/FLua/Include/FLuaTypeExposure.h
++++ b/FirePlace/FireWorks/FLua/Include/FLuaTypeExposure.h
+@@ -22,7 +22,7 @@
+ // FLUA_EXPOSE_TYPE(CLASS, NAME)
+ // Exposes CLASS to lua under with NAME as the type name in lua
+ #define FLUA_EXPOSE_TYPE_EX(CLASS, NAME) \
+-	static FLua::TypeExposure<CLASS>::NameRegistrar LuaRegTypeName_##NAME##(#NAME);
++	static FLua::TypeExposure<CLASS>::NameRegistrar LuaRegTypeName_##NAME(#NAME);
+ 
+ // FLUA_EXPOSE_TYPE(CLASS)
+ // Exposes CLASS to lua under with CLASS as the type name in lua
+@@ -36,24 +36,24 @@
+ 
+ // FLUA_EXPOSE_INHERITANCE(PARENT, CHILD)
+ // Lets lua know that CHILD inherits from PARENT
+-#define FLUA_EXPOSE_INHERITANCE(CHILD, PARENT) FLUA_EXPOSE_INHERITANCE_EX(CHILD, PARENT, ##PARENT##_##CHILD##)
++#define FLUA_EXPOSE_INHERITANCE(CHILD, PARENT) FLUA_EXPOSE_INHERITANCE_EX(CHILD, PARENT, PARENT##_##CHILD)
+ 
+ // FLUA_EXPOSE_MEMBER_REX(CLASS, FUNC, THUNK_NAME, CATEGORY_FLAGS)
+ // Exposes the member function FUNC on type CLASS with a thunk name of THUNK_NAME
+ // Restrict the exposure to only states that fall into one of the provided category flags
+ // Use this when FLUA_EXPOSE_MEMBER_R generates and invalid name for the thunk function or registrar
+ #define FLUA_EXPOSE_MEMBER_REX(CLASS, FUNC, THUNK_NAME, CATEGORY_FLAGS) \
+-	int LuaThunk_##CLASS##_##THUNK_NAME##(lua_State *L) { \
++	int LuaThunk_##CLASS##_##THUNK_NAME(lua_State *L) { \
+ 	return FLua::Details::Call<CLASS>(&CLASS::FUNC, L, #CLASS "::" #THUNK_NAME); \
+ 	} \
+-	int LuaToString_##CLASS##_##THUNK_NAME##(lua_State *L) { \
++	int LuaToString_##CLASS##_##THUNK_NAME(lua_State *L) { \
+ 	char szDescription[256]; \
+ 	FLua::Details::DescribeFunc(&CLASS::FUNC, #THUNK_NAME, szDescription, 256); \
+ 	lua_pushstring(L, szDescription); \
+ 	return 1; \
+ 	} \
+-	static FLua::TypeExposure<##CLASS##>::FunctionRegistrar LuaReg_##CLASS##_##THUNK_NAME## \
+-	(#THUNK_NAME, &LuaThunk_##CLASS##_##THUNK_NAME##, &LuaToString_##CLASS##_##THUNK_NAME##, FLua::Details::DoConstCheck(&CLASS::FUNC), CATEGORY_FLAGS)
++	static FLua::TypeExposure<CLASS>::FunctionRegistrar LuaReg_##CLASS##_##THUNK_NAME \
++	(#THUNK_NAME, &LuaThunk_##CLASS##_##THUNK_NAME, &LuaToString_##CLASS##_##THUNK_NAME, FLua::Details::DoConstCheck(&CLASS::FUNC), CATEGORY_FLAGS)
+ 
+ // FLUA_EXPOSE_MEMBER_EX(CLASS, FUNC, THUNK_NAME)
+ // Exposes the member function FUNC on type CLASS with a thunk name of THUNK_NAME.
+@@ -73,17 +73,17 @@
+ // Exposes the member function FUNC on type CLASS.  Use this for when there are a const and noncost
+ // version of a function with the same name.  It will always expose the nonconst version.
+ #define FLUA_EXPOSE_MEMBER_AS_NONCONST(CLASS, FUNC) \
+-	int LuaThunk_##CLASS##_##FUNC##(lua_State *L) { \
++	int LuaThunk_##CLASS##_##FUNC(lua_State *L) { \
+ 	return FLua::Details::Call<CLASS>(&CLASS::FUNC, L, #CLASS "::" #FUNC); \
+ 	} \
+-	int LuaToString_##CLASS##_##FUNC##(lua_State *L) { \
++	int LuaToString_##CLASS##_##FUNC(lua_State *L) { \
+ 	char szDescription[256]; \
+ 	FLua::Details::DescribeFunc(&CLASS::FUNC, #FUNC, szDescription, 256); \
+ 	lua_pushstring(L, szDescription); \
+ 	return 1; \
+ 	} \
+-	static FLua::TypeExposure<##CLASS##>::FunctionRegistrar LuaReg_##CLASS##_##FUNC## \
+-	(#FUNC, &LuaThunk_##CLASS##_##FUNC##, &LuaToString_##CLASS##_##FUNC##, false, FLua::TypeExposures::sm_uiUnrestrictedExposure)
++	static FLua::TypeExposure<CLASS>::FunctionRegistrar LuaReg_##CLASS##_##FUNC \
++	(#FUNC, &LuaThunk_##CLASS##_##FUNC, &LuaToString_##CLASS##_##FUNC, false, FLua::TypeExposures::sm_uiUnrestrictedExposure)
+ 
+ // FLUA_SUPPORT_ENUM(ENUM)
+ // Allows an enum to be used in lua exposures.  Does not expose the members of the enum.
+@@ -604,7 +604,7 @@
+ 		// 0 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet>
+ 		static int Call(TRet(TFuncOwner::*pfn)(), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
+ 			if( lua_gettop(L) == 1 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -623,7 +623,7 @@
+ 		// 1 arg with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
+ 			if( lua_gettop(L) == 2 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -643,8 +643,8 @@
+ 		// 1 arg with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
+ 			if( lua_gettop(L) == 2 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -668,8 +668,8 @@
+ 		// 2 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
+ 			if( lua_gettop(L) == 3 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -690,9 +690,9 @@
+ 		// 2 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
+ 			if( lua_gettop(L) == 3 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -717,9 +717,9 @@
+ 		// 3 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1, class TArg2>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1, TArg2), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
+ 			if( lua_gettop(L) == 4 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -743,10 +743,10 @@
+ 		// 3 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1, class TArg2>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1, TArg2), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
+ 			if( lua_gettop(L) == 4 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -774,10 +774,10 @@
+ 		// 4 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1, class TArg2, class TArg3>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
+ 			if( lua_gettop(L) == 5 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -803,11 +803,11 @@
+ 		// 4 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1, class TArg2, class TArg3>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
+ 			if( lua_gettop(L) == 5 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -837,11 +837,11 @@
+ 		// 5 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1, class TArg2, class TArg3, class TArg4>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3, TArg4), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
+-			typedef LuaAnalog<TArg4>::Result Analog4;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg4>::Result Analog4;
+ 			if( lua_gettop(L) == 6 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -869,12 +869,12 @@
+ 		// 5 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1, class TArg2, class TArg3, class TArg4>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3, TArg4), lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
+-			typedef LuaAnalog<TArg4>::Result Analog4;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg4>::Result Analog4;
+ 			if( lua_gettop(L) == 6 ) {
+ 				TClass *pkObj = FLua::Details::Get<TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -924,7 +924,7 @@
+ 		// 0 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet>
+ 		static int Call(TRet(TFuncOwner::*pfn)()const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
+ 			if( lua_gettop(L) == 1 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -943,7 +943,7 @@
+ 		// 1 arg with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
+ 			if( lua_gettop(L) == 2 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -963,8 +963,8 @@
+ 		// 1 arg with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
+ 			if( lua_gettop(L) == 2 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -988,8 +988,8 @@
+ 		// 2 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
+ 			if( lua_gettop(L) == 3 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -1010,9 +1010,9 @@
+ 		// 2 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
+ 			if( lua_gettop(L) == 3 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -1037,9 +1037,9 @@
+ 		// 3 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1, class TArg2>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1, TArg2)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
+ 			if( lua_gettop(L) == 4 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -1063,10 +1063,10 @@
+ 		// 3 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1, class TArg2>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1, TArg2)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
+ 			if( lua_gettop(L) == 4 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -1094,10 +1094,10 @@
+ 		// 4 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1, class TArg2, class TArg3>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
+ 			if( lua_gettop(L) == 5 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -1123,11 +1123,11 @@
+ 		// 4 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1, class TArg2, class TArg3>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
+ 			if( lua_gettop(L) == 5 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -1157,11 +1157,11 @@
+ 		// 5 args with no return value
+ 		template<class TClass, class TFuncOwner, class TArg0, class TArg1, class TArg2, class TArg3, class TArg4>
+ 		static int Call(void(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3, TArg4)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
+-			typedef LuaAnalog<TArg4>::Result Analog4;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg4>::Result Analog4;
+ 			if( lua_gettop(L) == 6 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+@@ -1189,12 +1189,12 @@
+ 		// 5 args with return value
+ 		template<class TClass, class TFuncOwner, class TRet, class TArg0, class TArg1, class TArg2, class TArg3, class TArg4>
+ 		static int Call(TRet(TFuncOwner::*pfn)(TArg0, TArg1, TArg2, TArg3, TArg4)const, lua_State *L, const TCHAR *szLuaFnName) {
+-			typedef PushAnalog<TRet>::Result RetAnalog;
+-			typedef LuaAnalog<TArg0>::Result Analog0;
+-			typedef LuaAnalog<TArg1>::Result Analog1;
+-			typedef LuaAnalog<TArg2>::Result Analog2;
+-			typedef LuaAnalog<TArg3>::Result Analog3;
+-			typedef LuaAnalog<TArg4>::Result Analog4;
++			typedef typename PushAnalog<TRet>::Result RetAnalog;
++			typedef typename LuaAnalog<TArg0>::Result Analog0;
++			typedef typename LuaAnalog<TArg1>::Result Analog1;
++			typedef typename LuaAnalog<TArg2>::Result Analog2;
++			typedef typename LuaAnalog<TArg3>::Result Analog3;
++			typedef typename LuaAnalog<TArg4>::Result Analog4;
+ 			if( lua_gettop(L) == 6 ) {
+ 				const TClass *pkObj = FLua::Details::Get<const TClass*>(L, 1);
+ 				if( pkObj != NULL) {
+--- a/FirePlace/FireWorks/FLua/Include/FLuaTypes.h
++++ b/FirePlace/FireWorks/FLua/Include/FLuaTypes.h
+@@ -102,7 +102,7 @@
+ 			// Try pushing this value onto the lua stack
+ 			if( Push() ) {
+ 				// Get the lua analog for this type off of the lua stack
+-				typedef Details::LuaAnalog<T>::Result Analog;
++				typedef typename Details::LuaAnalog<T>::Result Analog;
+ 				Analog analog = Details::Get<Analog>(m_pkLuaState, lua_gettop(m_pkLuaState));
+ 
+ 				// Validate the value from lua
+@@ -263,7 +263,7 @@
+ 		private:
+ 			friend Table;
+ 			template<class T> Field(const Table &kTable, T key) : m_kTable((Table&)kTable) {
+-				typedef Details::PushAnalog<T>::Result KeyAnalog;
++				typedef typename Details::PushAnalog<T>::Result KeyAnalog;
+ 				lua_State *L = kTable.GetLuaState();
+ 				if( L != NULL )
+ 				{
+@@ -310,7 +310,7 @@
+ 		void SetField( _In_z_ const char *szField, T val) {
+ 			if( Push() ) {
+ 				lua_State *L = m_kLuaVal.GetLuaState();
+-				typedef Details::PushAnalog<T>::Result Analog;
++				typedef typename Details::PushAnalog<T>::Result Analog;
+ 				Analog analog = Details::ToLuaAnalog<Analog>::Convert(val);
+ 				lua_checkstack(L, 1);
+ 				Details::Push(L, analog);
+@@ -323,7 +323,7 @@
+ 		void SetField(int iIndex, T val) {
+ 			if( Push() ) {
+ 				lua_State *L = m_kLuaVal.GetLuaState();
+-				typedef Details::PushAnalog<T>::Result Analog;
++				typedef typename Details::PushAnalog<T>::Result Analog;
+ 				Analog analog = Details::ToLuaAnalog<Analog>::Convert(val);
+ 				lua_checkstack(L, 1);
+ 				Details::Push(L, analog);
+@@ -347,7 +347,7 @@
+ 					}
+ 					else
+ 					{
+-						typedef Details::PushAnalog<T>::Result Analog;
++						typedef typename Details::PushAnalog<T>::Result Analog;
+ 						Analog analog = Details::ToLuaAnalog<Analog>::Convert(val);
+ 						lua_checkstack(L, 1);
+ 						Details::Push(L, analog); // Push the value
+@@ -488,7 +488,7 @@
+ 			Value kRetVal;
+ 			Details::LockAccess();
+ 			if( Push() ) {
+-				typedef Details::PushAnalog<TArg0>::Result Analog0;
++				typedef typename Details::PushAnalog<TArg0>::Result Analog0;
+ 				Analog0 arg0 = Details::ToLuaAnalog<Analog0>::Convert(a0);
+ 
+ 				lua_State *L = GetLuaState();
+@@ -514,8 +514,8 @@
+ 			Value kRetVal;
+ 			Details::LockAccess();
+ 			if( Push() ) {
+-				typedef Details::PushAnalog<TArg0>::Result Analog0;
+-				typedef Details::PushAnalog<TArg1>::Result Analog1;
++				typedef typename Details::PushAnalog<TArg0>::Result Analog0;
++				typedef typename Details::PushAnalog<TArg1>::Result Analog1;
+ 
+ 				Analog0 arg0 = Details::ToLuaAnalog<Analog0>::Convert(a0);
+ 				Analog1 arg1 = Details::ToLuaAnalog<Analog1>::Convert(a1);
+@@ -544,9 +544,9 @@
+ 			Value kRetVal;
+ 			Details::LockAccess();
+ 			if( Push() ) {
+-				typedef Details::PushAnalog<TArg0>::Result Analog0;
+-				typedef Details::PushAnalog<TArg1>::Result Analog1;
+-				typedef Details::PushAnalog<TArg2>::Result Analog2;
++				typedef typename Details::PushAnalog<TArg0>::Result Analog0;
++				typedef typename Details::PushAnalog<TArg1>::Result Analog1;
++				typedef typename Details::PushAnalog<TArg2>::Result Analog2;
+ 
+ 				Analog0 arg0 = Details::ToLuaAnalog<Analog0>::Convert(a0);
+ 				Analog1 arg1 = Details::ToLuaAnalog<Analog1>::Convert(a1);
+@@ -577,10 +577,10 @@
+ 			Value kRetVal;
+ 			Details::LockAccess();
+ 			if( Push() ) {
+-				typedef Details::PushAnalog<TArg0>::Result Analog0;
+-				typedef Details::PushAnalog<TArg1>::Result Analog1;
+-				typedef Details::PushAnalog<TArg2>::Result Analog2;
+-				typedef Details::PushAnalog<TArg3>::Result Analog3;
++				typedef typename Details::PushAnalog<TArg0>::Result Analog0;
++				typedef typename Details::PushAnalog<TArg1>::Result Analog1;
++				typedef typename Details::PushAnalog<TArg2>::Result Analog2;
++				typedef typename Details::PushAnalog<TArg3>::Result Analog3;
+ 
+ 				Analog0 arg0 = Details::ToLuaAnalog<Analog0>::Convert(a0);
+ 				Analog1 arg1 = Details::ToLuaAnalog<Analog1>::Convert(a1);
+@@ -615,11 +615,11 @@
+ 			Value kRetVal;
+ 			Details::LockAccess();
+ 			if( Push() ) {
+-				typedef Details::PushAnalog<TArg0>::Result Analog0;
+-				typedef Details::PushAnalog<TArg1>::Result Analog1;
+-				typedef Details::PushAnalog<TArg2>::Result Analog2;
+-				typedef Details::PushAnalog<TArg3>::Result Analog3;
+-				typedef Details::PushAnalog<TArg4>::Result Analog4;
++				typedef typename Details::PushAnalog<TArg0>::Result Analog0;
++				typedef typename Details::PushAnalog<TArg1>::Result Analog1;
++				typedef typename Details::PushAnalog<TArg2>::Result Analog2;
++				typedef typename Details::PushAnalog<TArg3>::Result Analog3;
++				typedef typename Details::PushAnalog<TArg4>::Result Analog4;
+ 
+ 				Analog0 arg0 = Details::ToLuaAnalog<Analog0>::Convert(a0);
+ 				Analog1 arg1 = Details::ToLuaAnalog<Analog1>::Convert(a1);
+--- a/FirePlace/FireWorks/FMemHooks.h
++++ b/FirePlace/FireWorks/FMemHooks.h
+@@ -8,6 +8,9 @@
+ 
+ #ifndef __FIRAXIS_MEM_HOOKS_H__
+ #define __FIRAXIS_MEM_HOOKS_H__
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include <stddef.h>
+ 
+ //-----------------------------------------------------------------------------
+ // Pool Types (tags are pool type specific)
+--- a/FirePlace/FireWorks/FMemoryStream.h
++++ b/FirePlace/FireWorks/FMemoryStream.h
+@@ -86,7 +86,8 @@
+ 	bool    m_bRealloc;		//!< Will the memory stream grow if you write too much?
+ 	bool	m_bReallocMin;	//!< Will the memory stream only allocate the minimum extra requested space (or double)?
+ 
+-	uint	m_uMemoryPool, m_uMemoryTag;
++	uint m_uMemoryPool;
++	uint m_uMemoryTag;
+ };
+ 
+ 
+--- a/FirePlace/FireWorks/FObjectHandle.h
++++ b/FirePlace/FireWorks/FObjectHandle.h
+@@ -15,6 +15,9 @@
+ 
+ #ifndef _INCLUDED_FObjectHandle_H
+ #define _INCLUDED_FObjectHandle_H
++
++#include <set>
++#include "FirePlace/FireWorks/FAssert.h"
+ 
+ // JAR - uncomment this if a stale handle assert is thrown and you don't know
+ // where the object handle was allocated
+@@ -35,7 +38,7 @@
+ {
+ 	~DestructionNotification()
+ 	{
+-		std::set<const NotificationTarget *>::const_iterator i;
++		typename std::set<const NotificationTarget *>::const_iterator i;
+ 		for(i = m_targets.begin(); i != m_targets.end(); ++i)
+ 		{
+ 			const NotificationTarget * t = *i;
+--- a/FirePlace/FireWorks/FObjectPool.h
++++ b/FirePlace/FireWorks/FObjectPool.h
+@@ -16,6 +16,9 @@
+ #ifndef		FOBJECTPOOL_H
+ #define		FOBJECTPOOL_H
+ #pragma		once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
++#include "FirePlace/FireWorks/FMemHooks.h"
+ 
+ #include	"FirePlace/FireWorks/FCriticalSection.h"
+ 
+--- a/FirePlace/FireWorks/FRemark.h
++++ b/FirePlace/FireWorks/FRemark.h
+@@ -14,6 +14,8 @@
+ #ifndef		FREMARK_H
+ #define		FREMARK_H
+ #pragma		once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
+ 
+ #include "FirePlace/FireWorks/FAssert.h"
+ 
+--- a/FirePlace/FireWorks/FSTLBlockAllocator.h
++++ b/FirePlace/FireWorks/FSTLBlockAllocator.h
+@@ -31,6 +31,9 @@
+ #ifndef __FIRAXIS_STL_BLOCK_ALLOCATOR_H__
+ #define __FIRAXIS_STL_BLOCK_ALLOCATOR_H__
+ 
++#include <stddef.h>
++#include "FirePlace/FireWorks/FMemHooks.h"
++
+ //-----------------------------------------------------------------------------
+ // predecs for stuff we really really don't want to expose to the outside
+ // world but apparently have to anyway.
+--- a/FirePlace/FireWorks/FSTLBlockAllocatorMT.h
++++ b/FirePlace/FireWorks/FSTLBlockAllocatorMT.h
+@@ -27,6 +27,8 @@
+ #ifndef __FIRAXIS_STL_BLOCK_ALLOCATOR_MT_H__
+ #define __FIRAXIS_STL_BLOCK_ALLOCATOR_MT_H__
+ 
++#include "FirePlace/FireWorks/FFireTypes.h"
++
+ //-----------------------------------------------------------------------------
+ // Includes
+ //-----------------------------------------------------------------------------
+--- a/FirePlace/FireWorks/FStlContainerSerialization.h
++++ b/FirePlace/FireWorks/FStlContainerSerialization.h
+@@ -14,6 +14,13 @@
+ 
+ #ifndef _INCLUDED_FStlContainerSerialization_H
+ #define _INCLUDED_FStlContainerSerialization_H
++
++#include <unordered_map>
++#if defined(_MSC_VER)
++#include <hash_map>
++#endif
++
++#include "FirePlace/FireWorks/FDataStream.h"
+ 
+ //---------------------------------------------------------------------
+ // Specific container specializations help the compiler associate
+@@ -82,9 +89,9 @@
+ void SerializeToSequenceContainer(FDataStream & loadFrom, ContainerType & container)
+ {
+ 	container.clear();
+-	ContainerType::size_type count = 0;
++	typename ContainerType::size_type count = 0;
+ 	loadFrom >> count;
+-	ContainerType::size_type i = 0;
++	typename ContainerType::size_type i = 0;
+ 	for(i = 0; i < count; ++i)
+ 	{
+ 		ElementType v;
+@@ -159,16 +166,25 @@
+ }
+ 
+ template<typename KeyType, typename ElementType>
++FDataStream & operator<<(FDataStream & saveTo, const std::unordered_map<KeyType, ElementType> & readFrom)
++{
++	std::for_each(readFrom.begin(), readFrom.end(), SerializeFromAssociativeContainer<std::pair<KeyType, ElementType>, const std::unordered_map<KeyType, ElementType> >(saveTo, readFrom));
++	return saveTo;
++}
++
++#if defined(_MSC_VER)
++template<typename KeyType, typename ElementType>
+ FDataStream & operator<<(FDataStream & saveTo, const stdext::hash_map<KeyType, ElementType> & readFrom)
+ {
+ 	std::for_each(readFrom.begin(), readFrom.end(), SerializeFromAssociativeContainer<std::pair<KeyType, ElementType>, const stdext::hash_map<KeyType, ElementType> >(saveTo, readFrom));
+ 	return saveTo;
+ }
++#endif
+ 
+ template<typename KeyType>
+-FDataStream & operator <<(FDataStream & saveTo, const std::tr1::unordered_set<KeyType>& readFrom)
+-{
+-	std::for_each(readFrom.begin(), readFrom.end(), SerializeFromAssociativeContainer<KeyType, const std::tr1::unordered_set<KeyType> >(saveTo, readFrom));
++FDataStream & operator <<(FDataStream & saveTo, const std::unordered_set<KeyType>& readFrom)
++{
++	std::for_each(readFrom.begin(), readFrom.end(), SerializeFromAssociativeContainer<KeyType, const std::unordered_set<KeyType> >(saveTo, readFrom));
+ 	return saveTo;
+ }
+ 
+@@ -240,16 +256,25 @@
+ }
+ 
+ template<typename KeyType, typename ElementType>
++FDataStream & operator>>(FDataStream & loadFrom, std::unordered_map<KeyType, ElementType> & writeTo)
++{
++	SerializeToAssociativeContainer<std::pair<KeyType, ElementType>, std::unordered_map<KeyType, ElementType> >(loadFrom, writeTo);
++	return loadFrom;
++}
++
++#if defined(_MSC_VER)
++template<typename KeyType, typename ElementType>
+ FDataStream & operator>>(FDataStream & loadFrom, stdext::hash_map<KeyType, ElementType> & writeTo)
+ {
+ 	SerializeToAssociativeContainer<std::pair<KeyType, ElementType>, stdext::hash_map<KeyType, ElementType> >(loadFrom, writeTo);
+ 	return loadFrom;
+ }
++#endif
+ 
+ template<typename KeyType>
+-FDataStream & operator>>(FDataStream & loadFrom, std::tr1::unordered_set<KeyType> & writeTo)
+-{
+-	SerializeToAssociativeContainer<KeyType, std::tr1::unordered_set<KeyType> >(loadFrom, writeTo);
++FDataStream & operator>>(FDataStream & loadFrom, std::unordered_set<KeyType> & writeTo)
++{
++	SerializeToAssociativeContainer<KeyType, std::unordered_set<KeyType> >(loadFrom, writeTo);
+ 	return loadFrom;
+ }
+ 
+--- a/FirePlace/FireWorks/FStringA.inl
++++ b/FirePlace/FireWorks/FStringA.inl
+@@ -5,6 +5,8 @@
+ //
+ // Classes
+ 
++#pragma once
++#include "FirePlace/FireWorks/FString.h"
+ inline FStringA::FStringAHashTraits::FStringAHashTraits( void )
+ {
+ 	// does nothing
+--- a/FirePlace/FireWorks/FStringW.inl
++++ b/FirePlace/FireWorks/FStringW.inl
+@@ -5,6 +5,8 @@
+ //
+ // Classes
+ 
++#pragma once
++#include "FirePlace/FireWorks/FString.h"
+ inline FStringW::FStringWHashTraits::FStringWHashTraits( void )
+ {
+ 	// does nothing
+--- a/FirePlace/FireWorks/FTempHeap.h
++++ b/FirePlace/FireWorks/FTempHeap.h
+@@ -16,6 +16,9 @@
+ 
+ #ifndef FTEMP_HEAP_H
+ #define FTEMP_HEAP_H
++
++#include "FirePlace/FireWorks/FAssert.h"
++#include "FirePlace/FireWorks/FMemHooks.h"
+ #include "FirePlace/FireWorks/FAtomic.h"
+ #include "FirePlace/FireWorks/FUncopyable.h"
+ 
+--- a/FirePlace/FireWorks/FTimer.h
++++ b/FirePlace/FireWorks/FTimer.h
+@@ -15,6 +15,8 @@
+ #ifndef		FTIMER_H
+ #define		FTIMER_H
+ #pragma		once
++
++#include "FirePlace/FireWorks/FFireTypes.h"
+ 
+ // Add the standard low resolution Windows time functions to the PS3
+ #ifdef		_PS3
+@@ -98,21 +100,24 @@
+ #endif	//	_XBOX
+ 
+ 
+-__forceinline __int64 GetTicks() { __asm rdtsc }
++#if defined(_MSC_VER)
++#include <intrin.h>
++__forceinline __int64 GetTicks() { return __rdtsc(); }
++#else
++__forceinline __int64 GetTicks() { return __builtin_ia32_rdtsc(); }
++#endif
+ 
+ 
+ //---------------------------------------------------------------------------------------
+ //  P5time  --  return TICKS since last call
+ //---------------------------------------------------------------------------------------
+-inline __declspec(naked) uint P5time()
++inline uint P5time()
+ {
+ 	static	int tick=0;
+ 
+-	__asm  mov   ecx,tick
+-    __asm  rdtsc
+-	__asm  mov   tick,eax
+-	__asm  sub   eax,ecx
+-	__asm  ret
++	int prev = tick;
++	tick = (int)GetTicks();
++	return (uint)(tick - prev);
+ }
+ #endif	//	!defined( _XENON ) && !defined( _PS3 )
+ 
+--- a/FirePlace/FireWorks/FVariableSystem.h
++++ b/FirePlace/FireWorks/FVariableSystem.h
+@@ -13,6 +13,12 @@
+ #ifndef		FVARIABLESYSTEM_H
+ #define		FVARIABLESYSTEM_H
+ #pragma		once
++
++#if defined(_MSC_VER)
++#include <hash_map>
++#else
++#include <unordered_map>
++#endif
+ 
+ #include "FirePlace/FireWorks/FString.h"
+ 
+@@ -46,7 +52,11 @@
+ #define FVARTYPE FVariableDebug
+ #endif	//	FINAL_RELEASE
+ 
++#if defined(_MSC_VER)
+ typedef STDEXT::hash_map< FString, FVARTYPE*, FStringHashTraits > FVariableHash;
++#else
++typedef std::unordered_map< FString, FVARTYPE*, FStringHashTraits, FStringHashTraits > FVariableHash;
++#endif
+ 
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ // CLASS:	FVariableCallback
+--- a/FirePlace/FireWorks/Win32/FDebugHelper.h
++++ b/FirePlace/FireWorks/Win32/FDebugHelper.h
+@@ -1,7 +1,10 @@
+ #ifndef FDEBUGHELPER_H
+ #define FDEBUGHELPER_H
+ 
++#include <Windows.h>
++#if defined(_MSC_VER)
+ #include <dbghelp.h>
++#endif
+ 
+ // If in debug, use the semi-undocumented RtlCaptureStackBackTrace function.  It is exposed in Vista, but it is part of XP too.
+ // There are limitations to it though, the code cannot be compiled with FPO (Frame Pointer Optimizations) on.
+--- a/FirePlace/FireWorks/Win32/FDebugHelper.inl
++++ b/FirePlace/FireWorks/Win32/FDebugHelper.inl
+@@ -1,3 +1,5 @@
++#pragma once
++#include "FirePlace/FireWorks/Win32/FDebugHelper.h"
+ template< class Function > void FDebugHelper::WalkStack( const CONTEXT& context, Function Func )
+ {
+ 	DWORD dwMachineType = 0;

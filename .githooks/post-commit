@@ -1,0 +1,17 @@
+#!/bin/sh
+# Carries the committed headers into Ghidra. A failure here never affects the commit.
+root=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+cd "$root" || exit 0
+py=
+for c in .venv/Scripts/python.exe .venv/bin/python; do
+    if [ -f "$c" ]; then
+        py=$c
+        break
+    fi
+done
+if [ -z "$py" ]; then
+    echo "post-commit: .venv not found, ghidra apply skipped (run python tools/bootstrap.py)" >&2
+    exit 0
+fi
+PYTHONUTF8=1 "$py" -m civ5re ghidra apply --hook || echo "post-commit: ghidra apply failed (see build/ghidra/last-apply.json)" >&2
+exit 0

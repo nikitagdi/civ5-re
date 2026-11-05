@@ -1,0 +1,11 @@
+Unit	Lua/CvLuaUnit.h
+City	Lua/CvLuaCity.h
+Plot	Lua/CvLuaPlot.h
+Player	Lua/CvLuaPlayer.h
+Team	Lua/CvLuaTeam.h
+TeamTech	Lua/CvLuaTeamTech.h
+Deal	Lua/CvLuaDeal.h
+League	Lua/CvLuaLeague.h
+Area	Lua/CvLuaArea.h
+Game	Lua/CvLuaGame.h
+Map	Lua/CvLuaMap.h

@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Structors.h:10 A3 base 0x0834a000 extra: C2 = C1 = 0x0834a000
+Civ5Expansion2/Fx/Structors.h:15 A3 base 0x0834a030 extra: D2 = D1 = 0x0834a030

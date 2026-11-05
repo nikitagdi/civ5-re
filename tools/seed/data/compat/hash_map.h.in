@@ -1,0 +1,41 @@
+#pragma once
+
+// MSVC <hash_map> for clang. The Civ5XP build maps stdext::hash_map onto libc++ unordered_map with
+// stdext::hash_compare<K, std::equal_to<K>> as both the hasher and the key_eq; hash_compare is not
+// empty (it holds the predicate), so each map is 0x1c bytes in the binary.
+#include <functional>
+#include <memory>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+
+namespace stdext
+{
+	template<class K, class Pred = std::less<K> >
+	class hash_compare
+	{
+	public:
+		enum
+		{
+			bucket_size = 1,
+			min_buckets = 8
+		};
+
+		hash_compare() : comp() {}
+		hash_compare(Pred pred) : comp(pred) {}
+
+		size_t operator()(const K& key) const { return std::hash<K>()(key); }
+		bool operator()(const K& a, const K& b) const { return comp(a, b); }
+
+		Pred comp;
+	};
+
+	// The default traits are hash_compare<K, equal_to<K>> (not MSVC's less<K>): unordered_map uses the
+	// traits as key_eq, and this is the type the binary instantiates.
+	template<class K, class V, class Tr = hash_compare<K, std::equal_to<K> >,
+	         class Alloc = std::allocator<std::pair<const K, V> > >
+	using hash_map = std::unordered_map<K, V, Tr, Tr, Alloc>;
+
+	template<class K, class Tr = hash_compare<K, std::equal_to<K> >, class Alloc = std::allocator<K> >
+	using hash_set = std::unordered_set<K, Tr, Tr, Alloc>;
+}

@@ -1,0 +1,3 @@
+Civ5Expansion2/Fx/Structors.h:9 A3 base 0x0834a0a4 on C2 _ZN15cvUnitVisSystemC2Ev, which is not exported
+Civ5Expansion2/Fx/Structors.h:16 A3 address 0x0834a220 on C1 _ZN10cvOnlyBaseC1Ev, which is not exported; only C2 is: use 'base 0x0834a220'
+Civ5Expansion2/Fx/Structors.h:25 A3 deleting 0x0834a280 on D0 _ZN7FSocketD0Ev, which is not exported

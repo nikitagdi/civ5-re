@@ -1,0 +1,3 @@
+# path relative to d:/Firaxis_OldServer/Civ5Expansion2/ (lowercase)	original_case	libs	status_vs_source_paths_unique
+civ5/src/app/cvgamecoredllutil	d:/Firaxis_OldServer/Civ5Expansion2/Civ5/Src/App/CvGameCoreDLLUtil	CvGameCoreDLLUtilWin32.lib	NEW(dir)
+civ5/src/app/cvgamecoredllutil/cvassert.h	d:/firaxis_oldserver/civ5expansion2/civ5/src/app/cvgamecoredllutil/cvassert.h	CvGameCoreDLLUtilWin32.lib	NEW(dir)

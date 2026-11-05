@@ -1,0 +1,4 @@
+ROOT/Civ5/Src/App/Audio/cvAudioManager.cpp	Wr
+ROOT/Civ5/Src/App/Audio/cvAudioManager.h	L
+ROOT/Civ5/Src/App/Graphics/cvUnitVisSystem.cpp	Wr?
+ROOT/<unresolved>/FVersionInfo.cpp	Wr?

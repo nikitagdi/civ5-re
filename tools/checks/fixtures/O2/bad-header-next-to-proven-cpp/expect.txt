@@ -1,0 +1,2 @@
+Civ5Expansion2/Civ5/Src/App/Audio/cvAudioManager.inl:1 O2 origin binary
+Civ5Expansion2/Civ5/Src/App/CvGameCoreDLLUtil/Other.h:1 O2 origin binary

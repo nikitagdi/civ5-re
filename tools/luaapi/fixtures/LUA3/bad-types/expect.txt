@@ -1,0 +1,3 @@
+Civ5Expansion2/Lua/UI.h:6 LUA3 unknown type 'Nope'
+Civ5Expansion2/Lua/UI.h:10 LUA3 unknown type 'Unti'
+Civ5Expansion2/Lua/UI.h:13 LUA3 EventArgs is only allowed on members of class Event

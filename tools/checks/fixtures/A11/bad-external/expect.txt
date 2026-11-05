@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Linkage.h:5 A11 Helper is external, but 0x08350000 is not exported
+Civ5Expansion2/Fx/Linkage.h:11 A11 cvHidden::Secret is external, but 0x08350100 is not exported

@@ -1,0 +1,3 @@
+Civ5Expansion2/Fx/Ph.h:5 M5 function FUN_08350040 is Ghidra style
+Civ5Expansion2/Fx/Ph.h:9 M5 field field_0x14 is Ghidra style
+Civ5Expansion2/Fx/Ph.h:13 M5 global DAT_0b000100 is Ghidra style

@@ -1,0 +1,15 @@
+#pragma once
+#include <cstddef>
+/// Doxygen comment in third-party code: never a marker.
+namespace std { inline namespace __1 {
+template <class T>
+class vector {
+public:
+    vector() : __begin_(0), __end_(0), __cap_(0) {}
+    size_t size() const { return __end_ - __begin_; }
+private:
+    T* __begin_;
+    T* __end_;
+    T* __cap_;
+};
+} }

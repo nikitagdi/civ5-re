@@ -1,0 +1,51 @@
+# Example of civ5re.local.cfg. Copy to civ5re.local.cfg (git-ignored) and fill in your own paths.
+# `python tools/bootstrap.py` also writes an empty template if the file does not exist.
+# Every key can instead be given as an environment variable (name in the comment next to it).
+# Example values (Windows):
+#   llvm_dir           = C:\LLVM22
+#   ghidra_dir         = C:\ghidra_12.1.2_PUBLIC
+#   ghidra_project_dir = C:\work\civ5-ghidra-project
+#   bin_dir            = C:\path\to\bins           (contains linux_1.0.3.279/Civ5XP, see bins.lock)
+#   game_dir           = D:\Games\Steam\steamapps\common\Sid Meier's Civilization V
+#   lekmod_dir         = C:\work\Lekmod           (only for `civ5re seed`)
+#
+# Which command needs which key:
+#   llvm_dir            binfacts, typedb, check, seed
+#   ghidra_dir          ghidra *
+#   ghidra_project_dir  ghidra * (required)
+#   bin_dir             binfacts (rebuild), ghidra *
+#   game_dir            lua-api
+#   [seed] lekmod_dir, libcxx_src, libc_src   seed
+#   [lua-api] out       optional copy target of the lua-api output
+
+# Machine-specific settings, not in git. Never overwritten by bootstrap.
+# Precedence: civ5re.cfg < this file < env CIV5RE_<KEY> / CIV5RE_<SECTION>_<KEY>.
+
+# LLVM 22 install (clang++, ld.lld, llvm-cxxfilt). Read by binfacts, typedb, checks, seed. Env: CIV5RE_LLVM_DIR
+llvm_dir = 
+
+# Ghidra 12.1.2 install directory. Read by ghidra-sync. Env: CIV5RE_GHIDRA_DIR
+ghidra_dir = 
+
+# Directory of the Ghidra project (not in git). Read by ghidra-sync. Required. Env: CIV5RE_GHIDRA_PROJECT_DIR
+ghidra_project_dir = 
+
+# Root of the binaries listed in bins.lock. Read by bootstrap, binfacts, ghidra-sync. Env: CIV5RE_BIN_DIR
+bin_dir = 
+
+# Installed game with Lua/XML. Read by lua-api. Env: CIV5RE_GAME_DIR
+game_dir = 
+
+[seed]
+# Lekmod checkout (SDK headers, Lua, PDB/lib evidence). Read by seed. Env: CIV5RE_SEED_LEKMOD_DIR
+lekmod_dir = 
+
+# libc++ headers copied into third_party. Read by seed. Env: CIV5RE_SEED_LIBCXX_SRC
+libcxx_src = 
+
+# glibc headers copied into third_party. Read by seed. Env: CIV5RE_SEED_LIBC_SRC
+libc_src = 
+
+[lua-api]
+# Directory that receives a copy of the lua-api output (build/ always gets it). Read by lua-api. Env: CIV5RE_LUA_API_OUT
+out =

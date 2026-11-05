@@ -1,0 +1,6 @@
+build/
+.venv/
+civ5re.local.cfg
+__pycache__/
+*.profraw
+*.log

@@ -1,0 +1,3 @@
+Civ5Expansion2/Lua/UI.h:16 LUA8 Events.UnitCreated has no CvLuaEvent
+Civ5Expansion2/Lua/UI.h:16 LUA8 UnitData has no push
+Civ5Expansion2/Lua/UI.h:24 LUA8 Other: push and pull differ

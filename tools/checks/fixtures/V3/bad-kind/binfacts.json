@@ -1,0 +1,72 @@
+{
+ "typeinfo": [
+  {
+   "addr": "0x0a1b2c40",
+   "bases": [],
+   "class": "cvBase",
+   "flags": null,
+   "kind": "class",
+   "name": "cvBase",
+   "symbol": "_ZTI6cvBase"
+  },
+  {
+   "addr": "0x0a1b2ca0",
+   "bases": [],
+   "class": "cvIface",
+   "flags": null,
+   "kind": "class",
+   "name": "cvIface",
+   "symbol": "_ZTI7cvIface"
+  },
+  {
+   "addr": "0x0a1b2d00",
+   "bases": [
+    {
+     "class": "cvBase",
+     "offset": 0,
+     "public": true,
+     "typeinfo": "_ZTI6cvBase",
+     "virtual": false
+    },
+    {
+     "class": "cvIface",
+     "offset": 4,
+     "public": true,
+     "typeinfo": "_ZTI7cvIface",
+     "virtual": false
+    }
+   ],
+   "class": "cvUnitVisSystem",
+   "flags": 0,
+   "kind": "vmi",
+   "name": "cvUnitVisSystem",
+   "symbol": "_ZTI15cvUnitVisSystem"
+  },
+  {
+   "addr": "0x0a1b2d80",
+   "bases": [],
+   "class": "FTMaker<int>",
+   "flags": null,
+   "kind": "class",
+   "name": "7FTMakerIiE",
+   "symbol": "_ZTI7FTMakerIiE"
+  },
+  {
+   "addr": "0x0a1b2dc0",
+   "bases": [
+    {
+     "class": "cvBase",
+     "offset": 0,
+     "public": true,
+     "typeinfo": "_ZTI6cvBase",
+     "virtual": false
+    }
+   ],
+   "class": "cvLeaf",
+   "flags": null,
+   "kind": "vmi",
+   "name": "6cvLeaf",
+   "symbol": "_ZTI6cvLeaf"
+  }
+ ]
+}

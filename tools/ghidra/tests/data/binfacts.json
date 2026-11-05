@@ -1,0 +1,711 @@
+{
+ "binary": {
+  "build_id": "0",
+  "comment": [],
+  "entry": "0x08048000",
+  "name": "Civ5XP",
+  "sha256": "cc06b647821ec5e7cca3c397f6b0d4726f0106cdd67bcf074d494bea2607a8ca",
+  "size": 36536148
+ },
+ "functions_eh": [
+  {
+   "addr": "0x080002a0",
+   "size": 16
+  }
+ ],
+ "plt": [
+  {
+   "addr": "0x08468860",
+   "name": "__cxa_pure_virtual"
+  }
+ ],
+ "schema": 1,
+ "sections": [
+  {
+   "addr": "0x08000000",
+   "flags": "AX",
+   "name": ".text",
+   "size": 4096
+  }
+ ],
+ "stats": {},
+ "symbols": [
+  {
+   "addr": "0x08000100",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4BaseC1Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN4BaseC1Ev",
+   "name": "_ZN4BaseC1Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x08000100",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4BaseC2Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN4BaseC2Ev",
+   "name": "_ZN4BaseC2Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x08000110",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4BaseD1Ev",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN4BaseD1Ev",
+   "name": "_ZN4BaseD1Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D1"
+  },
+  {
+   "addr": "0x08000114",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4BaseD2Ev",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN4BaseD2Ev",
+   "name": "_ZN4BaseD2Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D2"
+  },
+  {
+   "addr": "0x08000120",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4BaseD0Ev",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN4BaseD0Ev",
+   "name": "_ZN4BaseD0Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D0"
+  },
+  {
+   "addr": "0x08000130",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4Base6UpdateEi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN4Base6UpdateEi",
+   "name": "_ZN4Base6UpdateEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000140",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4Base5ExtraEii",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN4Base5ExtraEii",
+   "name": "_ZN4Base5ExtraEii",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000200",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7DerivedC1Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN7DerivedC1Ev",
+   "name": "_ZN7DerivedC1Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "C1"
+  },
+  {
+   "addr": "0x08000210",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7DerivedC2Ev",
+   "group": "firaxis",
+   "kind": "ctor",
+   "mangled": "_ZN7DerivedC2Ev",
+   "name": "_ZN7DerivedC2Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "C2"
+  },
+  {
+   "addr": "0x08000220",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7DerivedD1Ev",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN7DerivedD1Ev",
+   "name": "_ZN7DerivedD1Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D1"
+  },
+  {
+   "addr": "0x08000224",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7DerivedD2Ev",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN7DerivedD2Ev",
+   "name": "_ZN7DerivedD2Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D2"
+  },
+  {
+   "addr": "0x08000230",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7DerivedD0Ev",
+   "group": "firaxis",
+   "kind": "dtor",
+   "mangled": "_ZN7DerivedD0Ev",
+   "name": "_ZN7DerivedD0Ev",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": "D0"
+  },
+  {
+   "addr": "0x08000240",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived6UpdateEi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7Derived6UpdateEi",
+   "name": "_ZN7Derived6UpdateEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000250",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived5ScaleEi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7Derived5ScaleEi",
+   "name": "_ZN7Derived5ScaleEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000260",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZNK7Derived6GetPosEv",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZNK7Derived6GetPosEv",
+   "name": "_ZNK7Derived6GetPosEv",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000270",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived3SumEii",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN7Derived3SumEii",
+   "name": "_ZN7Derived3SumEii",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000290",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_Z7UsePosP7Derivedi",
+   "group": "firaxis",
+   "kind": "function",
+   "mangled": "_Z7UsePosP7Derivedi",
+   "name": "_Z7UsePosP7Derivedi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000400",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN5Multi7OnEventEi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN5Multi7OnEventEi",
+   "name": "_ZN5Multi7OnEventEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000410",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZThn8_N5Multi7OnEventEi",
+   "group": "firaxis",
+   "kind": "thunk",
+   "mangled": "_ZThn8_N5Multi7OnEventEi",
+   "name": "_ZThn8_N5Multi7OnEventEi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000600",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN4Util6CopyNTE2NTRKi",
+   "group": "firaxis",
+   "kind": "function",
+   "mangled": "_ZN4Util6CopyNTE2NTRKi",
+   "name": "_ZN4Util6CopyNTE2NTRKi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000700",
+   "bind": "global",
+   "cv": null,
+   "demangled": "cfunc",
+   "group": "firaxis",
+   "kind": "c",
+   "mangled": "cfunc",
+   "name": "cfunc",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x08000800",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN11FFastVectorIiE9push_backERKi",
+   "group": "firaxis",
+   "kind": "method",
+   "mangled": "_ZN11FFastVectorIiE9push_backERKi",
+   "name": "_ZN11FFastVectorIiE9push_backERKi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".text",
+   "size": 16,
+   "type": "func",
+   "variant": null
+  },
+  {
+   "addr": "0x0a000100",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZTV4Base",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV4Base",
+   "name": "_ZTV4Base",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".data",
+   "size": 40,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a000200",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZTV7Derived",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV7Derived",
+   "name": "_ZTV7Derived",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".data",
+   "size": 40,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a000280",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZTV5Iface",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV5Iface",
+   "name": "_ZTV5Iface",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".data",
+   "size": 40,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a000300",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZTV5Multi",
+   "group": "firaxis",
+   "kind": "vtable",
+   "mangled": "_ZTV5Multi",
+   "name": "_ZTV5Multi",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".data",
+   "size": 40,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a100000",
+   "bind": "global",
+   "cv": null,
+   "demangled": "g_counter",
+   "group": "firaxis",
+   "kind": "c",
+   "mangled": "g_counter",
+   "name": "g_counter",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".data",
+   "size": 4,
+   "type": "object",
+   "variant": null
+  },
+  {
+   "addr": "0x0a100200",
+   "bind": "global",
+   "cv": null,
+   "demangled": "_ZN7Derived9s_iStaticE",
+   "group": "firaxis",
+   "kind": "data",
+   "mangled": "_ZN7Derived9s_iStaticE",
+   "name": "_ZN7Derived9s_iStaticE",
+   "params": null,
+   "scope": null,
+   "scope_is_class": null,
+   "section": ".data",
+   "size": 4,
+   "type": "object",
+   "variant": null
+  }
+ ],
+ "tool": {
+  "binfacts": "1",
+  "cxxfilt": "x",
+  "groups_cfg": "0000000000000000000000000000000000000000000000000000000000000000"
+ },
+ "typeinfo": [],
+ "vtables": [
+  {
+   "addr": "0x0a000100",
+   "class": "Base",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a000108",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4BaseD1Ev"
+       ],
+       "target": "0x08000110"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4BaseD0Ev"
+       ],
+       "target": "0x08000120"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4Base6UpdateEi"
+       ],
+       "target": "0x08000130"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4Base5ExtraEii"
+       ],
+       "target": "0x08000140"
+      }
+     ],
+     "typeinfo": "_ZTI4Base",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 24,
+   "symbol": "_ZTV4Base"
+  },
+  {
+   "addr": "0x0a000200",
+   "class": "Derived",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a000208",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN7DerivedD1Ev"
+       ],
+       "target": "0x08000220"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN7DerivedD0Ev"
+       ],
+       "target": "0x08000230"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN7Derived6UpdateEi"
+       ],
+       "target": "0x08000240"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4Base5ExtraEii"
+       ],
+       "target": "0x08000140"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN7Derived5ScaleEi"
+       ],
+       "target": "0x08000250"
+      },
+      {
+       "kind": "func",
+       "symbols": [],
+       "target": "0x080002a0"
+      }
+     ],
+     "typeinfo": "_ZTI7Derived",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 32,
+   "symbol": "_ZTV7Derived"
+  },
+  {
+   "addr": "0x0a000280",
+   "class": "Iface",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a000288",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "pure",
+       "symbols": [
+        "__cxa_pure_virtual"
+       ],
+       "target": "0x08468860"
+      }
+     ],
+     "typeinfo": "_ZTI5Iface",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 12,
+   "symbol": "_ZTV5Iface"
+  },
+  {
+   "addr": "0x0a000300",
+   "class": "Multi",
+   "construction": false,
+   "groups": [
+    {
+     "address_point": "0x0a000308",
+     "offset_to_top": 0,
+     "slots": [
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4BaseD1Ev"
+       ],
+       "target": "0x08000110"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4BaseD0Ev"
+       ],
+       "target": "0x08000120"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4Base6UpdateEi"
+       ],
+       "target": "0x08000130"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN4Base5ExtraEii"
+       ],
+       "target": "0x08000140"
+      },
+      {
+       "kind": "func",
+       "symbols": [
+        "_ZN5Multi7OnEventEi"
+       ],
+       "target": "0x08000400"
+      }
+     ],
+     "typeinfo": "_ZTI5Multi",
+     "vbase_offsets": []
+    },
+    {
+     "address_point": "0x0a000330",
+     "offset_to_top": -8,
+     "slots": [
+      {
+       "kind": "thunk",
+       "symbols": [
+        "_ZThn8_N5Multi7OnEventEi"
+       ],
+       "target": "0x08000410"
+      }
+     ],
+     "typeinfo": "_ZTI5Multi",
+     "vbase_offsets": []
+    }
+   ],
+   "size": 48,
+   "symbol": "_ZTV5Multi"
+  }
+ ]
+}

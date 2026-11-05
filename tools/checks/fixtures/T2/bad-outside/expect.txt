@@ -1,0 +1,3 @@
+tools/typedb/NOTES.md:1 T2 md outside allowed locations
+docs/new.md:1 T2 md outside allowed locations
+Civ5Expansion2/Civ5/ABOUT.md:1 T2 md outside allowed locations

@@ -1,0 +1,15 @@
+"c:/program files (x86)/microsoft directx sdk (august 2009)/include	CvGameCoreDLLUtilWin32.lib,FLuaWin32.lib
+"c:/program files (x86)/microsoft visual studio 9.0/vc/atlmfc/include	CvGameCoreDLLUtilWin32.lib,FLuaWin32.lib
+"c:/program files (x86)/microsoft visual studio 9.0/vc/include	CvGameCoreDLLUtilWin32.lib,FLuaWin32.lib
+"c:/program files/microsoft sdks/windows/v6.0a/include	CvGameCoreDLLUtilWin32.lib,FLuaWin32.lib
+d:/firaxis_oldserver/civ5expansion2/civ5/src/app/cvgamecoredll	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/civ5/src/app/cvgamecoredllutil	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/fireplace	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/fireplace/fireworks	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/fireplace/fireworks/flua/include	FLuaWin32.lib
+d:/firaxis_oldserver/civ5expansion2/sdks/csmtp_v2_1_ssl/openssl-0.9.8l/inc32	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/sdks/intelbb_2_2/include	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/sdks/logitechsdk/lcdsdk/src	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/sdks/logitechsdk/lcdsdk/src/lcdui	CvGameCoreDLLUtilWin32.lib
+d:/firaxis_oldserver/civ5expansion2/sdks/lua/5.1/include	CvGameCoreDLLUtilWin32.lib,FLuaWin32.lib
+d:/firaxis_oldserver/civ5expansion2/tools/nexus/listener/include	CvGameCoreDLLUtilWin32.lib

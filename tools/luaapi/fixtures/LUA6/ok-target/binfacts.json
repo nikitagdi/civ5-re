@@ -1,0 +1,72 @@
+{
+ "symbols+": [
+  {
+   "mangled": "_Z28LuaThunk_ControlBase_SetHideP9lua_State",
+   "demangled": "LuaThunk_ControlBase_SetHide(lua_State*)",
+   "addr": "0x09000010",
+   "size": 16,
+   "type": "func",
+   "bind": "global",
+   "section": ".text",
+   "kind": "function",
+   "variant": null,
+   "scope": "",
+   "scope_is_class": null,
+   "name": "LuaThunk_ControlBase_SetHide",
+   "params": "lua_State*",
+   "cv": null,
+   "group": "firaxis"
+  },
+  {
+   "mangled": "_Z28LuaThunk_ControlBase_SetSizeP9lua_State",
+   "demangled": "LuaThunk_ControlBase_SetSize(lua_State*)",
+   "addr": "0x09000020",
+   "size": 16,
+   "type": "func",
+   "bind": "global",
+   "section": ".text",
+   "kind": "function",
+   "variant": null,
+   "scope": "",
+   "scope_is_class": null,
+   "name": "LuaThunk_ControlBase_SetSize",
+   "params": "lua_State*",
+   "cv": null,
+   "group": "firaxis"
+  },
+  {
+   "mangled": "_Z30LuaThunk_ControlBase_GetParentP9lua_State",
+   "demangled": "LuaThunk_ControlBase_GetParent(lua_State*)",
+   "addr": "0x09000030",
+   "size": 16,
+   "type": "func",
+   "bind": "global",
+   "section": ".text",
+   "kind": "function",
+   "variant": null,
+   "scope": "",
+   "scope_is_class": null,
+   "name": "LuaThunk_ControlBase_GetParent",
+   "params": "lua_State*",
+   "cv": null,
+   "group": "firaxis"
+  },
+  {
+   "mangled": "_Z24LuaThunk_ControlBase_RawP9lua_State",
+   "demangled": "LuaThunk_ControlBase_Raw(lua_State*)",
+   "addr": "0x09000040",
+   "size": 16,
+   "type": "func",
+   "bind": "global",
+   "section": ".text",
+   "kind": "function",
+   "variant": null,
+   "scope": "",
+   "scope_is_class": null,
+   "name": "LuaThunk_ControlBase_Raw",
+   "params": "lua_State*",
+   "cv": null,
+   "group": "firaxis"
+  }
+ ]
+}

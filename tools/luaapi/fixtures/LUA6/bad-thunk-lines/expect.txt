@@ -1,0 +1,2 @@
+Civ5Expansion2/Lua/UI.h:18 LUA6 ControlBase:SetHide: 2 lines for one thunk
+Civ5Expansion2/Lua/UI.h:23 LUA6 ControlBase:SetHide: '?' on LuaThunk_ControlBase_SetHide

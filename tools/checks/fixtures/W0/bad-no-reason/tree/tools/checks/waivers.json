@@ -1,0 +1,4 @@
+[
+  {"rule": "T1", "key": "T1:src/x.h", "reason": ""},
+  {"rule": "T2", "key": "T2:a.md"}
+]

@@ -1,0 +1,2 @@
+/// origin binary
+#pragma once

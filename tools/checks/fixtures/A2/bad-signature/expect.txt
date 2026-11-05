@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Symbols.h:16 A2 at 0x0834a060 exported cvBase::Update(float), declared _ZN6cvBase6UpdateEd
+Civ5Expansion2/Fx/Symbols.h:22 A2 at 0x0834a380 exported cvBase::Init(), declared _ZNK6cvBase4InitEv

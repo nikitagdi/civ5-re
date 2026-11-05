@@ -1,0 +1,2 @@
+Civ5Expansion2/Fx/Foo.h:1 O4 origin guess, but there is no class Foo in the file
+Civ5Expansion2/Fx/Foo.cpp:1 O4 origin guess, but there is no class Foo in Foo.h

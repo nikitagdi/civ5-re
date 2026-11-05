@@ -1,0 +1,5 @@
+# fixture: compat, fwd, libcxx, <clang>
+compat
+fwd
+libcxx/v1
+<clang>

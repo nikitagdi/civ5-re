@@ -1,0 +1,4 @@
+Civ5Expansion2/Fx/Vtables.h:6 V1 vtable 0x0a1b2c08, but _ZTV6cvBase = 0x0a1b2c00
+Civ5Expansion2/Fx/Vtables.h:14 V1 vtable ?, but _ZTV7cvIface = 0x0a1b2c80
+Civ5Expansion2/Fx/Vtables.h:22 V1 FTMaker<int> has no '/// vtable', but _ZTV7FTMakerIiE = 0x0a1b2d60
+Civ5Expansion2/Fx/Vtables.h:31 V1 vtable 0x0a1b2e00, but _ZTV6cvNoVt is not in the binary

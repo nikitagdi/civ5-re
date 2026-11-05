@@ -1,0 +1,21 @@
+{
+ "symbols+": [
+  {
+   "mangled": "_FAKE_Create_7",
+   "demangled": "CvLuaEvent<EventTemplate<Event_Int2Type<7>, UnitData, LinearEventDispatcher, NonSerialContainer, NullEventClass>>::lCreate(lua_State*)",
+   "addr": "0x090000b0",
+   "size": 16,
+   "type": "func",
+   "bind": "global",
+   "section": ".text",
+   "kind": "method",
+   "variant": null,
+   "scope": "CvLuaEvent<EventTemplate<Event_Int2Type<7>, UnitData, LinearEventDispatcher, NonSerialContainer, NullEventClass>>",
+   "scope_is_class": true,
+   "name": "lCreate",
+   "params": "lua_State*",
+   "cv": null,
+   "group": "firaxis"
+  }
+ ]
+}

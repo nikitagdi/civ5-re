@@ -1,0 +1,3 @@
+#pragma once
+#include <stddef.h>
+namespace std { inline namespace __1 { typedef ::size_t size_t; } }
